@@ -2,4 +2,6 @@
 Desarrollo web para Calida Mx 
 
 # Fonts 
-Las fuentes para utilizadas 
+Las fuentes para a utilizar 
+
+manrope
