@@ -1,4 +1,4 @@
-//let ancla = document.getElementById("hdsn");
+let formRespuesta = document.getElementById("hdsn");
 
 function validacionForm(nombre,correo,telefono,mensaje){
     let correoValor = correo.value;
