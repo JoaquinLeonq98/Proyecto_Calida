@@ -35,12 +35,26 @@ function validacionForm(nombre,correo,telefono,mensaje){
     return estado;
 }
 
-formRespuesta.addEventListener("submit",(evento)=>{
-
-    evento.preventDefault();
-    validacionForm(correo,nombre,telefono,mensaje);
-    let precioValor = precio.value;
-    let nombreValor = nombre.value;
-   let nuevaTarjeta= crearTarjeta(nombreValor,precioValor);
-   ancla.innerHTML = nuevaTarjeta;
-})
+if (validacionForm===true){
+    formRespuesta.addEventListener("submit",(evento)=>{
+        evento.preventDefault();
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Se ha enviado correctamente',
+            showConfirmButton: false,
+            timer: 1500
+          });
+    })
+}else{
+    formRespuesta.addEventListener("submit",(evento)=>{
+        evento.preventDefault();
+        Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: 'Checa tus campos',
+            showConfirmButton: false,
+            timer: 1500
+          });
+    })
+}
