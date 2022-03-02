@@ -1,4 +1,4 @@
-let formRespuesta = document.getElementById("hdsn");
+let formRespuesta = document.getElementById("resp");
 
 function validacionForm(nombre,correo,telefono,mensaje){
     let correoValor = correo.value;
@@ -35,7 +35,7 @@ function validacionForm(nombre,correo,telefono,mensaje){
     return estado;
 }
 
-if (validacionForm===true){
+if (validacionForm(nombre,correo,telefono,mensaje)===true){
     formRespuesta.addEventListener("submit",(evento)=>{
         evento.preventDefault();
         Swal.fire({
