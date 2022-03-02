@@ -5,17 +5,22 @@ function validacionForm(nombre,correo,telefono,mensaje){
     let nombreValor = nombre.value;
     let telefonoValor = telefono.value;
     let mensajeValor = mensaje.value;
-    let estado = true;
 
     
-    if(correoValor === "" || mensajeValor==="" || telefonoValor==="" ||nombreValor===""){
+    if(correoValor === "" ){
         correo.classList.add("is-invalid");
-        mensaje.classList.add("is-invalid");
+        return false;
+    }else if(nombreValor===""){
+        nombre.classList.add("is-invalid");
+        return false;
+    }else if(telefonoValor===""){
         telefono.classList.add("is-invalid");
-        nombre.classList.add("is-invalid")
+        return false;
+    }else if(mensajeValor===""){
+        mensaje.classList.add("is-invalid");
         return false;
     }else{
-        return true
+        return true;
     }
 }
 let nombre1=document.getElementById("nombre");
