@@ -8,16 +8,16 @@
       }
     },
     "color": {
-      "value": "#8c8c8c"
+      "value": "#85f2e8"
     },
     "shape": {
       "type": "circle",
       "stroke": {
         "width": 0,
-        "color": "#1b1b1b"
+        "color": "#000"
       },
       "polygon": {
-        "nb_sides": 3
+        "nb_sides": 6
       },
       "image": {
         "src": "img/github.svg",
@@ -32,17 +32,17 @@
         "enable": false,
         "speed": 1,
         "opacity_min": 0.1,
-        "sync": true
+        "sync": false
       }
     },
     "size": {
-      "value": 177.55821936726136,
+      "value": 160,
       "random": true,
       "anim": {
         "enable": true,
-        "speed": 35.964035964035965,
-        "size_min": 55.14485514485514,
-        "sync": true
+        "speed": 10,
+        "size_min": 40,
+        "sync": false
       }
     },
     "line_linked": {
@@ -56,7 +56,7 @@
       "enable": true,
       "speed": 8,
       "direction": "none",
-      "random": false,
+      "random": true,
       "straight": false,
       "out_mode": "out",
       "bounce": false,
@@ -82,20 +82,20 @@
     },
     "modes": {
       "grab": {
-        "distance": 191.80819180819182,
+        "distance": 400,
         "line_linked": {
           "opacity": 1
         }
       },
       "bubble": {
         "distance": 400,
-        "size": 359.64035964035963,
-        "duration": 2.317682317682318,
-        "opacity": 0.8311688311688312,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
         "speed": 3
       },
       "repulse": {
-        "distance": 263.73626373626377,
+        "distance": 200,
         "duration": 0.4
       },
       "push": {
