@@ -1,6 +1,6 @@
-export const btn = document.getElementById('button');
+const btn = document.getElementById('button');
 
-document.getElementById('form').addEventListener('submit', function (event) {
+document.getElementById('resp').addEventListener('submit', function (event) {
   event.preventDefault();
 
   btn.value = 'Enviando...';
