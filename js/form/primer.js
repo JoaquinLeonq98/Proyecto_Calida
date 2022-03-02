@@ -8,36 +8,24 @@ function validacionForm(nombre,correo,telefono,mensaje){
     let estado = true;
 
     
-    if(correoValor === ""){
+    if(correoValor === "" || mensajeValor==="" || telefonoValor==="" ||nombreValor===""){
         correo.classList.add("is-invalid");
-        let estado = false;
-    }else{
-        correo.classList.add("is-valid");
-    }
-    if(nombreValor === ""){
-        nombre.classList.add("is-invalid");
-        let estado = false;
-    }else{
-        nombre.classList.add("is-valid");
-    }
-    if(telefonoValor === ""){
-        telefono.classList.add("is-invalid");
-        let estado = false;
-    }else{
-        telefono.classList.add("is-valid");
-    }
-    if(mensajeValor === ""){
         mensaje.classList.add("is-invalid");
-        let estado = false;
+        telefono.classList.add("is-invalid");
+        nombre.classList.add("is-invalid")
+        return false;
     }else{
-        mensaje.classList.add("is-valid");
+        return true
     }
-    return estado;
 }
+let nombre1=document.getElementById("nombre");
+let correo1=document.getElementById("correo");
+let mensaje1 =document.getElementById("mensaje");
+let telefono1= document.getElementById("telefono");
 
-if (validacionForm(nombre,correo,telefono,mensaje)){
-    formRespuesta.addEventListener("submit",(evento)=>{
-        evento.preventDefault();
+formRespuesta.addEventListener("submit",(evento)=>{
+    evento.preventDefault();
+    if(validacionForm(nombre1,correo1,telefono1,mensaje1)===true){
         Swal.fire({
             position: 'top-end',
             icon: 'success',
@@ -45,10 +33,7 @@ if (validacionForm(nombre,correo,telefono,mensaje)){
             showConfirmButton: false,
             timer: 1500
           });
-    })
-}else{
-    formRespuesta.addEventListener("submit",(evento)=>{
-        evento.preventDefault();
+    }else{
         Swal.fire({
             position: 'top-end',
             icon: 'error',
@@ -56,5 +41,5 @@ if (validacionForm(nombre,correo,telefono,mensaje)){
             showConfirmButton: false,
             timer: 1500
           });
-    })
-}
+    }
+})
