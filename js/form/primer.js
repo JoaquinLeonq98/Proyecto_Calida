@@ -10,17 +10,13 @@ function validacionForm(nombre,correo,telefono,mensaje){
     if(correoValor === "" || nombreValor === "" || telefonoValor===""||mensajeValor===""){
         
         nombre.classList.add("is-invalid");
-
-        precio.classList.add("is-invalid");
-
+        correo.classList.add("is-invalid");
         
 
     }else{
 
         nombre.classList.add("is-valid");
-        precio.classList.add("is-valid");
+        correo.classList.add("is-valid");
 
-        console.log(nombreValor);
-        console.log(precioValor);
     }
 }
