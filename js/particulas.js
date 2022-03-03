@@ -14,7 +14,11 @@ particlesJS({
       type: 'circle',
       stroke: {
         width: 0,
+<<<<<<< HEAD
         color: '#57aca4',
+=======
+        color: '#000',
+>>>>>>> javascript
       },
       polygon: {
         nb_sides: 6,
@@ -36,7 +40,11 @@ particlesJS({
       },
     },
     size: {
+<<<<<<< HEAD
       value: 196.41797745602653,
+=======
+      value: 160,
+>>>>>>> javascript
       random: true,
       anim: {
         enable: true,
