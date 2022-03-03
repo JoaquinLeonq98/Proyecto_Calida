@@ -1,5 +1,13 @@
 let formRespuesta = document.getElementById("resp");
 
+function ValidateEmail(mail) 
+{
+ if (/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(myForm.emailAddr.value)){
+    return (true);
+}else
+    return (false);
+}
+
 function validacionForm(nombre,correo,telefono,mensaje){
     let correoValor = correo.value;
     let nombreValor = nombre.value;
@@ -7,7 +15,7 @@ function validacionForm(nombre,correo,telefono,mensaje){
     let mensajeValor = mensaje.value;
 
     
-    if(correoValor === "" ){
+    if(correoValor === "" || ValidateEmail(correoValor)===false){
         correo.classList.add("is-invalid");
         return false;
     }else if(nombreValor===""){
