@@ -15,14 +15,14 @@
         <h2 class="">Contactanos</h2>
       </div>
       
-    <form class="formulario col-md-12 p-5" id="resp">
+    <form class="formulario col-md-12 p-5" id="resp" action="mailto:joaquinleonquero00@gmail.com" method="post">
      
         <fieldset>
             
             <div class="contenedor_campos">
                 <div class="campo text-center">
               
-                    <input class="input-text " type="name" placeholder="Nombre y Apellidos" id="nombre">
+                    <input class="input-text " type="name" placeholder="Nombre y Apellidos" id="nombre" name="nombre">
                 </div>
                 <div class="campo text-center">
                    
@@ -39,8 +39,9 @@
             </div>
             <!--contendor de los campos-->
             <div class="enviar text-center">
-                <input class="boton " type="submit" value="Enviar">
-
+               <button class="boton " type="submit" value="Enviar">
+                 <a href="mailto:joaquinleonquero00@gmail.com" target="_blank"></a>Enviar
+               </button>
             </div>
         </fieldset>
     </form> <!-- Form--> 
