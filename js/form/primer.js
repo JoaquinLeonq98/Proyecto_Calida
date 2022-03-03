@@ -32,7 +32,7 @@ formRespuesta.addEventListener("submit",(evento)=>{
     evento.preventDefault();
     if(validacionForm(nombre1,correo1,telefono1,mensaje1)===true){
         Swal.fire({
-            position: 'top-end',
+            position: 'top-center',
             icon: 'success',
             title: 'Se ha enviado correctamente',
             showConfirmButton: false,
@@ -40,7 +40,7 @@ formRespuesta.addEventListener("submit",(evento)=>{
           });
     }else{
         Swal.fire({
-            position: 'top-end',
+            position: 'top-center',
             icon: 'error',
             title: 'Checa tus campos',
             showConfirmButton: false,
