@@ -1,5 +1,7 @@
 let formRespuesta = document.getElementById("resp");
 
+
+
 function validacionForm(nombre,correo,telefono,mensaje){
     let correoValor = correo.value;
     let nombreValor = nombre.value;
@@ -7,7 +9,7 @@ function validacionForm(nombre,correo,telefono,mensaje){
     let mensajeValor = mensaje.value;
 
     
-    if(correoValor === "" ){
+    if(correoValor === ""){
         correo.classList.add("is-invalid");
         return false;
     }else if(nombreValor===""){
