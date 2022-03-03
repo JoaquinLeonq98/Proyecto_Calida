@@ -25,6 +25,17 @@ function validacionForm(nombre,correo,telefono,mensaje){
         return true;
     }
 }
+
+function enviarinfo(nombre,correo,telefono,mensaje){
+    let correoValor = correo.value;
+    let nombreValor = nombre.value;
+    let telefonoValor = telefono.value;
+    let mensajeValor = mensaje.value;
+    let pp = `Hola, mi nombre es: ${nombreValor}, mi correo y teléfono es: ${correoValor} y ${telefonoValor}
+    y te escribí el siguiente mensaje: ${mensajeValor}.`;
+    return pp;
+}
+
 let nombre1=document.getElementById("nombre");
 let correo1=document.getElementById("correo");
 let mensaje1 =document.getElementById("mensaje");
@@ -40,6 +51,9 @@ formRespuesta.addEventListener("submit",(evento)=>{
             showConfirmButton: false,
             timer: 1500
           });
+        setTimeout(function(){
+            document.getElementById("resp").reset();
+        }, 3000);
     }else{
         Swal.fire({
             position: 'top-center',
