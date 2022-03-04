@@ -72,8 +72,10 @@
     </footer>
    
 `;
-// A la constante "ancla" se le da ubicacion por medio del id="anclaFooter"
-const ancla = document.getElementById("anclaFooter");
+window.addEventListener("load", function(){
+    // A la constante "ancla" se le da ubicacion por medio del id="anclaFooter"
+    const ancla = document.getElementById("anclaFooter");
 
-// Asigna el contenido de "contenidoFooter" y devuelve la sintaxis HTML con un "innerHTML" a la constante "anclaF"
-ancla.innerHTML= contenidoFooter;
+    // Asigna el contenido de "contenidoFooter" y devuelve la sintaxis HTML con un "innerHTML" a la constante "anclaF"
+    ancla.innerHTML= contenidoFooter;
+});
