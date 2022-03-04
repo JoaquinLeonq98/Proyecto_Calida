@@ -1,6 +1,7 @@
 @import url(./navBar.css);
 @import url(./aboutUs.css);
-@import url(./style.css);
+
+@import url(./footer.css);
 
 
 #particles-js {
