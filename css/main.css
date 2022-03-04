@@ -1,9 +1,10 @@
+@import url(./navBar.css);
+@import url(./aboutUs.css);
+@import url(./style.css);
+
+
 #particles-js {
-<<<<<<< HEAD
-  background: #f9d9c3;
-=======
   background: #efa0f5;
->>>>>>> javascript
   height: 100vh;
   width: 100vw;
   position: fixed;

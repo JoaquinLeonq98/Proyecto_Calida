@@ -5,7 +5,7 @@
  <nav class="navbar navbar-expand-lg navbar-light bg-light " style="background-color: #ffffff;">
      
         <div>
-            <img class=" mb-3 img-fluid "src="./calidaLogo.png" alt="logo">
+            <img class=" mb-3 img-fluid "src="../img/calidaLogo.png" alt="logo">
         </div> 
         </a> 
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,10 +47,10 @@
 
              <form class="form-inline my-2 my-lg-0">
                 <a class="" href="#" type="submit" target="_blank"
-                ><img src="./iconmonstr-user-7.svg" alt="icono usuario"/></a>
+                ><img src="../img/iconmonstr-user-7.svg" alt="icono usuario"/></a>
 
                 <a class="ml-4 spaceIcon" href="#" type="submit" target="_blank" 
-                ><img src="./iconmonstr-shopping-cart-2.svg" alt="icono carrito de compras"/></a>
+                ><img src="../img/iconmonstr-shopping-cart-2.svg" alt="icono carrito de compras"/></a>
 
              </form>
          </div>    
