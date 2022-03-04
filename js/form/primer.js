@@ -29,11 +29,7 @@ function enviarinfo(nombre, correo, telefono, mensaje) {
   let nombreValor = nombre.value;
   let telefonoValor = telefono.value;
   let mensajeValor = mensaje.value;
-  let pp = `Hola, mi nombre es: ${nombreValor},  
-
-           mi correo y teléfono es: ${correoValor} y ${telefonoValor}.
-  
-          Te escribí el siguiente mensaje: "${mensajeValor}".`;
+  let pp = `Hola, mi nombre es: ${nombreValor},mi correo y teléfono es: ${correoValor} y ${telefonoValor}. Te escribí el siguiente mensaje: "${mensajeValor}".`;
   return pp;
 } //Termina función
 //Traigo los valores del input
@@ -50,7 +46,7 @@ formRespuesta.addEventListener('submit', (evento) => {
       icon: 'success',
       title: 'Se ha enviado correctamente',
       showConfirmButton: false,
-      timer: 1500,
+      timer: 1000,
     });
     window.open(
       'mailto:joaquinleonquero00@gmail.com?subject=subject&body=' +
@@ -63,9 +59,9 @@ formRespuesta.addEventListener('submit', (evento) => {
     Swal.fire({
       position: 'top-center',
       icon: 'error',
-      title: 'Checa tus campos',
+      title: '¡Error, alguno de tu campos es incorrecto!',
       showConfirmButton: false,
-      timer: 1500,
+      timer: 1000,
     });
   }
 });
