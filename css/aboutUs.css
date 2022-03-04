@@ -1,5 +1,9 @@
 #particles-js {
   background: #f7c09b;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
 }
 
 .card {
