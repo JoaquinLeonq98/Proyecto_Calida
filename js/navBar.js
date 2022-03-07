@@ -26,7 +26,7 @@
                             <a class="dropdown-item" href="https://www.linkedin.com/in/aurelio-reyes-s%C3%A1nchez/">Aurelio Reyes Sanchez</a>
                             <a class="dropdown-item" href="https://www.linkedin.com/in/maría-fernanda-rivera-medina-77aaa522b/">Maria Fernanda Rivera Medina</a>
                             <a class="dropdown-item" href="https://www.linkedin.com/in/crismoute/">Cristian Mota Ramirez</a>
-                            <a class="dropdown-item" href="#">Manuel Alberto De La Torre Piña</a>
+                            <a class="dropdown-item" href="https://www.linkedin.com/in/manueldltp/">Manuel Alberto De La Torre Piña</a>
                             <a class="dropdown-item" href="https://www.linkedin.com/in/naomi-quintero/">Naomi Quintero Flores</a>
                         </div>
                     </li>
