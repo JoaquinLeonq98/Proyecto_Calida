@@ -17,30 +17,30 @@
                 <ul class="navbar-nav m-auto">
     
                     <li class="nav-item dropdown" id="menu">
-                        <a class="nav-link dropdown-toggle ml-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"  aria-expanded="false">
+                        <a class="nav-link dropdown-toggle ml-5" href="../pages/aboutUs.html" id="navbarDropdown" role="button" data-toggle="dropdown"  aria-expanded="false">
                             Nosotros
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Carlos Alberto López Benítez</a>
-                            <a class="dropdown-item" href="#">Joaquín León Quero</a>
-                            <a class="dropdown-item" href="#">Aurelio Reyes Sanchez</a>
-                            <a class="dropdown-item" href="#">Maria Fernanda Rivera Medina</a>
-                            <a class="dropdown-item" href="#">Cristian Mota Ramirez</a>
-                            <a class="dropdown-item" href="#">Manuel Alberto De La Torre Piña</a>
-                            <a class="dropdown-item" href="#">Naomi Quintero Flores</a>
+                            <a class="dropdown-item" href="https://www.linkedin.com/in/calbertolb/">Carlos Alberto López Benítez</a>
+                            <a class="dropdown-item" href="https://www.linkedin.com/in/joaqu%C3%ADnlq/">Joaquín León Quero</a>
+                            <a class="dropdown-item" href="https://www.linkedin.com/in/aurelio-reyes-s%C3%A1nchez/">Aurelio Reyes Sanchez</a>
+                            <a class="dropdown-item" href="https://www.linkedin.com/in/maría-fernanda-rivera-medina-77aaa522b/">Maria Fernanda Rivera Medina</a>
+                            <a class="dropdown-item" href="https://www.linkedin.com/in/crismoute/">Cristian Mota Ramirez</a>
+                            <a class="dropdown-item" href="https://www.linkedin.com/in/manueldltp/">Manuel Alberto De La Torre Piña</a>
+                            <a class="dropdown-item" href="https://www.linkedin.com/in/naomi-quintero/">Naomi Quintero Flores</a>
                         </div>
                     </li>
     
                     <li class="nav-item">
-                        <a class="nav-link ml-5" href="#">Tienda</a>
+                        <a class="nav-link ml-5" href="../pages/tienda.html">Tienda</a>
                     </li>
     
                     <li class="nav-item">
-                        <a class="nav-link ml-5" href="#">Contáctenos</a>
+                        <a class="nav-link ml-5" href="../pages/form.html">Contáctenos</a>
                     </li>
     
                     <li class="nav-item">
-                        <a class="nav-link ml-5" href="#">Blog</a>
+                        <a class="nav-link ml-5" href="../pages/blog.html">Blog</a>
                     </li>
      
                 </ul>

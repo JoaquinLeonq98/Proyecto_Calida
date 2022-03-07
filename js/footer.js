@@ -52,14 +52,14 @@
             <div class="col-md-4 col-lg-3 col-xl-3 mt-2">
                 <!-- Links -->
                 <h6 class="text-uppercase mb-4 titulo-footer">Información</h6>
-                <p class="text-white"><a href="#!" target="_blank" class="text-reset">Contáctanos</a></p>
+                <p class="text-white"><a href="../pages/aboutUs.html" target="_blank" class="text-reset">Contáctanos</a></p>
                 <p class="text-white"><a href="#!" target="_blank" class="text-reset">Politicas de Privacidad</a></p>
                 <p class="text-white"><a href="#!" target="_blank" class="text-reset">Términos y Condiciones</a></p>
             </div>
             <!-- Termina Información -->
             
             </div><!-- Contenido -->
-        </div><!--Cpntainer-->
+        </div><!--Container-->
         </section>
         <!-- Section: Links  -->
     
@@ -72,8 +72,10 @@
     </footer>
    
 `;
-// A la constante "ancla" se le da ubicacion por medio del id="anclaFooter"
-const ancla = document.getElementById("anclaFooter");
+window.addEventListener("load", function(){
+    // A la constante "ancla" se le da ubicacion por medio del id="anclaFooter"
+    const ancla = document.getElementById("anclaFooter");
 
-// Asigna el contenido de "contenidoFooter" y devuelve la sintaxis HTML con un "innerHTML" a la constante "anclaF"
-ancla.innerHTML= contenidoFooter;
+    // Asigna el contenido de "contenidoFooter" y devuelve la sintaxis HTML con un "innerHTML" a la constante "anclaF"
+    ancla.innerHTML= contenidoFooter;
+});

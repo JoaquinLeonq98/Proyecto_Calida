@@ -1,13 +1,4 @@
 @import url(./navBar.css);
 @import url(./aboutUs.css);
-
 @import url(./footer.css);
-
-
-#particles-js {
-  background: #efa0f5;
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  z-index: -1;
-}
+@import url(./form.css);
