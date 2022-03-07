@@ -52,7 +52,7 @@
             <div class="col-md-4 col-lg-3 col-xl-3 mt-2">
                 <!-- Links -->
                 <h6 class="text-uppercase mb-4 titulo-footer">Información</h6>
-                <p class="text-white"><a href="#!" target="_blank" class="text-reset">Contáctanos</a></p>
+                <p class="text-white"><a href="../pages/aboutUs.html" target="_blank" class="text-reset">Contáctanos</a></p>
                 <p class="text-white"><a href="#!" target="_blank" class="text-reset">Politicas de Privacidad</a></p>
                 <p class="text-white"><a href="#!" target="_blank" class="text-reset">Términos y Condiciones</a></p>
             </div>
