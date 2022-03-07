@@ -59,7 +59,7 @@
             <!-- Termina Información -->
             
             </div><!-- Contenido -->
-        </div><!--Cpntainer-->
+        </div><!--Container-->
         </section>
         <!-- Section: Links  -->
     
