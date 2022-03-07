@@ -17,7 +17,7 @@
                 <ul class="navbar-nav m-auto">
     
                     <li class="nav-item dropdown" id="menu">
-                        <a class="nav-link dropdown-toggle ml-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"  aria-expanded="false">
+                        <a class="nav-link dropdown-toggle ml-5" href="../pages/aboutUs.html" id="navbarDropdown" role="button" data-toggle="dropdown"  aria-expanded="false">
                             Nosotros
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
