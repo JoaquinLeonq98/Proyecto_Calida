@@ -24,7 +24,7 @@
                             <a class="dropdown-item" href="#">Carlos Alberto López Benítez</a>
                             <a class="dropdown-item" href="#">Joaquín León Quero</a>
                             <a class="dropdown-item" href="#">Aurelio Reyes Sanchez</a>
-                            <a class="dropdown-item" href="#">Maria Fernanda Rivera Medina</a>
+                            <a class="dropdown-item" href="https://www.linkedin.com/in/maría-fernanda-rivera-medina-77aaa522b/">Maria Fernanda Rivera Medina</a>
                             <a class="dropdown-item" href="#">Cristian Mota Ramirez</a>
                             <a class="dropdown-item" href="#">Manuel Alberto De La Torre Piña</a>
                             <a class="dropdown-item" href="#">Naomi Quintero Flores</a>
