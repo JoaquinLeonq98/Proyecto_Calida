@@ -21,7 +21,7 @@
                             Nosotros
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Carlos Alberto López Benítez</a>
+                            <a class="dropdown-item" href="https://www.linkedin.com/in/calbertolb/">Carlos Alberto López Benítez</a>
                             <a class="dropdown-item" href="#">Joaquín León Quero</a>
                             <a class="dropdown-item" href="#">Aurelio Reyes Sanchez</a>
                             <a class="dropdown-item" href="https://www.linkedin.com/in/maría-fernanda-rivera-medina-77aaa522b/">Maria Fernanda Rivera Medina</a>
