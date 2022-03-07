@@ -32,7 +32,7 @@
                     </li>
     
                     <li class="nav-item">
-                        <a class="nav-link ml-5" href="#">Tienda</a>
+                        <a class="nav-link ml-5" href="../pages/tienda.html">Tienda</a>
                     </li>
     
                     <li class="nav-item">
@@ -40,7 +40,7 @@
                     </li>
     
                     <li class="nav-item">
-                        <a class="nav-link ml-5" href="#">Blog</a>
+                        <a class="nav-link ml-5" href="../pages/blog.html">Blog</a>
                     </li>
      
                 </ul>
