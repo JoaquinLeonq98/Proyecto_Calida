@@ -65,7 +65,7 @@
     
         <!-- Copyright -->
         <div class="text-center p-4 bg-dark rights">
-        © CÁLIDA All Rights Reserved
+        © CÁLIDA All Rights Reserved - <a  href="../pages/aboutUs.html" >Desarrollado por LabCode</a>
         </div>
     <!--Termina Footer-->
 
