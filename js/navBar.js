@@ -5,7 +5,7 @@
  <nav class="navbar navbar-expand-lg navbar-light bg-light " style="background-color: #ffffff;">
      
         <div>
-            <img class=" mb-3 img-fluid "src="../img/calidaLogo.png" alt="logo">
+            <a href="./index.html"> <img class=" mb-3 img-fluid "src="../img/calidaLogo.png" alt="logo"></a>
         </div> 
         </a> 
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
