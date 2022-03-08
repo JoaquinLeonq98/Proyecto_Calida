@@ -1,0 +1,66 @@
+.formulario {
+  background-color: #efece8;
+  /**utilizar el valor mas pequeño**/
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 1rem;
+}
+
+.formulario fieldset {
+  border: none;
+}
+
+.formulario legend {
+  margin: auto;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000;
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-size: 2rem;
+}
+
+.input-text {
+  background: #ffffff;
+  /* fallback for old browsers */
+  width: 80%;
+  border: none;
+  padding: 1.5rem;
+  color: rgb(0, 0, 0);
+}
+
+.boton {
+  background-color: #788a6a;
+  color: #ffffff;
+  padding: 1rem 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  font-size: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .boton {
+    width: auto;
+  }
+}
+
+.boton:hover {
+  cursor: pointer;
+}

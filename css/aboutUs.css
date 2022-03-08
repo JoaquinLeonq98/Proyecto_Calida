@@ -1,0 +1,18 @@
+#particles-js {
+  background: #f7c09b;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
+}
+
+.card {
+  border-radius: 1em;
+  /* text-align: center; */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.img-fluid {
+  border-radius: 1rem;
+  height: 100%;
+}

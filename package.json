@@ -1,0 +1,25 @@
+{
+  "name": "proyecto_calida",
+  "version": "1.0.0",
+  "description": "Proyecto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoaquinLeonq98/Proyecto_Calida.git"
+  },
+  "keywords": [
+    "calida"
+  ],
+  "author": "Joaquin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoaquinLeonq98/Proyecto_Calida/issues"
+  },
+  "homepage": "https://github.com/JoaquinLeonq98/Proyecto_Calida#readme",
+  "dependencies": {
+    "sweetalert2": "^11.4.4"
+  }
+}
