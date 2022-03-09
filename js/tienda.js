@@ -42,3 +42,28 @@ addItem({'name':'Cuna de Moisés ',
     'img': './img/calidamx-p5.jpg' ,
     'price': '$280',
     'description':'Si necesitas una plantita resistente, las aglaonemas son la respuesta 💚 Riega una vez a la semana🌊 y ponla cerquita de la ventana☀️ pero también se adapta muy bien a semisombra.👌'});
+
+    addItem({'name':'Monsteras deliciosa ',
+    'img': './img/calidamx-p6.jpg' ,
+    'price': '$160',
+    'description':'🌿 ¿Sabías que cuando las monsteras deliciosas son jovenes no tienen agujeros en sus hojas? Estos agujeros se llaman “fenestraciones” y comienzan a salir para dejar pasar luz a las hojas previas cuando la planta alcanza la madurez. ✨'});
+
+    addItem({'name':'Plantita bonita ',
+    'img': './img/calidamx-p7.jpg' ,
+    'price': '$160',
+    'description':'🌿  ✨'});
+
+    addItem({'name':'Calathea makoyana ',
+    'img': './img/calidamx-p8.jpg' ,
+    'price': '$110',
+    'description':'¿Sabías que a la calathea makoyana también la conocen como “planta pavo real”? 🦚 Te ayudará a crear ambientes húmedos para tus demás  plantitas 🌿 y es ideal si tienes 🐶🐱 porque es petfriendly.⚡'});
+
+    addItem({'name':'Plantita bonita 2',
+    'img': './img/calidamx-p9.jpg' ,
+    'price': '$100',
+    'description':'plantita'});
+
+    addItem({'name':'Rosario, Hoja de sandia y Espada mini ',
+    'img': './img/calidamx-p10.jpg' ,
+    'price': '$190',
+    'description':'¿Buscas plantas pequeñas para tu escritorio? ✍️ 🌿¡Estas tres son perfectas para ti! ya que crecen muy lento y no tendrás que cambiarlas demaceta en mucho mucho tiempo. ✨💓'});
