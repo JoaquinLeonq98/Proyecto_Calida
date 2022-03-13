@@ -17,7 +17,7 @@ const contenidoFooter2 = `
            
            <div class="row mt-3 contenidof"><!--Contenido-->
 
-           <!-- Lado izq (logo) -->
+           <!-- (logo) -->
            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 ruleta">
                <!-- Content -->
                <ul>
@@ -25,7 +25,7 @@ const contenidoFooter2 = `
                <li><p class="text-white">Programando y creando hacia el futuro</p></li>
                </ul>
            </div>
-           <!-- lado izq (logo) -->
+           <!--(logo) -->
            
            </div><!-- Contenido -->
        </div><!--Container-->
