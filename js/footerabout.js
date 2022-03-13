@@ -5,7 +5,7 @@ const contenidoFooter2 = `
    <footer class="text-center text-lg-start text-muted contenido bajarFooter">
        <!-- Línea arriba -->
        <section
-       class="d-flex justify-content-center mx-auto justify-content-lg-between p-4 contenido">
+       class="d-flex justify-content-center mx-auto justify-content-lg-between p-4 contenidof">
 
        </section>
        <!-- Termina Línea arriba -->
@@ -18,11 +18,12 @@ const contenidoFooter2 = `
            <div class="row mt-3 contenidof"><!--Contenido-->
 
            <!-- Lado izq (logo) -->
-           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 ruleta">
                <!-- Content -->
-               <img class="mb-4" src="../img/labCodelogo(1).png" alt="logo" height="100px">
-               <p class="text-white">Programando y creando hacia el futuro</p>
-               
+               <ul>
+               <li><img src="../img/labCodelogo.png" alt="logo" height="100px"></li>
+               <li><p class="text-white">Programando y creando hacia el futuro</p></li>
+               </ul>
            </div>
            <!-- lado izq (logo) -->
            
