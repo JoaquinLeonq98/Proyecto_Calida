@@ -15,7 +15,7 @@ class UI {
     element.innerHTML = `
   
     <div class="card text-center mb-2 mt-3">
-    <img src="${producto.image}" class="card-img-top img-thumbnail" alt="...">  
+    <img src="${producto.image}" class="card-img-top img-thumbnail img-fluid" alt="...">  
       <div class="card-body"> 
         <strong>Producto</strong>: ${producto.name}
         <strong>Precio</strong>: ${producto.price}
