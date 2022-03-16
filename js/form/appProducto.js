@@ -85,8 +85,8 @@ form.addEventListener("submit", function (event) {
 
   const ui = new UI();
   //condicion para la validacion de datos
-  if(name === ''|| price === '' || description === ''){
-     return ui.showMesage('Porfavor llene los campos', 'info');
+  if(name === ''|| price === '' || description === '' || imagen === ''){
+     return ui.showMesage('Campos incompletos, favor de llenarlos', 'warning');
   }//temrmina funcion de validacion 
 
   ui.addProduct(producto);
