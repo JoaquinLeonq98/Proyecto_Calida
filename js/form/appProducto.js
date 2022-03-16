@@ -1,8 +1,9 @@
 class Product {
-  constructor(name, price, description) {
+  constructor(name, price, description,img) {
     this.name = name;
     this.price = price;
     this.description = description;
+    this.img = this.img;
   }
 }
 
@@ -14,7 +15,8 @@ class UI {
     element.innerHTML = `
   
     <div class="card text-center mb-2 mt-3">
-        <div class="card-body"> 
+    <img src="${producto.img}" class="card-img-top img-thumbnail img-fluid" alt="...">  
+      <div class="card-body"> 
         <strong>Producto</strong>: ${producto.name}
         <strong>Precio</strong>: ${producto.price}
         <strong>Descripcion</strong>: ${producto.description}
@@ -68,10 +70,11 @@ form.addEventListener("submit", function (event) {
   const name = document.getElementById("name").value;
   const price = document.getElementById("price").value;
   const description = document.getElementById("description").value;
+  const imagen = document.getElementById("image").value;
 
-  console.log(name, price, description);
+  console.log(name, price, description,imagen);
 
-  const producto = new Product(name, price, description);
+  const producto = new Product(name, price, description, imagen);
 
   const ui = new UI();
   //condicion para la validacion de datos
