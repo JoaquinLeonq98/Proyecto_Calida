@@ -3,9 +3,11 @@ class Product {
     this.name = name;
     this.price = price;
     this.description = description;
-    this.img = this.img;
+    this.img = img;
   }
 }
+
+
 
 // Objeto que se crea en el Dom y su compportamiento al apretar un boton
 class UI {
@@ -15,12 +17,11 @@ class UI {
     element.innerHTML = `
   
     <div class="card text-center mb-2 mt-3">
-    <img src="${producto.img}" class="card-img-top img-thumbnail img-fluid" alt="...">  
+    <img src="${producto.img}" class="card-img-top img-thumbnail img-fluid image" alt="...">  
       <div class="card-body"> 
-        <strong>Producto</strong>: ${producto.name}
-        <strong>Precio</strong>: ${producto.price}
-        <strong>Descripcion</strong>: ${producto.description}
-        <a href='#' class ="btn btn-success" name ="add">Agregar</a>
+        <strong id="name">Producto</strong>: ${producto.name}
+        <strong id="price">Precio</strong>: ${producto.price}
+        <strong id="description">Descripcion</strong>: ${producto.description}
         <a href='#' class ="btn btn-danger" name ="delete">Eliminar</a>
         </div>
          
@@ -72,14 +73,20 @@ form.addEventListener("submit", function (event) {
   const description = document.getElementById("description").value;
   const imagen = document.getElementById("image").value;
 
+  let b = {name:name,price:price,description:description,img:imagen}; //Creación de JSON
+  let b_user=JSON.stringify(b);
+  localStorage.setItem("Info",b_user); //Se agrega a localStorage
+
+
+
   console.log(name, price, description,imagen);
 
   const producto = new Product(name, price, description, imagen);
 
   const ui = new UI();
   //condicion para la validacion de datos
-  if(name === ''|| price === '' || description === ''){
-     return ui.showMesage('Porfavor llene los campos', 'info');
+  if(name === ''|| price === '' || description === '' || imagen === ''){
+     return ui.showMesage('Campos incompletos, favor de llenarlos', 'warning');
   }//temrmina funcion de validacion 
 
   ui.addProduct(producto);
@@ -92,6 +99,7 @@ form.addEventListener("submit", function (event) {
 document
   .getElementById("product-list")
   .addEventListener("click", function (event) {
+    localStorage.removeItem("Info");
     const ui = new UI();
     ui.deleteProduct(event.target);
   });
@@ -103,3 +111,5 @@ document
     const ui = new UI();
     ui.successProduct(event.target);
   });
+
+  
