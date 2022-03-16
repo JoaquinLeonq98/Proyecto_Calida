@@ -1,9 +1,9 @@
 class Product {
-  constructor(name, price, description,image) {
+  constructor(name, price, description,img) {
     this.name = name;
     this.price = price;
     this.description = description;
-    this.image = image;
+    this.img = this.img;
   }
 }
 
@@ -15,7 +15,7 @@ class UI {
     element.innerHTML = `
   
     <div class="card text-center mb-2 mt-3">
-    <img src="${producto.image}" class="card-img-top img-thumbnail img-fluid" alt="...">  
+    <img src="${producto.img}" class="card-img-top img-thumbnail img-fluid" alt="...">  
       <div class="card-body"> 
         <strong>Producto</strong>: ${producto.name}
         <strong>Precio</strong>: ${producto.price}
