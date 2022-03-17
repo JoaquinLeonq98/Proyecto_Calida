@@ -32,9 +32,9 @@
             <div class="col-md-2 col-lg-2 col-xl-2 mt-2">
                 <!-- Links -->
                 <h6 class="text-uppercase mb-4 titulo-footer">Descubre</h6>
-                <p class="text-white"><a href="#!" target="_blank" class="text-reset">Lo nuevo</a></p>
-                <p class="text-white"><a href="#!" target="_blank" class="text-reset">Lo más buscado</a></p>
-                <p class="text-white"><a href="#!" target="_blank" class="text-reset">Lo más vendido</a></p>
+                <p class="text-white"><a href="../pages/prox.html" target="_blank" class="text-reset">Lo nuevo</a></p>
+                <p class="text-white"><a href="../pages/prox.html" target="_blank" class="text-reset">Lo más buscado</a></p>
+                <p class="text-white"><a href="../pages/prox.html" target="_blank" class="text-reset">Lo más vendido</a></p>
             </div>
             <!-- Termina Descubre -->
     
@@ -42,9 +42,9 @@
             <div class="col-md-3 col-lg-2 col-xl-2 mt-2">
                 <!-- Links -->
                 <h6 class="text-uppercase mb-4 titulo-footer">Acerca de</h6>
-                <p class="text-white"><a href="#!" target="_blank" class="text-reset">Ayuda</a></p>
-                <p class="text-white"><a href="#!" target="_blank" class="text-reset">Envíos</a></p>
-                <p class="text-white"><a href="#!" target="_blank" class="text-reset">Cuenta</a></p>
+                <p class="text-white"><a href="../pages/prox.html" target="_blank" class="text-reset">Ayuda</a></p>
+                <p class="text-white"><a href="../pages/prox.html" target="_blank" class="text-reset">Envíos</a></p>
+                <p class="text-white"><a href="../pages/prox.html" target="_blank" class="text-reset">Cuenta</a></p>
             </div>
             <!-- Termina Acerca de -->
     
@@ -53,8 +53,9 @@
                 <!-- Links -->
                 <h6 class="text-uppercase mb-4 titulo-footer">Información</h6>
                 <p class="text-white"><a href="../pages/aboutUs.html" target="_blank" class="text-reset">Contáctanos</a></p>
-                <p class="text-white"><a href="#!" target="_blank" class="text-reset">Politicas de Privacidad</a></p>
-                <p class="text-white"><a href="#!" target="_blank" class="text-reset">Términos y Condiciones</a></p>
+                <p class="text-white"><a href="../pages/prox.html" target="_blank" class="text-reset">Politicas de Privacidad</a></p>
+                <p class="text-white"><a href="../pages/prox.html" target="_blank" class="text-reset">Términos y Condiciones</a></p>
+                <a href="../pages/producto.html" class="ml-3" target="_blank"><img src="../img/iconmonstr-door-5.svg" style="margin-top: 8%;"alt="logo entrar" height="35px"></a>
             </div>
             <!-- Termina Información -->
             

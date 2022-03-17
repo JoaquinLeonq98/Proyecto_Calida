@@ -35,10 +35,10 @@
                 </ul>
 
              <form class="form-inline my-2 my-lg-0">
-                <a class="" href="#" type="submit" target="_blank"
+                <a class="" href="../pages/prox.html" type="submit" target="_blank"
                 ><img src="../img/iconmonstr-user-7.svg" alt="icono usuario"/></a>
 
-                <a class="ml-4 spaceIcon" href="#" type="submit" target="_blank" 
+                <a class="ml-4 spaceIcon" href="../pages/prox.html" type="submit" target="_blank" 
                 ><img src="../img/iconmonstr-shopping-cart-2.svg" alt="icono carrito de compras"/></a>
 
              </form>
