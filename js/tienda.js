@@ -9,7 +9,7 @@ function addItem(item){
                     <p class="card-text">${item.description}</p>
                     </div>
                 <div class="card-footer">
-            <div class="text-center"><button type="button" class="btn btn-outline-dark">Add to cart</button>\n </div>
+            <div class="text-center"><button type="button" class="btn btn-outline-dark">Agregar al carrito</button>\n </div>
         </div>
     </div>
 </div>`;

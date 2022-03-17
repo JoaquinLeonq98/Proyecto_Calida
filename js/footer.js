@@ -53,7 +53,7 @@
                 <!-- Links -->
                 <h6 class="text-uppercase mb-4 titulo-footer">Información</h6>
                 <p class="text-white"><a href="../pages/aboutUs.html" target="_blank" class="text-reset">Contáctanos</a></p>
-                <p class="text-white"><a href="../pages/prox.html" target="_blank" class="text-reset">Politicas de Privacidad</a></p>
+                <p class="text-white"><a href="../pages/prox.html" target="_blank" class="text-reset">Políticas de Privacidad</a></p>
                 <p class="text-white"><a href="../pages/prox.html" target="_blank" class="text-reset">Términos y Condiciones</a></p>
                 <a href="../pages/producto.html" class="ml-3" target="_blank"><img src="../img/iconmonstr-door-5.svg" style="margin-top: 8%;"alt="logo entrar" height="35px"></a>
             </div>
@@ -66,7 +66,7 @@
     
         <!-- Copyright -->
         <div class="text-center p-4 bg-dark rights">
-        © CÁLIDA All Rights Reserved - <a  href="../pages/aboutUs.html" >Desarrollado por LabCode</a>
+        © CÁLIDA Todos los derechos reservados - <a  href="../pages/aboutUs.html" >Desarrollado por LabCode</a>
         </div>
     <!--Termina Footer-->
 
