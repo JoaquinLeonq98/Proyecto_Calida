@@ -30,7 +30,7 @@
                 </li>
     
                 <li class="nav-item">
-                    <a class="nav-link mr-5" href="../pages/form.html">Contáctenos</a>
+                    <a class="nav-link mr-5" href="../pages/form.html">Contáctanos</a>
                 </li>
     
                 <li class="nav-item">
