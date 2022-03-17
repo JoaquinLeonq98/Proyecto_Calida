@@ -34,7 +34,7 @@
                 </li>
     
                 <li class="nav-item">
-                    <a class="nav-link mr-5" href="../pages/blog.html">Blog</a>
+                    <a class="nav-link mr-5" href="../pages/index.html">Cálida</a>
                 </li>
             </ul>
         </div>    
