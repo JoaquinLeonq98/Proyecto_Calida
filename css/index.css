@@ -1,0 +1,24 @@
+.backg{
+    background-color: white ;
+    opacity:0.65;
+    max-width: 90%;
+    max-height: 50%;
+    margin-bottom: 22%;
+}
+
+.bgImage{
+
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+#backEstelar{
+    background-color: #EFECE8;
+
+}
+
+#backTestimonios{
+    background-color: azure;
+  
+}
+
