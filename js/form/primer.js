@@ -46,7 +46,7 @@ formRespuesta.addEventListener('submit', (evento) => {
       icon: 'success',
       title: 'Se ha enviado correctamente',
       showConfirmButton: false,
-      timer: 1000,
+      timer: 2300,
     });
     window.open(
       'mailto:joaquinleonquero00@gmail.com?subject=subject&body=' +
@@ -54,14 +54,14 @@ formRespuesta.addEventListener('submit', (evento) => {
     );
     setTimeout(function () {
       document.getElementById('resp').reset();
-    }, 1000);
+    }, 2300);
   } else {
     Swal.fire({
       position: 'top-center',
       icon: 'error',
       title: '¡Error, alguno de tu campos es incorrecto!',
       showConfirmButton: false,
-      timer: 1000,
+      timer: 2300,
     });
   }
 });
