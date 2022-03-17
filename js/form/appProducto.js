@@ -59,7 +59,7 @@ class UI {
     //metodo y funcion de temporizador para elminar la alerta 
     setTimeout(function(){
         document.querySelector('.alert').remove();
-    },2000);
+    },2300);
   }
 }
 
@@ -86,7 +86,7 @@ form.addEventListener("submit", function (event) {
   const ui = new UI();
   //condicion para la validacion de datos
   if(name === ''|| price === '' || description === '' || imagen === ''){
-     return ui.showMesage('Campos incompletos, favor de llenarlos', 'warning');
+    return ui.showMesage('Campos incompletos, favor de llenarlos', 'warning');
   }//temrmina funcion de validacion 
 
   ui.addProduct(producto);
