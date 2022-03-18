@@ -12,62 +12,104 @@
         <!-- Barra de navegacion -->
         <header id="anclaNavBar"></header>
 
-            <!-- Form App -->
-    <div class="container">
-        <div id="App" class="row pt-5">
+        <div class="row ">
+            <!-- Form Iniciar Sesión -->
+    <div class="container col-lg-4">
+        <div id="App" class="p-3">
           <div class="card">
             <div class="card-header">
               <h4>Iniciar sesión</h4>
             </div>
-            <form id="producto-form" class="card-body form">
+            <form id="logInCliente" class="card-body form">
               <!-- Se cambiara el id por una accion para enviar a un servidor -->
               <div class="form-group">
-                <label for="exampleFormControlInput1">Usuario</label>
+                <label for="exampleFormControlInput1">Correo</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="correo1"
+                  placeholder="Correo"
+                />
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Contraseña</label>
+                <input
+                  type="password" 
+                  class="form-control"
+                  id="password1"
+                  placeholder="Constraseña"
+                />
+              </div>
+        
+              <input type="submit" value="Ingresar" class="btn btn-success btn-block">
+            </form>
+          </div>
+          <div id="" class="col-md-8 col-ms-6"></div>
+        </div>
+        
+      </div>
+      <!-- Termina Form Iniciar Sesión-->
+
+            <!-- Form Crear cuenta -->
+    <div class="container col-lg-4">
+        <div id="App" class=" p-3">
+          <div class="card">
+            <div class="card-header">
+              <h4>Crear cuenta</h4>
+            </div>
+            <form id="crearCuenta" class="card-body form">
+              <!-- Se cambiara el id por una accion para enviar a un servidor -->
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Correo</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="correo2"
+                  placeholder="Correo" />
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Nombre</label>
                 <input
                   type="text"
                   class="form-control"
                   id="name"
-                  placeholder="Producto"
-                />
+                  placeholder="Nombre" />
               </div>
               <div class="form-group">
-                <label for="exampleFormControlSelect1">Constraseña</label>
+                <label for="exampleFormControlInput1">Apellidos</label>
                 <input
-                  type="number" step="0.01"
+                  type="text"
                   class="form-control"
-                  id="price"
-                  placeholder="Precio"
-                />
+                  id="apellidos"
+                  placeholder="Apellidos" />
               </div>
               <div class="form-group">
-                <label for="exampleFormControlTextarea1"
-                  >Descripción de Producto</label
-                >
-                <textarea
-                  class="form-control"
-                  id="description"
-                  rows="5"
-                  placeholder="Descripción..."
-                ></textarea>
-              </div>
-              <div class="form-group">
+                <label for="exampleFormControlInput1">Teléfono/Celular</label>
                 <input
-                type="text" 
-                class="form-control"
-                id="image"
-                placeholder="Imagen"
-              />
-                <br>
+                type="tel" 
+                  class="form-control"
+                  id="telefono"
+                  placeholder="Teléfono/Celular" />
               </div>
-              <input type="submit" value="Agregar" class="btn btn-success btn-block">
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Contraseña</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password2"
+                  placeholder="Constraseña" />
+              </div>
+              
+        
+              <input type="submit" value="Ingresar" class="btn btn-success btn-block">
             </form>
           </div>
-          <div id="product-list" class="col-md-8 col-ms-6"></div>
+          <div id="" class="col-md-8 col-ms-6"></div>
         </div>
         
       </div>
-      <!-- Termina App Form -->
-
+      <!-- Termina Form Crear Cuenta-->
+    </div>
 
 
     <!--Ancla footer-->
