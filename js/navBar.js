@@ -17,7 +17,7 @@
                 <ul class="navbar-nav m-auto">
     
                     <li class="nav-item">
-                        <a class="nav-link ml-5" href="../pages/nosotros.html">Nosotros</a>
+                        <a class="nav-link ml-5" href="../pages/aboutUs.html">Nosotros</a>
                     </li>
 
                     <li class="nav-item">
