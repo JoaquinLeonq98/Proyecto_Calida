@@ -42,17 +42,17 @@ class Cliente {
     }
   }
 
-  const crearCliente = document.getElementById("logInCliente");
+  const crearCliente = document.getElementById("crearCuenta");
 crearCliente.addEventListener("submit", function (event) {
   const correo = document.getElementById("correo2").value;
   const name = document.getElementById("name").value;
   const apellidos = document.getElementById("apellidos").value;
   const telefono = document.getElementById("telefono").value;
-  const password = document.getElementById("password").value;
+  const password = document.getElementById("password2").value;
 
-  let b = {correo:correo,name:name,apellidos:apellidos,telefono:telefono,password:password}; //Creación de JSON
-  let b_user=JSON.stringify(b);
-  localStorage.setItem("Info",b_user); //Se agrega a localStorage
+  let a = {correo:correo,name:name,apellidos:apellidos,telefono:telefono,password:password}; //Creación de JSON
+  let a_user=JSON.stringify(a);
+  localStorage.setItem("Info",a_user); //Se agrega a localStorage
 
 
 
