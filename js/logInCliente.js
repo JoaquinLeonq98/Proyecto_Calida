@@ -41,7 +41,13 @@ class Cliente {
       },2300);
     }
   }
+function validateEmail (email)  {
+  return email.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+};
 
+function validateTel (tel)  {
+  return tel.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im);
+};
   const crearCliente = document.getElementById("crearCuenta");
 crearCliente.addEventListener("submit", function (event) {
   const correo = document.getElementById("correo2").value;
@@ -54,7 +60,16 @@ crearCliente.addEventListener("submit", function (event) {
   let a_user=JSON.stringify(a);
   localStorage.setItem("Info",a_user); //Se agrega a localStorage
 
-
+  if(validateEmail(correo)){
+    alert("correo correcto");
+  } else{
+    alert("Correo no válido");
+  }
+  if(validateTel(telefono)){
+    alert("telefono incorrecto");
+  } else{
+    alert("no valido");
+  }
 
   console.log(correo, name, apellidos, telefono, password);
 
