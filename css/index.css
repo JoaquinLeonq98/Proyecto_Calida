@@ -24,18 +24,16 @@
 
 .hexCalida{
     color:#252524;
-  
-}
-.hexCalida:hover{
+}.hexCalida:hover{
     color:#678877;
     text-decoration:none;
 }
 
-.fa-solid{
+#fasolid{
     color:#678877;
-    font-size: 17px;
-}
-.fa-solid:hover{
+    font-size: 22px;
+} #fasolid:hover{
     color:#9FAB97;
-    font-size: 20px;
+    font-size: 23px;
 }
+

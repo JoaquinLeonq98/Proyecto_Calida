@@ -5,7 +5,7 @@
  <nav class="navbar navbar-expand-lg navbar-light bg-light " style="background-color: #ffffff;">
      
         <div>
-            <a href="./index.html"> <img class=" mb-3 img-fluid "src="../img/calidaLogo.png" alt="logo"></a>
+            <a href="./index.html"> <img class=" mb-3 img-fluid " src="../img/ramitaLogo.png" style="height:35px; margin-left: 0px; alt="logo"></a>
         </div> 
         </a> 
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,7 +14,7 @@
          
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
              
-                <ul class="navbar-nav m-auto">
+                <ul class="navbar-nav m-auto" id="colorLink">
     
                     <li class="nav-item">
                         <a class=" ml-5 hexCalida" href="../pages/aboutUs.html">Nosotros</a>
@@ -34,12 +34,12 @@
      
                 </ul>
 
-             <form class="form-inline my-2 my-lg-0">
+             <form class="form-inline my-2 my-lg-0" id="navbarSupportedContent">
                 <a class="" href="../pages/prox.html" type="submit" target="_blank"
-                ><i class="fa-solid fa-user" ></i></a>
+                ><i class="fa-solid fa-user" id="fasolid"></i></a>
 
                 <a class="ml-4 spaceIcon" href="../pages/prox.html" type="submit" target="_blank" 
-                ><i class="fa-solid fa-cart-shopping"></i></a>
+                ><i class="fa-solid fa-cart-shopping" id="fasolid"></i></a>
 
              </form>
          </div>    
