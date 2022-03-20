@@ -22,3 +22,20 @@
   
 }
 
+.hexCalida{
+    color:#252524;
+  
+}
+.hexCalida:hover{
+    color:#678877;
+    text-decoration:none;
+}
+
+.fa-solid{
+    color:#678877;
+    font-size: 17px;
+}
+.fa-solid:hover{
+    color:#9FAB97;
+    font-size: 20px;
+}

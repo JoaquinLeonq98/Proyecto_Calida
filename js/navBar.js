@@ -17,29 +17,29 @@
                 <ul class="navbar-nav m-auto">
     
                     <li class="nav-item">
-                        <a class="nav-link ml-5" href="../pages/aboutUs.html">Nosotros</a>
+                        <a class=" ml-5 hexCalida" href="../pages/aboutUs.html">Nosotros</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link ml-5" href="../pages/tienda.html">Tienda</a>
+                        <a class=" ml-5 hexCalida" href="../pages/tienda.html">Tienda</a>
                     </li>
     
                     <li class="nav-item">
-                        <a class="nav-link ml-5" href="../pages/form.html">Contáctanos</a>
+                        <a class=" ml-5 hexCalida" href="../pages/form.html">Contáctanos</a>
                     </li>
     
                     <li class="nav-item">
-                        <a class="nav-link ml-5" href="../pages/blog.html">Blog</a>
+                        <a class=" ml-5 hexCalida" href="../pages/blog.html">Blog</a>
                     </li>
      
                 </ul>
 
              <form class="form-inline my-2 my-lg-0">
                 <a class="" href="../pages/prox.html" type="submit" target="_blank"
-                ><img src="../img/iconmonstr-user-7.svg" alt="icono usuario"/></a>
+                ><i class="fa-solid fa-user" ></i></a>
 
                 <a class="ml-4 spaceIcon" href="../pages/prox.html" type="submit" target="_blank" 
-                ><img src="../img/iconmonstr-shopping-cart-2.svg" alt="icono carrito de compras"/></a>
+                ><i class="fa-solid fa-cart-shopping"></i></a>
 
              </form>
          </div>    
