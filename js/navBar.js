@@ -50,3 +50,11 @@ const ancla = document.getElementById("anclaNavBar");
 
 // Asigna el contenido de "contenidoNavbar" y devuelve la sintaxis HTML con un "innerHTML" a la constante "ancla"
 ancla.innerHTML = contenidoNavbar;
+
+
+$(".hover").mouseleave(
+    function () {
+      $(this).removeClass("hover");
+    }
+  );
+  

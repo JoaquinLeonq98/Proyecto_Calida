@@ -22,6 +22,13 @@
   
 }
 
+
+.rosaCalida{
+color:#D29293;
+}
+.verdeCalida{
+color:#9FAB97;
+}
 .hexCalida{
     color:#252524;
 }.hexCalida:hover{
@@ -37,3 +44,119 @@
     font-size: 23px;
 }
 
+
+figure.opinionIndex {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  background-color: #000000;
+}
+figure.opinionIndex *,
+figure.opinionIndex *:before,
+figure.opinionIndex *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.55s ease;
+  transition: all 0.55s ease;
+}
+figure.opinionIndex img {
+  max-width: 100%;
+  backface-visibility: hidden;
+  vertical-align: top;
+  opacity: 0.9;
+}
+figure.opinionIndex .title {
+  position: absolute;
+  top: 58%;
+  left: 25px;
+  padding: 5px 10px 10px;
+}
+figure.opinionIndex .title:before,
+figure.opinionIndex .title:after {
+  height: 2px;
+  width: 400px;
+  position: absolute;
+  content: '';
+  background-color: #ffffff;
+}
+figure.opinionIndex .title:before {
+  top: 0;
+  left: 10px;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+figure.opinionIndex .title:after {
+  bottom: 0;
+  right: 10px;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+figure.opinionIndex .title div:before {
+  top: 10px;
+  right: 0;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+figure.opinionIndex .title div:after {
+  bottom: 10px;
+  left: 0;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+figure.opinionIndex h2,
+figure.opinionIndex h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+figure.opinionIndex h2 {
+  font-weight: 400;
+}
+figure.opinionIndex h4 {
+  display: block;
+  font-weight: 700;
+  background-color: #ffffff;
+  padding: 5px 10px;
+  color: #000000;
+}
+figure.opinionIndex figcaption {
+  position: absolute;
+  bottom: 42%;
+  left: 25px;
+  text-align: left;
+  opacity: 0;
+  padding: 5px 60px 5px 10px;
+  font-size: 0.8em;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+figure.opinionIndex figcaption p {
+  margin: 0;
+}
+figure.opinionIndex a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+figure.opinionIndex:hover img,
+figure.opinionIndex.hover img {
+  zoom: 1;
+  filter: alpha(opacity=35);
+  -webkit-opacity: 0.35;
+  opacity: 0.35;
+}
+
+figure.opinionIndex:hover figcaption,
+figure.opinionIndex.hover figcaption {
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
