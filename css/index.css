@@ -44,7 +44,7 @@ color:#9FAB97;
     font-size: 23px;
 }
 
-
+/* Inicia elementos de sección Opiniones de clientes*/
 figure.opinionIndex {
   position: relative;
   overflow: hidden;
@@ -160,3 +160,45 @@ figure.opinionIndex.hover figcaption {
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
+/* Termina elementos de sección Opiniones de clientes*/
+
+/* Inicia elementos de sección favoritos*/
+.favContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    grid-gap: 2rem;
+    margin: 2rem;
+  }
+  .favCard {
+    height: 215px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  } 
+  .favTitulo {
+    position:absolute;
+    color:#678877;
+    font-size: 24px;
+    margin: 20px 0 0 20px;
+  } 
+  .favTexto {
+    position:absolute;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    align-self: end;
+    margin: 0 0 20px 20px;
+    letter-spacing: 0.5px;
+  }
+  .favCard:hover {
+    transform: scale(1.035, 1.035);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  }
+  .favCard:hover img {
+    transform: translateY(-10px);
+  }
+  /* termina elementos de sección favoritos*/
