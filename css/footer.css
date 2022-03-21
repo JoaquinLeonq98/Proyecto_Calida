@@ -19,8 +19,22 @@
     font-weight: bold;
 }
 
-.bajarFooter{ 
-    bottom: 0;
-    width: 100%;
-    margin-top: 30px;
+
+
+#fasolidFooter {
+    color:#678877;
+    font-size: 35px;
+} #fasolidFooter:hover{
+    color:#9FAB97;
+    font-size: 36px;
+}
+
+#fasolidFooterDos {
+    margin-top: 13px;
+    color:#678877;
+    font-size: 35px;
+} #fasolidFooterDos:hover {
+    margin-top: 13px;
+    color:#9FAB97;
+    font-size: 36px;
 }
