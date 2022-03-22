@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Configuración de productos</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    <link rel="icon" href="../img/favicon.ico">
+    <title>Configuración</title>
+    <!--CSS Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
       integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous" />
+    <!--CSS Main-->
     <link rel="stylesheet" href="../css/main.css" />
+    <!--Icons-->
+    <script src="https://kit.fontawesome.com/6631c06026.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- Barra de navegacion -->
@@ -47,19 +49,27 @@
             </div>
             <div class="form-group">
               <label for="exampleFormControlTextarea1"
-                >Descripcion de Producto</label
+                >Descripción de Producto</label
               >
               <textarea
                 class="form-control"
                 id="description"
                 rows="5"
-                placeholder="Descripcion..."
+                placeholder="Descripción..."
               ></textarea>
+            </div>
+            <div class="form-group">
+              <input
+              type="text" 
+              class="form-control"
+              id="image"
+              placeholder="Imagen"
+            />
+              <br>
             </div>
             <input type="submit" value="Agregar" class="btn btn-success btn-block">
           </form>
         </div>
-        
         <div id="product-list" class="col-md-8 col-ms-6"></div>
       </div>
       

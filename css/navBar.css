@@ -1,4 +1,34 @@
 
 .spaceIcon{
-    margin-right: 1rem;
+  margin-right: 12px;
 }
+
+#colorLink li {
+  margin-right: 70px;
+}
+  
+
+  
+  #colorLink a {
+    position: relative;
+    text-decoration:none;
+  }
+  
+  #colorLink a::before {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    width: 100%;
+    height: 2px;
+    background: #D29293;
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+
+  }
+  
+  #colorLink a:hover::before {
+    transform: scaleX(1);
+  }
+  

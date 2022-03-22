@@ -5,7 +5,7 @@
  <nav class="navbar navbar-expand-lg navbar-light bg-light " style="background-color: #ffffff;">
      
         <div>
-            <a href="./index.html"> <img class=" mb-3 img-fluid "src="../img/calidaLogo.png" alt="logo"></a>
+            <a href="./index.html"> <img class=" mb-3 img-fluid " src="../img/ramitaLogo.png" style="height:35px; margin-left: 0px; alt="logo"></a>
         </div> 
         </a> 
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,32 +14,32 @@
          
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
              
-                <ul class="navbar-nav m-auto">
+                <ul class="navbar-nav m-auto" id="colorLink">
     
                     <li class="nav-item">
-                        <a class="nav-link ml-5" href="../pages/nosotros.html">Nosotros</a>
+                        <a class=" ml-5 hexCalida" href="../pages/aboutUs.html">Nosotros</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link ml-5" href="../pages/tienda.html">Tienda</a>
+                        <a class=" ml-5 hexCalida" href="../pages/tienda.html">Tienda</a>
                     </li>
     
                     <li class="nav-item">
-                        <a class="nav-link ml-5" href="../pages/form.html">Contáctanos</a>
+                        <a class=" ml-5 hexCalida" href="../pages/form.html">Contáctanos</a>
                     </li>
     
                     <li class="nav-item">
-                        <a class="nav-link ml-5" href="../pages/blog.html">Blog</a>
+                        <a class=" ml-5 hexCalida" href="../pages/blog.html">Blog</a>
                     </li>
      
                 </ul>
 
-             <form class="form-inline my-2 my-lg-0">
-                <a class="" href="#" type="submit" target="_blank"
-                ><img src="../img/iconmonstr-user-7.svg" alt="icono usuario"/></a>
+             <form class="form-inline my-2 my-lg-0" id="navbarSupportedContent">
+                <a class="" href="../pages/prox.html" type="submit" target="_blank"
+                ><i class="fa-solid fa-user" id="fasolid"></i></a>
 
-                <a class="ml-4 spaceIcon" href="#" type="submit" target="_blank" 
-                ><img src="../img/iconmonstr-shopping-cart-2.svg" alt="icono carrito de compras"/></a>
+                <a class="ml-4 spaceIcon" href="../pages/prox.html" type="submit" target="_blank" 
+                ><i class="fa-solid fa-cart-shopping" id="fasolid"></i></a>
 
              </form>
          </div>    
@@ -50,3 +50,11 @@ const ancla = document.getElementById("anclaNavBar");
 
 // Asigna el contenido de "contenidoNavbar" y devuelve la sintaxis HTML con un "innerHTML" a la constante "ancla"
 ancla.innerHTML = contenidoNavbar;
+
+
+$(".hover").mouseleave(
+    function () {
+      $(this).removeClass("hover");
+    }
+  );
+  
