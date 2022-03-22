@@ -23,8 +23,8 @@
                 <!-- Content -->
                 <img class="mb-4" src="../img/calida-logo-vf-color-transparent.png" alt="logo" height="100px">
                 <p class="text-white">Tu tienda de plantas y macetas a precios accesibles</p>
-                <a href="https://www.instagram.com/calidamx/" target="_blank"><img src="../img/iconmonstr-instagram-13.svg" alt="logo insta" height="35px"></a>
-                <a href="https://www.facebook.com/CalidaMX/" class="ml-3" target="_blank"><img src="../img/iconmonstr-facebook-3.svg" alt="logo face" height="35px"></a>
+                <a href="https://www.instagram.com/calidamx/" target="_blank"><i class="fa-brands fa-instagram-square" id="fasolidFooter"></i></a>
+                <a href="https://www.facebook.com/CalidaMX/" class="ml-3" target="_blank"><i class="fa-brands fa-facebook-square" id="fasolidFooter"></i></a>
             </div>
             <!-- lado izq (logo) -->
             
@@ -32,9 +32,9 @@
             <div class="col-md-2 col-lg-2 col-xl-2 mt-2">
                 <!-- Links -->
                 <h6 class="text-uppercase mb-4 titulo-footer">Descubre</h6>
-                <p class="text-white"><a href="#!" target="_blank" class="text-reset">Lo nuevo</a></p>
-                <p class="text-white"><a href="#!" target="_blank" class="text-reset">Lo más buscado</a></p>
-                <p class="text-white"><a href="#!" target="_blank" class="text-reset">Lo más vendido</a></p>
+                <p class="text-white"><a href="../pages/prox.html" target="_blank" class="text-reset">Lo nuevo</a></p>
+                <p class="text-white"><a href="../pages/prox.html" target="_blank" class="text-reset">Lo más buscado</a></p>
+                <p class="text-white"><a href="../pages/prox.html" target="_blank" class="text-reset">Lo más vendido</a></p>
             </div>
             <!-- Termina Descubre -->
     
@@ -42,9 +42,9 @@
             <div class="col-md-3 col-lg-2 col-xl-2 mt-2">
                 <!-- Links -->
                 <h6 class="text-uppercase mb-4 titulo-footer">Acerca de</h6>
-                <p class="text-white"><a href="#!" target="_blank" class="text-reset">Ayuda</a></p>
-                <p class="text-white"><a href="#!" target="_blank" class="text-reset">Envíos</a></p>
-                <p class="text-white"><a href="#!" target="_blank" class="text-reset">Cuenta</a></p>
+                <p class="text-white"><a href="../pages/prox.html" target="_blank" class="text-reset">Ayuda</a></p>
+                <p class="text-white"><a href="../pages/prox.html" target="_blank" class="text-reset">Envíos</a></p>
+                <p class="text-white"><a href="../pages/prox.html" target="_blank" class="text-reset">Cuenta</a></p>
             </div>
             <!-- Termina Acerca de -->
     
@@ -53,8 +53,9 @@
                 <!-- Links -->
                 <h6 class="text-uppercase mb-4 titulo-footer">Información</h6>
                 <p class="text-white"><a href="../pages/aboutUs.html" target="_blank" class="text-reset">Contáctanos</a></p>
-                <p class="text-white"><a href="#!" target="_blank" class="text-reset">Politicas de Privacidad</a></p>
-                <p class="text-white"><a href="#!" target="_blank" class="text-reset">Términos y Condiciones</a></p>
+                <p class="text-white"><a href="../pages/prox.html" target="_blank" class="text-reset">Políticas de Privacidad</a></p>
+                <p class="text-white"><a href="../pages/prox.html" target="_blank" class="text-reset">Términos y Condiciones</a></p>
+                <a href="../pages/producto.html" class="ml-3" target="_blank"><i class="fa-solid fa-user-gear" id="fasolidFooterDos"></i></a>
             </div>
             <!-- Termina Información -->
             
@@ -65,7 +66,7 @@
     
         <!-- Copyright -->
         <div class="text-center p-4 bg-dark rights">
-        © CÁLIDA All Rights Reserved - <a  href="../pages/aboutUs.html" >Desarrollado por LabCode</a>
+        © CÁLIDA Todos los derechos reservados - <a  href="../pages/labCode.html" >Desarrollado por LabCode</a>
         </div>
     <!--Termina Footer-->
 

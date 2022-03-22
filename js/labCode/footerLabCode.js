@@ -2,7 +2,7 @@
 const contenidoFooter2 = `
 
 <!-- Footer -->
-   <footer class="text-center text-lg-start text-muted contenido bajarFooter">
+   <footer class="text-center text-lg-start text-muted contenido bajarFooter" style="position: relative;">
        <!-- Línea arriba -->
        <section
        class="d-flex justify-content-center mx-auto justify-content-lg-between p-4 contenidof">
@@ -34,7 +34,7 @@ const contenidoFooter2 = `
    
        <!-- Copyright -->
        <div class="text-center p-4 bg-dark rights">
-       © CÁLIDA All Rights Reserved - <a  href="../pages/aboutUs.html" >Desarrollado por LabCode</a>
+       © labCode Todos los derechos reservados - <a  href="../pages/aboutUs.html" >Desarrollado por LabCode</a>
        </div>
    <!--Termina Footer-->
 

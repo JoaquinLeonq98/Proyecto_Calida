@@ -46,22 +46,30 @@ formRespuesta.addEventListener('submit', (evento) => {
       icon: 'success',
       title: 'Se ha enviado correctamente',
       showConfirmButton: false,
-      timer: 1000,
+      timer: 2300,
     });
-    window.open(
+    /*window.open(
       'mailto:joaquinleonquero00@gmail.com?subject=subject&body=' +
         String(enviarinfo(nombre1, correo1, telefono1, mensaje1))
-    );
+    );*/
+    Email.send({
+      SecureToken : "52e8d6a4-e3b2-460b-8950-dc6d49bf76a2",
+      To : 'aurelior997@gmail.com',
+      From : `${correo1.value}`,
+      Subject : "Mensaje de contacto",
+      Body : `${mensaje1.value}`
+  }).then(
+    message => alert(message));
     setTimeout(function () {
       document.getElementById('resp').reset();
-    }, 1000);
-  } else {
+    }, 2300);
+  }else {
     Swal.fire({
       position: 'top-center',
       icon: 'error',
       title: '¡Error, alguno de tu campos es incorrecto!',
       showConfirmButton: false,
-      timer: 1000,
+      timer: 2300,
     });
   }
 });
