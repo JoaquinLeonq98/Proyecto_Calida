@@ -25,7 +25,7 @@ class UI {
 	}
 }//class UI
 
-function validateUser (usuario)  {
+function validateUsuario (usuario)  {
 	return usuario.match(/^[a-zA-Z ]+$/);
   };//Valida usuario
 
@@ -53,7 +53,9 @@ let a = {usuario:usuario,password:password}; //Creación de JSON
     alert("Contraseña incorrecta");
   }
 
+  const administrador = new Administrador(usuario, password);
   console.log(usuario, password);
+  console.log(Administrador);
 
   const ui = new UI();
   //condicion para la validacion de datos
