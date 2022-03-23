@@ -22,30 +22,44 @@
                     <h4>Debe autenticarse en el sistema para acceder</h4>
                     </div>
 
-                    <form action="" id="loginAdmin" class="card-body form" class="loginAdmin"> 
+                    <form action="" id="loginAdmin" class="card-body form" class="loginAdmin" class="needs-validation" novalidate> 
                     <!-- Se cambiara el id por una accion para enviar a un servidor -->
 
                     <!-- Grupo Usuario -->
                     <div class="form-group grupoFormulario" id="grupoUsuario">
-                        <label for="usuario" class="labelFormulario">Usuario</label>
+                        <label for="validationCustom01">Usuario</label>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="Usuario" required>
+                        <div class="valid-feedback">
+                          Usuario válido
+                        </div>
+                        <!--<label for="usuario" class="labelFormulario">Usuario</label>
                         <div class="grupoFormularioInput">
                             <input type="text" class="formularioInput"
                             id="usuario" name="usuario" placeholder="Usuario"/>
-                            <i class="formularioValidacion fas fa-times-circle"></i>
-                        </div>
-                        <p class="formularioInputError">El usuario tiene que ser de 4 a 16 dígitos 
-                            y solo puede contener numeros, letras y guion bajo</p>
+                             <i class="formularioValidacion fas fa-times-circle"></i> 
+                        </div>-->
+                        <!-- <p class="formularioInputError">El usuario tiene que ser de 4 a 16 dígitos 
+                            y solo puede contener numeros, letras y guion bajo</p> -->
                     </div>
 
                     <!-- Grupo Password -->
                     <div class="form-group grupoFormulario" id="grupoPassword">
-                        <label for="password" class="labelFormulario">Contraseña</label>
+                        <label for="validationCustom02">Contraseña</label>
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="Contraseña" required>
+                        <div class="valid-feedback">
+                          Contraseña válida
+                        </div>
+                        <!--<label for="password" class="labelFormulario">Contraseña</label>
                         <div class="grupoFormularioInput">
                             <input type="password" class="formularioInput"
                             id="password" name="password" placeholder="Contraseña"/>
-                            <i class="formularioValidacion fas fa-times-circle"></i>
+                             <i class="formularioValidacion fas fa-times-circle"></i>
+                        </div>-->
+                        <!-- <p class="formularioInputError">La contraseña tiene que tener de 4 a 12 dígitos</p> -->
+                        <div class="ingresar text-center mt-4">
+                            <button class="btn btn-primary" type="submit">Ingresar</button>
                         </div>
-                        <p class="formularioInputError">La contraseña tiene que tener de 4 a 12 dígitos</p>
+                        
                     </div>
 
                     <!-- Mensajes de error y éxito -->
@@ -56,8 +70,8 @@
                     <div class="grupoFormulario formularioGrupoEnviar">
                         <input type="submit" value="Ingresar" class="btn btn-success btn-block" 
                         class="formularioMensajeExito" id="formularioMensajeExito">
-                        <p class="formularioMensajeExito" id="formularioMensajeExito">Datos validados exitosamente</p> -->
-                    </div>
+                        <p class="formularioMensajeExito" id="formularioMensajeExito">Datos validados exitosamente</p> 
+                    </div> -->
 
                     <p class="text-center mt-4"><a href="../pages/form.html" target="_blank" id="recuperar">Recuperar Contraseña</a></p>
                     </form>
@@ -70,7 +84,7 @@
 
 
     <!--Ancla footer-->
-<footer id="anclaFooter"></footer>
+    <footer id="anclaFooter"></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
