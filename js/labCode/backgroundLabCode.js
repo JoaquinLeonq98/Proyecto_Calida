@@ -1,7 +1,7 @@
 const DPR = window.devicePixelRatio || 1;
 
 // Configs
-var particleAmount = 150;
+var particleAmount = 240;
 var particleMaxSpeed = 0.8;
 var particleMinSpeed = 0.5;
 var particleRadius = 1 * DPR;
@@ -9,7 +9,7 @@ var triangleMaxEdgeSize = 150 * DPR;
 var bkgColor = '#F2F2F2';
 var canvasWidth = document.body.clientWidth * DPR;
 var canvasheight = document.body.clientHeight * DPR;
-var triangleLineWidth = 0.8 * DPR;
+var triangleLineWidth = 0.6 * DPR;
 var triangleColor = '#005691';
 
 // Vars
