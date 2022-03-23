@@ -35,10 +35,10 @@
                 </ul>
 
              <form class="form-inline my-2 my-lg-0" id="navbarSupportedContent">
-                <a class="" href="../pages/prox.html" type="submit" target="_blank"
+                <a class="" href="../pages/logInCliente.html" type="submit" target="_blank"
                 ><i class="fa-solid fa-user" id="fasolid"></i></a>
 
-                <a class="ml-4 spaceIcon" href="../pages/prox.html" type="submit" target="_blank" 
+                <a class="ml-4 spaceIcon" href="../pages/loginAdmin.html" type="submit" target="_blank" 
                 ><i class="fa-solid fa-cart-shopping" id="fasolid"></i></a>
 
              </form>
