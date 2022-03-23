@@ -1,5 +1,79 @@
-	// Example starter JavaScript for disabling form submissions if there are invalid fields
-	(function() {
+class Administrador {
+    constructor(usuario, password) {
+      this.usuario = usuario;
+      this.password = password;
+	}
+}//class administrador
+
+class UI {
+    resetForm() {
+      document.getElementById("loginAdmin").reset();
+    }
+
+	showMesage(message, cssClass) {
+		const div = document.createElement("div");
+		div.className = `alert alert-${cssClass} mt-2`;
+		div.appendChild(document.createTextNode(message));
+		//muestra en el DOM
+		const container = document.querySelector(".container");
+		const app = document.querySelector("#App");
+		container.insertBefore(div, app);
+		//metodo y funcion de temporizador para elminar la alerta 
+		setTimeout(function(){
+			document.querySelector('.alert').remove();
+		},2300);
+	}
+}//class UI
+
+function validateUser (usuario)  {
+	return usuario.match(/^[a-zA-Z ]+$/);
+  };//Valida usuario
+
+function validatePass (password)  {
+	return password.match(/^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9!@#$%&*]{6,}$/);
+  };//valida contraseña y pide que sea mayor que 5, tenga al menos un dígito, un caracter especial.
+
+const crearAdmin = document.getElementById("loginAdmin");
+crearAdmin.addEventListener("submit", function (event) {
+const usuario = document.getElementById("usuario").value;
+const password = document.getElementById("password").value;
+
+let a = {usuario:usuario,password:password}; //Creación de JSON
+  let a_user=JSON.stringify(a);
+  localStorage.setItem("Info",a_user); //Se agrega a localStorage
+
+  if(validateUsuario(usuario)){
+    alert("Usuario válido");
+  } else{
+    alert("Usuario no válido");
+  }
+  if(validatePass(password)){
+    alert("Contraseña válida");
+  } else{
+    alert("Contraseña incorrecta");
+  }
+
+  console.log(usuario, password);
+
+  const ui = new UI();
+  //condicion para la validacion de datos
+  if(usuario === '' || password === ''){
+    return ui.showMesage('Campos incompletos, favor de llenarlos', 'warning');
+  }//termina funcion de validacion 
+
+});//función validateUser	
+
+document
+.getElementById("loginAdmin")
+.addEventListener("submit", function (event) {
+  const ui = new UI();
+  ui.successProduct(event.target);
+});
+
+
+
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+	/*(function() {
 	  'use strict';
 	  window.addEventListener('load', function() {
 		// Fetch all the forms we want to apply custom Bootstrap validation styles to
