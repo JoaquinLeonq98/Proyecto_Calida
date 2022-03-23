@@ -2,7 +2,7 @@
  *  contenidoNavbar es una constante que almacena en acentos graves el HTML de la barra de navegacion global
  */
  const contenidoNavbar = `
- <nav class="navbar navbar-expand-lg navbar-light bg-light " style="background-color: #ffffff;">
+ <nav class="navbar navbar-expand-lg navbar-light bg-light " style="background-color: #ffffff;  ">
      
     <div>
         <img class=" mb-3 img-fluid "src="../img/logoLabCode.jpg" alt="logo">
@@ -15,8 +15,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav m-auto">
                 <li class="nav-item dropdown" id="menu">
-                        <a class="nav-link dropdown-toggle mr-5" href="../pages/aboutUs.html" id="navbarDropdown" role="button" data-toggle="dropdown"  aria-expanded="false">
-                        labCode Team
+                        <a class="nav-link dropdown-toggle mr-5" href="../pages/labCode.html" id="navbarDropdown" role="button" data-toggle="dropdown"  aria-expanded="false">
+                        Team labCode
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="https://www.linkedin.com/in/joaqu%C3%ADnlq/" target="_blank">Joaquín León Quero</a>
@@ -30,11 +30,16 @@
                 </li>
     
                 <li class="nav-item">
-                    <a class="nav-link mr-5" href="../pages/form.html" target="_blank">Contáctanos</a>
+                    <a class="nav-link mr-5" href="#" target="_blank">Contáctanos</a>
                 </li>
-    
-                <li class="nav-item">
-                    <a class="nav-link mr-5" href="../pages/index.html" target="_blank">Cálida</a>
+
+                <li class="nav-item dropdown" id="menu">
+                        <a class="nav-link dropdown-toggle mr-5" href="../pages/labCode.html" id="navbarDropdown" role="button" data-toggle="dropdown"  aria-expanded="false">
+                        Proyectos desarrollados
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="../pages/index.html" target="_blank">Cálida MX</a>
+                        </div>
                 </li>
             </ul>
         </div>    
