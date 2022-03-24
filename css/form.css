@@ -1,6 +1,5 @@
 .form{
   background-color: #efece8;
-
 }
 
 .formulario {
@@ -8,6 +7,7 @@
   /**utilizar el valor mas pequeño**/
   margin: auto;
   margin-top: 50px;
+  margin-bottom: 50px;
   border-radius: 1rem;
 }
 
