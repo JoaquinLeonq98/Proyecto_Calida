@@ -1,6 +1,6 @@
 function addItem(item){
     const itemHTML = 
-`<div class="card-group col-lg-3 col-sm-12 col-md-6 card-espacio">
+`<div class="card-group col-lg-4 col-sm-12 col-md-6 card-espacio">
     <div class="card">
         <img src="${item.img}" class="card-img-top mx-auto" alt="...">
             <div class="card-body">
