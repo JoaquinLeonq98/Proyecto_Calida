@@ -1,3 +1,21 @@
+const a = [{usuario:'jleon', contra:'jleon12'}, {usuario:'cmota', contra:'cmota12'}, {usuario:'areyes', contra:'areyes12'},{usuario:'mpiña', contra:'mpiña12'}, {usuario:'nquintero', contra:'nquintero12'}, {usuario:'frivera', contra:'frivera12'}];
+function prueba (usuario, contra){
+    let b=false;
+    for (let i=0; i<a.length; i++){
+        if (a[i].usuario===usuario){
+            if (a[i].contra===contra){
+                let b = true;
+                return b;
+                break
+            } else {
+                break
+            }
+        } else {
+            continue
+        } 
+    }//for
+    return b;
+}//function prueba
 class Administrador {
     constructor(usuario, password) {
       this.usuario = usuario;
@@ -35,12 +53,12 @@ function validatePass (password)  {
 
 const crearAdmin = document.getElementById("loginAdmin");
 crearAdmin.addEventListener("submit", function (event) {
-const usuario = document.getElementById("usuario").value;
-const password = document.getElementById("password").value;
+	const usuario = document.getElementById("usuario").value;
+	const password = document.getElementById("password").value;
 
-let a = {usuario:usuario,password:password}; //Creación de JSON
-  let a_user=JSON.stringify(a);
-  localStorage.setItem("Info",a_user); //Se agrega a localStorage
+	let a = {usuario:usuario,password:password}; //Creación de JSON
+  	let a_user=JSON.stringify(a);
+  	localStorage.setItem("Info",a_user); //Se agrega a localStorage
 
   if(validateUsuario(usuario)){
     alert("Usuario válido");
