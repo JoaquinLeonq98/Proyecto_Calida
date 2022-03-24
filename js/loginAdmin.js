@@ -1,4 +1,4 @@
-const a = [{usuario:'jleon', contra:'jleon12'}, {usuario:'cmota', contra:'cmota12'}, {usuario:'areyes', contra:'areyes12'},{usuario:'mpiña', contra:'mpiña12'}, {usuario:'nquintero', contra:'nquintero12'}, {usuario:'frivera', contra:'frivera12'}];
+const a = [{usuario:'jleon', contra:'jleon12'}, {usuario:'cmota', contra:'cmota12'}, {usuario:'areyes', contra:'areyes12'},{usuario:'mpiña', contra:'mpiña12'}, {usuario:'nquintero', contra:'nquintero12'}, {usuario:'frivera', contra:'frivera12'},{usuario:'clopez', contra:'clopez12'}];
 function prueba (usuario, contra){
     let b=false;
     for (let i=0; i<a.length; i++){
@@ -53,42 +53,39 @@ function validatePass (password)  {
 
 const crearAdmin = document.getElementById("loginAdmin");
 crearAdmin.addEventListener("submit", function (event) {
-	const usuario = document.getElementById("usuario").value;
-	const password = document.getElementById("password").value;
+	event.preventDefault();
+	const usuario1 = document.getElementById("validationCustom01").value;
+	const password = document.getElementById("validationCustom02").value;
+	if (prueba(usuario1,password)){
+		window.location.assign("./producto.html");
+	}else{
+		Swal.fire({
+			position: 'top-center',
+			icon: 'error',
+			title: 'Tu usuario o contraseña es inválido',
+			showConfirmButton: false,
+			timer: 2300,
+		});
+	}
 
-	let a = {usuario:usuario,password:password}; //Creación de JSON
-  	let a_user=JSON.stringify(a);
-  	localStorage.setItem("Info",a_user); //Se agrega a localStorage
-
-  if(validateUsuario(usuario)){
-    alert("Usuario válido");
-  } else{
-    alert("Usuario no válido");
-  }
-  if(validatePass(password)){
-    alert("Contraseña válida");
-  } else{
-    alert("Contraseña incorrecta");
-  }
-
-  const administrador = new Administrador(usuario, password);
-  console.log(usuario, password);
+  const administrador = new Administrador(usuario1, password);
+  console.log(usuario1, password);
   console.log(Administrador);
 
   const ui = new UI();
   //condicion para la validacion de datos
-  if(usuario === '' || password === ''){
+ 	if(usuario1 === '' || password === ''){
     return ui.showMesage('Campos incompletos, favor de llenarlos', 'warning');
-  }//termina funcion de validacion 
+	}//termina funcion de validacion 
 
 });//función validateUser	
 
-document
+/*document
 .getElementById("loginAdmin")
 .addEventListener("submit", function (event) {
   const ui = new UI();
   ui.successProduct(event.target);
-});
+});*/
 
 
 
