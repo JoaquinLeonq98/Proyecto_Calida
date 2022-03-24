@@ -14,7 +14,7 @@
          
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
              
-                <ul class="navbar-nav m-auto" id="colorLink">
+                <ul class="navbar-nav m-auto text-center" id="colorLink">
     
                     <li class="nav-item">
                         <a class=" ml-5 hexCalida" href="../pages/aboutUs.html">Nosotros</a>
