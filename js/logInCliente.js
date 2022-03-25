@@ -61,13 +61,8 @@ crearUsuario.addEventListener("submit", function(e){
     s++;
     password.classList.add('is-valid');
   }else{
-    Swal.fire({
-			position: 'top-center',
-			icon: 'error',
-			title: 'Tu usuario o contraseña es inválido',
-			showConfirmButton: false,
-			timer: 2300,
-		}); //alerta en caso de campos incorrectos
+    let validPass = document.getElementById("anclaValidacionPassword");
+    validPass.innerHTML = "Tu contraseña necesita mínimo 6 carácteres, un carácter especial, un número y una mayúscula";
     password.classList.add('is-invalid')
   }
   e.preventDefault() 
