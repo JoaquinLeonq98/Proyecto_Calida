@@ -77,6 +77,7 @@ crearUsuario.addEventListener("submit", function(e){
 
   if(contadorValidacion == 5 && password.value === passwordConf.value){
      let a = {correo:correo.value,nombre:nombre.value,apellido:apellido.value,telefono:telefono.value,password:password.value};
+     
      usuarios.push(a);
      let jsonUsuarios = JSON.stringify(usuarios); // convertir la nueva array a json
      localStorage.setItem("usuarios", jsonUsuarios); // Regresarlo al local storage
@@ -91,6 +92,15 @@ crearUsuario.addEventListener("submit", function(e){
     let validPass2 = document.getElementById("anclaValidacionPassword2");
     validPass2.innerHTML = "Contraseñas no coiniciden";
     passwordConf.classList.add('is-invalid')
+   }else if(password.value === passwordConf.value && contadorValidacion<5) { 
+    passwordConf.classList.add('is-valid');
+    Swal.fire({
+      position: 'top-center',
+      icon: 'error',
+      title: '¡Error, en alguno de tus campos!',
+      showConfirmButton: false,
+      timer: 2300,
+    });
    }else{
     Swal.fire({
       position: 'top-center',
