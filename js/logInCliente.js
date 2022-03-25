@@ -19,6 +19,7 @@ function validatepass (pass)  {
 
 
 let usuarios = [];
+let stringify
 const crearUsuario = document.getElementById("crearCuenta");
 crearUsuario.addEventListener("submit", function(e){
   
@@ -28,10 +29,10 @@ crearUsuario.addEventListener("submit", function(e){
   let telefono = document.getElementById("telefono");
   let password = document.getElementById("password2");
   let passwordConf = document.getElementById("password3");
-  let s = 0;
+  let contadorValidacion = 0;
   
   if (validateEmail(correo.value)){
-    s++;
+    contadorValidacion++;
     correo.classList.add('is-valid');
   }else{
     let validCorreo = document.getElementById("anclaValidacionCorreo");
@@ -40,7 +41,7 @@ crearUsuario.addEventListener("submit", function(e){
   };
 
   if (validateName(nombre.value)){
-    s++;
+    contadorValidacion++;
     nombre.classList.add('is-valid');
   }else{
     let validNombre = document.getElementById("anclaValidacionNombre");
@@ -49,7 +50,7 @@ crearUsuario.addEventListener("submit", function(e){
   }
 
   if (validateName(apellido.value)){
-    s++;
+    contadorValidacion++;
     apellido.classList.add('is-valid');
   }else{
     let validApellido = document.getElementById("anclaValidacionApellido");
@@ -58,16 +59,16 @@ crearUsuario.addEventListener("submit", function(e){
   }
 
   if (validateTel(telefono.value)){
-    s++;
+    contadorValidacion++;
     telefono.classList.add('is-valid');
   }else{
     let validTelefono = document.getElementById("anclaValidacionTelefono");
-    validApellido.innerHTML = "Número inválido";
+    validTelefono.innerHTML = "Número inválido";
     telefono.classList.add('is-invalid')
   }
 
   if (validatepass(password.value)){
-    s++;
+    contadorValidacion++;
     password.classList.add('is-valid');
   }else{
     let validPass = document.getElementById("anclaValidacionPassword");
@@ -75,9 +76,9 @@ crearUsuario.addEventListener("submit", function(e){
     password.classList.add('is-invalid')
   }
 
-  if(s==5 && password.value === passwordConf.value){
-
-  }
+  if(contadorValidacion == 5 && password.value === passwordConf.value){
+     
+   }
   e.preventDefault() 
 });
 
