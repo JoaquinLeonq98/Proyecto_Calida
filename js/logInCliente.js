@@ -80,8 +80,18 @@ crearUsuario.addEventListener("submit", function(e){
      usuarios.push(a);
      let jsonUsuarios = JSON.stringify(usuarios); // convertir la nueva array a json
      localStorage.setItem("usuarios", jsonUsuarios); // Regresarlo al local storage
- 
-   } else {
+     Swal.fire({
+      position: 'top-center',
+      icon: 'success',
+      title: '¡Te has registrado exitosamente!',
+      showConfirmButton: false,
+      timer: 2300,
+    });
+   }else if(password.value != passwordConf.value) { 
+    let validPass2 = document.getElementById("anclaValidacionPassword2");
+    validPass2.innerHTML = "Contraseñas no coiniciden";
+    passwordConf.classList.add('is-invalid')
+   }else{
     Swal.fire({
       position: 'top-center',
       icon: 'error',
