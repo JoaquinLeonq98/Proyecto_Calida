@@ -40,7 +40,7 @@ class UI {
 
 const crearAdmin = document.getElementById("loginAdmin"); //se trae el formulario 
 crearAdmin.addEventListener("submit", function (event) {
-	event.preventDefault(); //
+	event.preventDefault(); //no se reinicia la página al apretar el botón (submitgit status)
 	const usuario1 = document.getElementById("validationCustom01").value;
 	const password = document.getElementById("validationCustom02").value;
 	if (prueba(usuario1,password)){
