@@ -1,21 +1,23 @@
 const a = [{usuario:'jleon', contra:'jleon12'}, {usuario:'cmota', contra:'cmota12'}, {usuario:'areyes', contra:'areyes12'},{usuario:'mpiña', contra:'mpiña12'}, {usuario:'nquintero', contra:'nquintero12'}, {usuario:'frivera', contra:'frivera12'},{usuario:'clopez', contra:'clopez12'}];
+//se crea un array con los usuarios y contraseñas de los administradores
 function prueba (usuario, contra){
-    let b=false;
+    let b=false; //se declara una variable b falso
     for (let i=0; i<a.length; i++){
         if (a[i].usuario===usuario){
-            if (a[i].contra===contra){
-                let b = true;
+            if (a[i].contra===contra){ //se comparan los usuarios y contraseñas para ver si coinciden
+                let b = true; //si coinciden, b ahora es true
                 return b;
-                break
+                break //se rompe el ciclo si se valida el usuario y contraseña (true)
             } else {
-                break
+                break //si la contraseña es incorrecta, se rompe el ciclo
             }
         } else {
-            continue
+            continue //de otra manera, continúa el ciclo
         } 
     }//for
     return b;
 }//function prueba
+
 class Administrador {
     constructor(usuario, password) {
       this.usuario = usuario;
@@ -42,14 +44,6 @@ class UI {
 		},2300);
 	}
 }//class UI
-
-function validateUsuario (usuario)  {
-	return usuario.match(/^[a-zA-Z ]+$/);
-  };//Valida usuario
-
-function validatePass (password)  {
-	return password.match(/^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9!@#$%&*]{6,}$/);
-  };//valida contraseña y pide que sea mayor que 5, tenga al menos un dígito, un caracter especial.
 
 const crearAdmin = document.getElementById("loginAdmin");
 crearAdmin.addEventListener("submit", function (event) {
