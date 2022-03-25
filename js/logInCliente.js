@@ -27,12 +27,15 @@ crearUsuario.addEventListener("submit", function(e){
   let apellido = document.getElementById("apellidos2");
   let telefono = document.getElementById("telefono");
   let password = document.getElementById("password2");
+  let passwordConf = document.getElementById("password3");
   let s = 0;
   
   if (validateEmail(correo.value)){
     s++;
     correo.classList.add('is-valid');
   }else{
+    let validCorreo = document.getElementById("anclaValidacionCorreo");
+    validCorreo.innerHTML = "Tu correo es inválido";
     correo.classList.add('is-invalid')
   };
 
@@ -40,6 +43,8 @@ crearUsuario.addEventListener("submit", function(e){
     s++;
     nombre.classList.add('is-valid');
   }else{
+    let validNombre = document.getElementById("anclaValidacionNombre");
+    validNombre.innerHTML = "Por favor verifica este campo, recuerda que tu nombre no debe contener números";
     nombre.classList.add('is-invalid')
   }
 
@@ -47,6 +52,8 @@ crearUsuario.addEventListener("submit", function(e){
     s++;
     apellido.classList.add('is-valid');
   }else{
+    let validApellido = document.getElementById("anclaValidacionApellido");
+    validApellido.innerHTML = "Por favor verifica este campo, recuerda que tu apellido no debe contener números";
     apellido.classList.add('is-invalid')
   }
 
@@ -54,6 +61,8 @@ crearUsuario.addEventListener("submit", function(e){
     s++;
     telefono.classList.add('is-valid');
   }else{
+    let validTelefono = document.getElementById("anclaValidacionTelefono");
+    validApellido.innerHTML = "Número inválido";
     telefono.classList.add('is-invalid')
   }
 
@@ -64,6 +73,10 @@ crearUsuario.addEventListener("submit", function(e){
     let validPass = document.getElementById("anclaValidacionPassword");
     validPass.innerHTML = "Tu contraseña necesita mínimo 6 carácteres, un carácter especial, un número y una mayúscula";
     password.classList.add('is-invalid')
+  }
+
+  if(s==5 && password.value === passwordConf.value){
+
   }
   e.preventDefault() 
 });
