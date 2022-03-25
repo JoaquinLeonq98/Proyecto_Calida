@@ -55,7 +55,7 @@
                 <p class="text-white"><a href="../pages/aboutUs.html" target="_blank" class="text-reset">Contáctanos</a></p>
                 <p class="text-white"><a href="../pages/prox.html" target="_blank" class="text-reset">Políticas de Privacidad</a></p>
                 <p class="text-white"><a href="../pages/prox.html" target="_blank" class="text-reset">Términos y Condiciones</a></p>
-                <a href="../pages/producto.html" class="ml-3" target="_blank"><i class="fa-solid fa-user-gear" id="fasolidFooterDos"></i></a>
+                <a href="../pages/loginAdmin.html" class="ml-3" target="_blank"><i class="fa-solid fa-user-gear" id="fasolidFooterDos"></i></a>
             </div>
             <!-- Termina Información -->
             
