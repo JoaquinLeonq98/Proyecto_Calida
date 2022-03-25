@@ -3,20 +3,20 @@
  const contenidoFooter = `
 
  <!-- Footer -->
-    <footer class="text-center text-lg-start text-muted contenido bajarFooter">
-        <!-- Línea arriba -->
-        <section
-        class="d-flex justify-content-center mx-auto justify-content-lg-between p-4 contenido">
+ <footer class="text-center text-lg-start text-muted contenido bajarFooter">
+     <!-- Línea arriba -->
+     <section
+     class="d-flex justify-content-center mx-auto justify-content-lg-between p-4 contenido">
 
-        </section>
-        <!-- Termina Línea arriba -->
-    
-        <!-- Section: Links  -->
-        <section class="contenido">
-            <p class="linea-footer"></p>
-        <div class="container text-center text-md-start mt-5 contenido">
-            
-            <div class="row mt-3 contenido"><!--Contenido-->
+     </section>
+     <!-- Termina Línea arriba -->
+ 
+     <!-- Section: Links  -->
+     <section class="contenido">
+         <p class="linea-footer"></p>
+     <div class="container text-center text-md-start mt-5 contenido">
+         
+         <div class="row mt-3 contenido"><!--Contenido-->
 
             <!-- Lado izq (logo) -->
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">

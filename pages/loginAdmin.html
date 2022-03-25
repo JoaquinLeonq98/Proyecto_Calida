@@ -28,7 +28,7 @@
                     <!-- Grupo Usuario -->
                     <div class="form-group grupoFormulario" id="grupoUsuario">
                         <label for="validationCustom01">Usuario</label>
-                        <input type="text" class="form-control usuario" id="validationCustom01" placeholder="Usuario" required>
+                        <input type="text" class="form-control usuario" id="validationCustom01" id="usuario" placeholder="Usuario" required>
                         <div class="valid-feedback">
                           Usuario válido
                         </div>
@@ -45,7 +45,7 @@
                     <!-- Grupo Password -->
                     <div class="form-group grupoFormulario" id="grupoPassword">
                         <label for="validationCustom02">Contraseña</label>
-                        <input type="password" class="form-control password" id="validationCustom02" placeholder="Contraseña" required>
+                        <input type="password" class="form-control password" id="validationCustom02" id="contraseña" placeholder="Contraseña" required>
                         <div class="valid-feedback">
                           Contraseña válida
                         </div>
@@ -57,9 +57,9 @@
                         </div>-->
                         <!-- <p class="formularioInputError">La contraseña tiene que tener de 4 a 12 dígitos</p> -->
                         <div class="ingresar text-center mt-4">
-                            <a href="../pages/producto.html" target="_blank"
-                                button class="btn btn-primary" type="submit">Ingresar</button>
-                            </a>
+                            
+                            <button class="btn btn-primary" type="submit">Ingresar</button>
+                            <a href="./producto.html" id="prueba"></a>
                             
                         </div>
                         
@@ -88,13 +88,13 @@
 
     <!--Ancla footer-->
     <footer id="anclaFooter"></footer>
-
+    <script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     <script src="../js/loginAdmin.js"></script>
     <script src="../js/navBar.js"></script>
     <script src="../js/footer.js"></script>
-    <!-- Link de íconos -->
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <!-- Link de íconos 
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script> -->
 </body>
 </html>
