@@ -17,7 +17,7 @@ function validatepass (pass)  {
   return pass.match(/^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9!@#$%&*]{6,}$/);
 };//valida contraseña y pide que sea mayor que 5, tenga al menos un dígito, un caracter especial.
 
-
+//Registro de cliente
 let usuarios = [];
 const crearUsuario = document.getElementById("crearCuenta");
 crearUsuario.addEventListener("submit", function(e){
@@ -112,4 +112,52 @@ crearUsuario.addEventListener("submit", function(e){
   }
   e.preventDefault() 
 });
+//Termina registro de cliente
 
+//Log In de clientes
+
+function prueba (usuario, contra){
+  let b=false; //se declara una variable b falso
+  let usuarioStorage = localStorage.getItem("usuarios"); //poner la key para obtener ese item desde la local storage
+  let arrayUsuario = JSON.parse(usuarioStorage); //parsearlo a que sea legible para JS
+
+  for (let i=0; i<arrayUsuario.length; i++){
+      
+    if (arrayUsuario[i].correo===usuario){
+          if (arrayUsuario[i].password===contra){ //se comparan los usuarios y contraseñas para ver si coinciden
+              let b = true; //si coinciden, b ahora es true
+              return b;
+              break //se rompe el ciclo si se valida el usuario y contraseña (true)
+          } else {
+              break //si la contraseña es incorrecta, se rompe el ciclo
+          }
+      } else {
+          continue //de otra manera, continúa el ciclo
+      } 
+  }//for
+  return b;
+}
+
+
+
+const ingresoCliente = document.getElementById("anclaLogIn"); //se trae el formulario 
+ingresoCliente.addEventListener("submit", function (event) {
+	event.preventDefault(); //
+	const usuario1 = document.getElementById("correo").value;
+	const password = document.getElementById("password").value;
+
+	if (prueba(usuario1,password)){
+		window.location.assign("./tienda.html");
+	}else{
+		Swal.fire({
+			position: 'top-center',
+			icon: 'error',
+			title: 'Tu usuario o contraseña es inválido',
+			showConfirmButton: false,
+			timer: 2300,
+		}); //alerta en caso de campos incorrectos
+	}
+});//función validateUser
+
+//Termina LogIn clientes
+console.log(usuarios);
