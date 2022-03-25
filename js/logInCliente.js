@@ -19,7 +19,6 @@ function validatepass (pass)  {
 
 
 let usuarios = [];
-let stringify
 const crearUsuario = document.getElementById("crearCuenta");
 crearUsuario.addEventListener("submit", function(e){
   
@@ -77,8 +76,20 @@ crearUsuario.addEventListener("submit", function(e){
   }
 
   if(contadorValidacion == 5 && password.value === passwordConf.value){
-     
-   }
+     let a = {correo:correo.value,nombre:nombre.value,apellido:apellido.value,telefono:telefono.value,password:password.value};
+     usuarios.push(a);
+     let jsonUsuarios = JSON.stringify(usuarios); // convertir la nueva array a json
+     localStorage.setItem("usuarios", jsonUsuarios); // Regresarlo al local storage
+ 
+   } else {
+    Swal.fire({
+      position: 'top-center',
+      icon: 'error',
+      title: '¡Error, en alguno de tus campos!',
+      showConfirmButton: false,
+      timer: 2300,
+    });
+  }
   e.preventDefault() 
 });
 
