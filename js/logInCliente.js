@@ -37,6 +37,7 @@ crearUsuario.addEventListener("submit", function(e){
     let validCorreo = document.getElementById("anclaValidacionCorreo");
     validCorreo.innerHTML = "Tu correo es inválido";
     correo.classList.add('is-invalid')
+    // document.getElementById("correo").reset(timer=4000);
   };
 
   if (validateName(nombre.value)){
@@ -88,6 +89,7 @@ crearUsuario.addEventListener("submit", function(e){
       showConfirmButton: false,
       timer: 2300,
     });
+ 
    }else if(password.value != passwordConf.value) { 
     let validPass2 = document.getElementById("anclaValidacionPassword2");
     validPass2.innerHTML = "Contraseñas no coiniciden";
@@ -111,6 +113,7 @@ crearUsuario.addEventListener("submit", function(e){
     });
   }
   e.preventDefault() 
+  
 });
 //Termina registro de cliente
 
