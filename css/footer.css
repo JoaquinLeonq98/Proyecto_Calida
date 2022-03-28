@@ -1,0 +1,62 @@
+#anclaFooter{
+   margin-top: 50px;
+}
+.rights{
+    color:white;
+}
+
+.contenido{
+    background-color: #DBA8A9;
+}
+
+.linea-footer{
+    border-bottom: 3px solid;
+    padding-bottom: 3px;
+    width: 80%;
+    color: white;
+    margin: 0 auto;
+}
+
+.titulo-footer{
+    color:black;
+    font-weight: bold;
+}
+.textColorCalida{
+    color: #678877;
+}
+
+
+
+#fasolidFooter {
+    color:#678877;
+    font-size: 35px;
+} #fasolidFooter:hover{
+    color:#9FAB97;
+    font-size: 36px;
+}
+
+#fasolidFooterDos {
+    margin-top: 13px;
+    color:#678877;
+    font-size: 35px;
+} #fasolidFooterDos:hover {
+    margin-top: 13px;
+    color:#9FAB97;
+    font-size: 36px;
+}
+
+#labCodefooter{
+    color: #678877;
+}
+#labCodefooter:hover{
+    color:#b3bdac;
+}
+
+.iconsRedes{
+ font-size: 2rem;
+ color: #678877;
+}
+.iconsRedes:hover{
+    font-size: 2.5rem;
+    color:#9FAB97;
+   }

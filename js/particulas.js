@@ -15,6 +15,7 @@ particlesJS({
       stroke: {
         width: 0,
         color: '#57aca4',
+        color: '#000',
       },
       polygon: {
         nb_sides: 6,
@@ -37,6 +38,7 @@ particlesJS({
     },
     size: {
       value: 196.41797745602653,
+      value: 160,
       random: true,
       anim: {
         enable: true,

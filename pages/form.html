@@ -4,44 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <link rel="icon" href="../img/favicon.ico">
+    <title>Contáctanos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" 
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!--CSS Main-->
+    <link rel="stylesheet" href="../css/main.css">
+    <!--Icons-->
+    <script src="https://kit.fontawesome.com/6631c06026.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<form action="" name="formulario" method="get" id="resp">
-    <label for ="nombre">Nombre :</label><br>
-    <input type = "text" name = "nombre" id = "nombre" maxlength="90" placeholder=" Ingresa tu nombre "><!--Ingresa nombre-->
-    <br>
-    <label for ="correo">Correo:</label><br>
-    <input type = "text" name = "correo" id = "correo" maxlength="" placeholder=" Ingresa tu correo electrónico "><!--Ingresa correo electronico-->
-    <br>
-    <label for ="telefono">Número de contacto:</label><br>
-    <input type = "text" name = "tel" id = "telefono" maxlength="10" placeholder=" Ingresa tu número telefónico " required><!--Ingresa número de contacto -->
-    <br>
-    <div> 
-        <label for="mensaje">Mensaje:</label>
-        <textarea class="form-control" id="mensaje" rows="3"></textarea>
+    <!-- Barra de navegación -->
+    <header id="anclaNavBar"></header>
+
+    <!-- Contenedor de form -->
+  <section class="contenedor-form container mt-5">
+    <div class="row text-center mx-auto-d-flex justify-content-center">
+      <div>
+        <h2 class="">Contáctanos</h2>
       </div>
-      <!-- <div>
-        <input type="checkbox" class="form-check-input" id="terminos">
-        <label class="form-check-label" for="exampleCheck1">Acepto términos y condiciones</label>
-      </div> -->
-      <button type="submit" id="button" class="btn btn-primary" value="submit">Enviar</button>
+      
+    <form class="formulario col-md-12 p-5" id="resp" action="mailto:joaquinleonquero00@gmail.com" method="post">
+     
+        <fieldset>
+            
+            <div class="contenedor_campos">
+                <div class="campo text-center">
+              
+                    <input class="input-text " type="name" placeholder="Nombre y Apellidos" id="nombre" name="nombre">
+                </div>
+                <div class="campo text-center">
+                   
+                    <input class="input-text" type="email" placeholder="Email" id="correo">
+                </div>
+                <div class="campo text-center">
+                 
+                    <input class="input-text" type="tel" placeholder="Teléfono o celular" id="telefono">
+                </div>
+                <div class="campo text-center">
+                  
+                    <textarea class="input-text" name="" id="mensaje" cols="30" rows="8"></textarea>
+                </div>
+            </div>
+            <!--contendor de los campos-->
+            <div class="enviar text-center">
+               <button class="boton " type="submit" value="Enviar">
+                 <a href="mailto:joaquinleonquero00@gmail.com" target="_blank"></a>Enviar
+               </button>
+            </div>
+        </fieldset>
+    </form> <!-- Form--> 
 
+    </div>
     
-    </form><!--términa el código del formulario-->
-    
-
-    <script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </section>
   
-  <script type="text/javascript">
-    emailjs.init('uNjHDbSMNUMUy7ZpX')
-  </script>
-<script src="../js/form/primer.js"></script>
+<!--Ancla footer-->
+<footer id="anclaFooter"></footer>
 
-<script src="../js/form/enviarDatos.js"></script>
-</form>    
+<!-- </form>  -->
+
+<script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+ 
+<!-- <script src="../js/form/primer.js"></script> -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="../js/form/primer.js"></script>
+
+
+<!--Barra de navegación-->
+<script src="../js/navBar.js"></script>
+<!--JS Footer-->
+<script src="../js/footer.js"></script>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
 </body>
 
 </html>

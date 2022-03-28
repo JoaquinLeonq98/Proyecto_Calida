@@ -1,0 +1,46 @@
+@import url(../labCode/background.css);
+.rights{
+    color:white;
+}
+
+.contenidof{
+    background-color: #66CDAA;
+}
+
+.linea-footer{
+    border-bottom: 3px solid;
+    padding-bottom: 3px;
+    width: 80%;
+    color: white;
+    margin: 0 auto;
+}
+
+.titulo-footer{
+    color:black;
+    font-weight: bold;
+}
+
+.bajarFooter{ 
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px;
+}
+
+ul{
+    list-style: none;
+    padding: 0%;
+    animation: animacion 6s infinite;
+}
+
+.ruleta{
+    height: 100px;
+    overflow: hidden;
+}
+
+@keyframes animacion {
+    0%{margin-top: 0;}
+    40%{margin-top: 0;}
+
+    50%{margin-top: -100px;}
+    90%{margin-top: -100px;}
+}

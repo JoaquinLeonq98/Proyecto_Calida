@@ -1,7 +1,9 @@
-#particles-js {
-  background: #f9d9c3;
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  z-index: -1;
-}
+@import url(./navBar.css);
+@import url(./aboutUs.css);
+@import url(./footer.css);
+@import url(./form.css);
+@import url(./tienda.css);
+@import url(./index.css);
+@import url(./logInCliente.css);
+/* @import url(./labCode.css); */
+@import url(./blog.css);
