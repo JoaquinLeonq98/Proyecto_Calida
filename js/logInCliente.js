@@ -53,7 +53,7 @@ function ValidaForm(correo,nombre,apellido,telefono,password,passwordConf){
     apellido.classList.add('is-valid');
   }else{
     apellido.classList.remove("is-valid");
-    let validApellido = document.getElementById("anclaValidacionApellido");
+    let validApellido = document.getElementById("anclaValidacionApellidos");
     validApellido.innerHTML = "Por favor verifica este campo, recuerda que tu apellido no debe contener números";
     apellido.classList.add('is-invalid');
     setTimeout(()=>{
