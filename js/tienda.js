@@ -5,7 +5,7 @@ function addItem(item){
         <img src="${item.img}" class="card-img-top mx-auto" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${item.name}</h5>
-                    <p class="card-text">${item.price}</p>
+                    <p class="card-text price">${item.price}</p>
                     <p class="card-text">${item.description}</p>
                     </div>
                 <div class="card-footer">
