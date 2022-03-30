@@ -10,35 +10,28 @@ function validateName (nam)  {
 };//Valida nombre
 
 function validateLname (nam1)  {
-  return nam1.match(/^[a-zA-Z ]+$/);
+  return nam1.match(/^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/);
 };//Valida apellido
 
 function validatepass (pass)  {
   return pass.match(/^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9!@#$%&*]{6,}$/);
 };//valida contraseña y pide que sea mayor que 5, tenga al menos un dígito, un caracter especial.
-
-//Registro de cliente
-let usuarios = [];
-const crearUsuario = document.getElementById("crearCuenta");
-crearUsuario.addEventListener("submit", function(e){
-  
-  let correo = document.getElementById("email2");
-  let nombre = document.getElementById("name2");
-  let apellido = document.getElementById("apellidos2");
-  let telefono = document.getElementById("telefono");
-  let password = document.getElementById("password2");
-  let passwordConf = document.getElementById("password3");
-  let contadorValidacion = 0;
-  
+function ValidaForm(correo,nombre,apellido,telefono,password,passwordConf){
+  let contadorValidacion=0;
   if (validateEmail(correo.value)){
     contadorValidacion++;
     correo.classList.add('is-valid');
   }else{
+    correo.classList.remove("is-valid");
     let validCorreo = document.getElementById("anclaValidacionCorreo");
     validCorreo.innerHTML = "Tu correo es inválido";
-    correo.classList.add('is-invalid')
-    // document.getElementById("correo").reset(timer=4000);
-  };
+    correo.classList.add('is-invalid');
+    setTimeout(()=>{
+      validCorreo.innerHTML="";
+      correo.value="";
+      correo.classList.remove("is-invalid");
+    }, 2300);
+  }
 
   if (validateName(nombre.value)){
     contadorValidacion++;
@@ -46,16 +39,26 @@ crearUsuario.addEventListener("submit", function(e){
   }else{
     let validNombre = document.getElementById("anclaValidacionNombre");
     validNombre.innerHTML = "Por favor verifica este campo, recuerda que tu nombre no debe contener números";
-    nombre.classList.add('is-invalid')
+    nombre.classList.add('is-invalid');
+    setTimeout(()=>{
+      validNombre.innerHTML="";
+      nombre.value="";
+      nombre.classList.remove("is-invalid");
+    }, 2300);
   }
 
-  if (validateName(apellido.value)){
+  if (validateLname(apellido.value)){
     contadorValidacion++;
     apellido.classList.add('is-valid');
   }else{
     let validApellido = document.getElementById("anclaValidacionApellido");
     validApellido.innerHTML = "Por favor verifica este campo, recuerda que tu apellido no debe contener números";
-    apellido.classList.add('is-invalid')
+    apellido.classList.add('is-invalid');
+    setTimeout(()=>{
+      validApellido.innerHTML="";
+      apellido.value="";
+      apellido.classList.remove("is-invalid");
+    }, 2300);
   }
 
   if (validateTel(telefono.value)){
@@ -64,7 +67,12 @@ crearUsuario.addEventListener("submit", function(e){
   }else{
     let validTelefono = document.getElementById("anclaValidacionTelefono");
     validTelefono.innerHTML = "Número inválido";
-    telefono.classList.add('is-invalid')
+    telefono.classList.add('is-invalid');
+    setTimeout(()=>{
+      validTelefono.innerHTML="";
+      telefono.value="";
+      telefono.classList.remove("is-invalid");
+    }, 2300);
   }
 
   if (validatepass(password.value)){
@@ -73,12 +81,43 @@ crearUsuario.addEventListener("submit", function(e){
   }else{
     let validPass = document.getElementById("anclaValidacionPassword");
     validPass.innerHTML = "Tu contraseña necesita mínimo 6 carácteres, un carácter especial, un número y una mayúscula";
-    password.classList.add('is-invalid')
+    password.classList.add('is-invalid');
+    setTimeout(()=>{
+      validPass.innerHTML="";
+      password.value="";
+      password.classList.remove("is-invalid");
+    }, 2300);
   }
+  if (validatepass(passwordConf.value)){
+    contadorValidacion++;
+    passwordConf.classList.add('is-valid');
+  }else{
+    let validPass1 = document.getElementById("anclaValidacionPassword2");
+    validPass1.innerHTML = "Tu contraseña necesita mínimo 6 carácteres, un carácter especial, un número y una mayúscula";
+    passwordConf.classList.add('is-invalid');
+    setTimeout(()=>{
+      validPass1.innerHTML="";
+      passwordConf.value="";
+      passwordConf.classList.remove("is-invalid");
+    }, 2300);
+  }
+  return contadorValidacion;
+};
 
-  if(contadorValidacion == 5 && password.value === passwordConf.value){
-     let a = {correo:correo.value,nombre:nombre.value,apellido:apellido.value,telefono:telefono.value,password:password.value};
-     
+//Registro de cliente
+let usuarios = [];
+let crearUsuario = document.getElementById("crearCuenta");
+crearUsuario.addEventListener("submit", function(e){
+  e.preventDefault();
+  let correo = document.getElementById("email2");
+  let nombre = document.getElementById("name2");
+  let apellido = document.getElementById("apellidos2");
+  let telefono = document.getElementById("telefono");
+  let password = document.getElementById("password2");
+  let passwordConf = document.getElementById("password3");
+  
+  if(ValidaForm(correo,nombre,apellido,telefono,password,passwordConf)==6 && password.value === passwordConf.value){
+     let a = {correo:correo.value,nombre:nombre.value,apellido:apellido.value,telefono:telefono.value,password:password.value};     
      usuarios.push(a);
      let jsonUsuarios = JSON.stringify(usuarios); // convertir la nueva array a json
      localStorage.setItem("usuarios", jsonUsuarios); // Regresarlo al local storage
@@ -89,11 +128,15 @@ crearUsuario.addEventListener("submit", function(e){
       showConfirmButton: false,
       timer: 2300,
     });
- 
    }else if(password.value != passwordConf.value) { 
     let validPass2 = document.getElementById("anclaValidacionPassword2");
     validPass2.innerHTML = "Contraseñas no coiniciden";
-    passwordConf.classList.add('is-invalid')
+    passwordConf.classList.add('is-invalid');
+    setTimeout(()=>{
+      validPass2.innerHTML="";
+      passwordConf.value="";
+      passwordConf.classList.remove("is-invalid");
+    }, 2300);
    }else if(password.value === passwordConf.value && contadorValidacion<5) { 
     passwordConf.classList.add('is-valid');
     Swal.fire({
@@ -112,7 +155,6 @@ crearUsuario.addEventListener("submit", function(e){
       timer: 2300,
     });
   }
-  e.preventDefault() 
   
 });
 //Termina registro de cliente

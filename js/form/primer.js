@@ -3,7 +3,7 @@ function validateEmail (email)  {
 };//Validar email
 
 function validateName (nam)  {
-  return nam.match(/^[a-zA-Z ]+$/);
+  return nam.match(/^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/);
 };//Valida nombre
   
 function validateTel (tel)  {
@@ -29,9 +29,15 @@ function validacionForm(nombre, correo, telefono, mensaje) {
     contadorValidacion++;
     correo.classList.add('is-valid');
   }else{
+    correo.classList.remove("is-valid");
     let validEmail = document.getElementById("anclaValidaCorreo");
     validEmail.innerHTML = "Tu correo es inválido";
-    correo.classList.add('is-invalid')
+    correo.classList.add('is-invalid');
+    setTimeout(()=>{
+      validEmail.innerHTML="";
+      correo.value="";
+      correo.classList.remove("is-invalid");
+    }, 2300);
 
   };// if email
 
@@ -39,27 +45,45 @@ function validacionForm(nombre, correo, telefono, mensaje) {
     contadorValidacion++;
     nombre.classList.add('is-valid');
   }else{
+    nombre.classList.remove("is-valid");
     let validNombre = document.getElementById("anclaValidaNombre");
     validNombre.innerHTML = "Por favor verifica este campo, recuerda que tu nombre no debe contener números";
-    nombre.classList.add('is-invalid')
+    nombre.classList.add('is-invalid');
+    setTimeout(()=>{
+      validNombre.innerHTML="";
+      nombre.value="";
+      nombre.classList.remove("is-invalid");
+    }, 2300);
   }//if nombre
   
   if (validateTel(telefonoValor)){
     contadorValidacion++;
     telefono.classList.add('is-valid');
   }else{
+    telefono.classList.remove("is-valid");
     let validTelefono = document.getElementById("anclaValidaTelefono");
     validTelefono.innerHTML = "Número inválido";
-      telefono.classList.add('is-invalid');
+    telefono.classList.add('is-invalid');
+    setTimeout(()=>{
+      validTelefono.innerHTML="";
+      telefono.value="";
+      telefono1.classList.remove("is-invalid");
+    }, 1500);
   }//if tel
 
   if (validateMsg(mensajeValor)){
     contadorValidacion++;
     mensaje.classList.add('is-valid');
   }else{
+    mensaje.classList.remove("is-valid");
     let validMsg = document.getElementById("anclaValidaMsg");
     validMsg.innerHTML = "Verifica el contenido de tu mensaje";
    mensaje.classList.add('is-invalid');
+   setTimeout(()=>{
+    validMsg.innerHTML="";
+    mensaje.value="";
+    mensaje.classList.remove("is-invalid");
+  }, 1500);
   }//if tel
  return contadorValidacion;
 } //Termina función
