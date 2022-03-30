@@ -37,6 +37,7 @@ class UI {
   deleteProduct(element) {
     if (element.name === "delete") {
       element.parentElement.parentElement.parentElement.remove();
+      console.log(element);
       this.showMesage('Producto elminado satisfactoriamente', 'danger')
     }
   }
