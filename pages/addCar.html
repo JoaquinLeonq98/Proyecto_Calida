@@ -8,6 +8,7 @@
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <!--CSS Main-->
     <link rel="stylesheet" href="../css/main.css">
+    <!--<link rel="stylesheet" href="../css/addCar.css">
     <!--Icons-->
     <script src="https://kit.fontawesome.com/6631c06026.js" crossorigin="anonymous"></script>
     <title>Agregar al carrito</title>
@@ -18,43 +19,41 @@
     <!-- Barra de navegación -->
     <header id="anclaNavBar"></header>
     
-    <!-- card de producto -->
-    <div class="container-xl">
-        <div class="row  col-lg-12 col-md-6">
-            <div class="card mb-4" style="max-width: 500px">
-                <div class="row">
-                  <div class="col-md-6">
-                    <img  class="img-fluid" src="../img/productos/calidamx-p15.jpg" alt="...">
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a content. </p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            <div class="card mb-4" style="max-width: 500px">
-                <div class="row">
-                  <div class="col-md-6">
-                    <img  class="img-fluid" src="../img/productos/calidamx-p15.jpg" alt="...">
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a content. </p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                </div>
-              </div> 
-        </div>
-        
-            
-        
-           
+    <!-- tabla de producto -->
+    <table class="tablaCar">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Producto</th>
+          <th scope="col">Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td class="tablaProductos">
+            <img src="../img/productos/Aglaonema roja1.jpg" alt="">
+            <h6 class="tablaTitulo">Aglaonema Roja</h6>
+            </td>
+          <td class="tablaPrecio"><p>$ 151</p></td>
+          <td class="tablaCantidad">
+            <input type="number" min="1" value="1">
+            <button class="delete btn btn-success">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br></br>
+    <div class="row mx-4">
+      <div class="col">
+        <h3 class="itemCarTotal">Total: $ 151</h3>
+      </div>
+      <div class="col d-flex justify-content-end">
+          <button class="btn btn-success">Comprar</button>
+      </div>
+      </div>
     </div>
+  
     
     
     <!--Ancla footer-->
