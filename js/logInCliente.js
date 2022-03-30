@@ -37,6 +37,7 @@ function ValidaForm(correo,nombre,apellido,telefono,password,passwordConf){
     contadorValidacion++;
     nombre.classList.add('is-valid');
   }else{
+    nombre.classList.remove("is-valid");
     let validNombre = document.getElementById("anclaValidacionNombre");
     validNombre.innerHTML = "Por favor verifica este campo, recuerda que tu nombre no debe contener números";
     nombre.classList.add('is-invalid');
@@ -51,6 +52,7 @@ function ValidaForm(correo,nombre,apellido,telefono,password,passwordConf){
     contadorValidacion++;
     apellido.classList.add('is-valid');
   }else{
+    apellido.classList.remove("is-valid");
     let validApellido = document.getElementById("anclaValidacionApellido");
     validApellido.innerHTML = "Por favor verifica este campo, recuerda que tu apellido no debe contener números";
     apellido.classList.add('is-invalid');
@@ -65,6 +67,7 @@ function ValidaForm(correo,nombre,apellido,telefono,password,passwordConf){
     contadorValidacion++;
     telefono.classList.add('is-valid');
   }else{
+    telefono.classList.remove("is-valid");
     let validTelefono = document.getElementById("anclaValidacionTelefono");
     validTelefono.innerHTML = "Número inválido";
     telefono.classList.add('is-invalid');
@@ -79,6 +82,7 @@ function ValidaForm(correo,nombre,apellido,telefono,password,passwordConf){
     contadorValidacion++;
     password.classList.add('is-valid');
   }else{
+    password.classList.remove("is-valid");
     let validPass = document.getElementById("anclaValidacionPassword");
     validPass.innerHTML = "Tu contraseña necesita mínimo 6 carácteres, un carácter especial, un número y una mayúscula";
     password.classList.add('is-invalid');
@@ -92,6 +96,7 @@ function ValidaForm(correo,nombre,apellido,telefono,password,passwordConf){
     contadorValidacion++;
     passwordConf.classList.add('is-valid');
   }else{
+    passwordConf.classList.remove("is-valid");
     let validPass1 = document.getElementById("anclaValidacionPassword2");
     validPass1.innerHTML = "Tu contraseña necesita mínimo 6 carácteres, un carácter especial, un número y una mayúscula";
     passwordConf.classList.add('is-invalid');
