@@ -31,7 +31,7 @@ function ValidaForm(correo,nombre,apellido,telefono,password,passwordConf){
       correo.value="";
       correo.classList.remove("is-invalid");
     }, 2300);
-  }
+  };
 
   if (validateName(nombre.value)){
     contadorValidacion++;
@@ -46,7 +46,7 @@ function ValidaForm(correo,nombre,apellido,telefono,password,passwordConf){
       nombre.value="";
       nombre.classList.remove("is-invalid");
     }, 2300);
-  }
+  };
 
   if (validateLname(apellido.value)){
     contadorValidacion++;
@@ -61,7 +61,7 @@ function ValidaForm(correo,nombre,apellido,telefono,password,passwordConf){
       apellido.value="";
       apellido.classList.remove("is-invalid");
     }, 2300);
-  }
+  };
 
   if (validateTel(telefono.value)){
     contadorValidacion++;
@@ -76,7 +76,7 @@ function ValidaForm(correo,nombre,apellido,telefono,password,passwordConf){
       telefono.value="";
       telefono.classList.remove("is-invalid");
     }, 2300);
-  }
+  };
 
   if (validatepass(password.value)){
     contadorValidacion++;
@@ -91,7 +91,7 @@ function ValidaForm(correo,nombre,apellido,telefono,password,passwordConf){
       password.value="";
       password.classList.remove("is-invalid");
     }, 2300);
-  }
+  };
   if (validatepass(passwordConf.value)){
     contadorValidacion++;
     passwordConf.classList.add('is-valid');
@@ -105,7 +105,7 @@ function ValidaForm(correo,nombre,apellido,telefono,password,passwordConf){
       passwordConf.value="";
       passwordConf.classList.remove("is-invalid");
     }, 2300);
-  }
+  };
   return contadorValidacion;
 };
 
@@ -134,6 +134,7 @@ crearUsuario.addEventListener("submit", function(e){
       timer: 2300,
     });
    }else if(password.value != passwordConf.value) { 
+    passwordConf.classList.remove("is-valid");
     let validPass2 = document.getElementById("anclaValidacionPassword2");
     validPass2.innerHTML = "Contraseñas no coiniciden";
     passwordConf.classList.add('is-invalid');
