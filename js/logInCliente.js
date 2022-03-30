@@ -133,6 +133,15 @@ crearUsuario.addEventListener("submit", function(e){
       showConfirmButton: false,
       timer: 2300,
     });
+    setTimeout(()=>{
+      correo.classList.remove("is-valid");
+      nombre.classList.remove("is-valid");
+      apellido.classList.remove("is-valid");
+      telefono.classList.remove("is-valid");
+      password.classList.remove("is-valid");
+      passwordConf.classList.remove("is-valid");
+      crearUsuario.reset();
+    }, 2800);
    }else if(password.value != passwordConf.value) { 
     passwordConf.classList.remove("is-valid");
     let validPass2 = document.getElementById("anclaValidacionPassword2");
