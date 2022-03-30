@@ -6,7 +6,7 @@ function validateTel (tel)  {
   return tel.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im);
 }; //Validar telefono
 function validateName (nam)  {
-  return nam.match(/^[a-zA-Z ]+$/);
+  return nam.match(/^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/);
 };//Valida nombre
 
 function validateLname (nam1)  {
