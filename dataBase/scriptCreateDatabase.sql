@@ -11,7 +11,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema CalidaDB
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `CalidaDB` DEFAULT CHARACTER SET utf8 ;
+CREATE SCHEMA IF NOT EXISTS `CalidaDB` DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci ;
 USE `CalidaDB` ;
 
 -- -----------------------------------------------------
@@ -32,7 +32,7 @@ DEFAULT CHARACTER SET = ascii;
 -- Table `CalidaDB`.`metodo_pago`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `CalidaDB`.`metodo_pago` (
-  `idmetodo` INT NOT NULL,
+  `idmetodo` INT NOT NULL AUTO_INCREMENT,
   `pago` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`idmetodo`))
 ENGINE = InnoDB;
