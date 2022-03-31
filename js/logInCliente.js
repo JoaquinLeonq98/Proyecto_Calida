@@ -220,4 +220,3 @@ ingresoCliente.addEventListener("submit", function (event) {
 });//función validateUser
 
 //Termina LogIn clientes
-console.log(usuarios);

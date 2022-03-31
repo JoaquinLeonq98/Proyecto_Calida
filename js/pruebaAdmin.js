@@ -16,7 +16,3 @@ function prueba (usuario, contra){
     }//for
     return b;
 }//function prueba
-
-console.log(prueba(1,3));
-console.log(prueba(1,2));
-console.log(prueba(2,4));

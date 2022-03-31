@@ -25,7 +25,7 @@ function addItem(e){
 }
 
 function addItemCar(NewItem){
-    // agregar clase a la etiqueta donde se enceuntra la cantidad
+    // agregar clase a la etiqueta donde se encuentra la cantidad
     //for para validar si un producto esta repetido y sumar la cantidad
     const InputElement = itemsContainer.getElementsByClassName('input__element') 
    for(let i = 0; i < car.length; i ++){
