@@ -9,7 +9,7 @@ function addItem(item){
                     <p class="card-text">${item.description}</p>
                     </div>
                 <div class="card-footer">
-            <div class="text-center"><button type="button" class="btn btn-outline-dark">Agregar al carrito</button>\n </div>
+            <div class="text-center"><button id="btnTienda" type="button" class="btn btn-outline-dark">Agregar al carrito</button>\n </div>
         </div>
     </div>
 </div>`;
@@ -19,7 +19,8 @@ function addItem(item){
     itemsContainer.innerHTML += itemHTML;
 }
 
-    addItem({'name':'Rosario, Hoja de sandia y Espada mini ',
+    addItem({
+    'name':'Rosario, Hoja de sandia y Espada mini ',
     'img': '../img/productos/calidamx-p10.jpg' ,
     'price': '$190',
     'description':'¿Buscas plantas pequeñas para tu escritorio? ✍️ 🌿¡Estas tres son perfectas para ti!✨💓'});

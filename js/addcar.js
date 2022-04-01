@@ -1,4 +1,4 @@
-const ClickButton = document.querySelectorAll(".btn");
+const ClickButton = document.getElementById("btnTienda");
 const itemsContainer = document.getElementById("list-items");
 let car = [];
 
@@ -25,9 +25,9 @@ function addItem(e){
 }
 
 function addItemCar(NewItem){
-
-    const InputElement = itemsContainer.getElementsByClassName('input__element') // agregar clase a la etiqueta donde se enceuntra la cantidad
+    // agregar clase a la etiqueta donde se encuentra la cantidad
     //for para validar si un producto esta repetido y sumar la cantidad
+    const InputElement = itemsContainer.getElementsByClassName('input__element') 
    for(let i = 0; i < car.length; i ++){
        if(car[i].title.trim() === NewItem.title.trim()){
         car[i].quanty ++;
@@ -47,7 +47,45 @@ function addItemCar(NewItem){
     car.map(item =>{
         const tr = document.createElement('tr')
         tr.classList.add('ItemCar')
-        const Content = ``// contenido de la tabla para carriro 
+        // contenido de la tabla para carriro 
+        const Content = `  
+        <table class="tablaCar">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Producto</th>
+          <th scope="col">Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td class="tablaProductos">
+            <img class="#" src="../img/productos/Aglaonema roja1.jpg" alt="">
+            <h6 class="tablaTitulo">Aglaonema Roja</h6>
+            </td>
+          <td class="tablaPrecio"><p>$ ${item.price}<</p></td>
+          <td class="tablaCantidad">
+            <input type="number" min="1" value="1">
+            <button class="delete btn btn-success">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br></br>
+    <div class="row mx-4">
+      <div class="col">
+        <h3 class="itemCarTotal">Total: $ ${item.total}</h3>
+      </div>
+      <div class="col d-flex justify-content-end">
+          <button class="btn btn-success">Comprar</button>
+      </div>
+      </div>
+    </div>
+        
+        
+        
+        `
         tr.innerHTML = Content;
         itemsContainer.append(tr)
         tr.querySelector(".delete").addEventListener('click',removeItemCar)

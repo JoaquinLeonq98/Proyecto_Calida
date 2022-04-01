@@ -37,7 +37,6 @@ class UI {
   deleteProduct(element) {
     if (element.name === "delete") {
       element.parentElement.parentElement.parentElement.remove();
-      console.log(element);
       this.showMesage('Producto elminado satisfactoriamente', 'danger')
     }
   }
@@ -79,8 +78,6 @@ form.addEventListener("submit", function (event) {
   localStorage.setItem("Info",b_user); //Se agrega a localStorage
 
 
-
-  console.log(name, price, description,imagen);
 
   const producto = new Product(name, price, description, imagen);
 

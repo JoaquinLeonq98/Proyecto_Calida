@@ -14,79 +14,18 @@ function validateMsg (mensaje){
   return mensaje.match(/^(?!\s*$)[-a-zA-Z0-9_:,.' ']{3,}$/);
 };
 
+function capitalize(str) {
+  if(str.length == 0) return str;
+  return str[0].toUpperCase() + str.substr(1);
+}
+
+function titleCase(str) {
+  return str.split(' ').map(capitalize).join(' ');
+}
 //Obtiene el id de form
 let formRespuesta = document.getElementById('resp');
 //Valida los contenidos del form
-function validacionForm(nombre, correo, telefono, mensaje) {
-  let correoValor = correo.value;
-  let nombreValor = nombre.value;
-  let telefonoValor = telefono.value;
-  let mensajeValor = mensaje.value;
-  let contadorValidacion = 0;
-
-
-  if (validateEmail(correoValor)){
-    contadorValidacion++;
-    correo.classList.add('is-valid');
-  }else{
-    correo.classList.remove("is-valid");
-    let validEmail = document.getElementById("anclaValidaCorreo");
-    validEmail.innerHTML = "Tu correo es inválido";
-    correo.classList.add('is-invalid');
-    setTimeout(()=>{
-      validEmail.innerHTML="";
-      correo.value="";
-      correo.classList.remove("is-invalid");
-    }, 2300);
-
-  };// if email
-
-  if (validateName(nombreValor)){
-    contadorValidacion++;
-    nombre.classList.add('is-valid');
-  }else{
-    nombre.classList.remove("is-valid");
-    let validNombre = document.getElementById("anclaValidaNombre");
-    validNombre.innerHTML = "Por favor verifica este campo, recuerda que tu nombre no debe contener números";
-    nombre.classList.add('is-invalid');
-    setTimeout(()=>{
-      validNombre.innerHTML="";
-      nombre.value="";
-      nombre.classList.remove("is-invalid");
-    }, 2300);
-  }//if nombre
-  
-  if (validateTel(telefonoValor)){
-    contadorValidacion++;
-    telefono.classList.add('is-valid');
-  }else{
-    telefono.classList.remove("is-valid");
-    let validTelefono = document.getElementById("anclaValidaTelefono");
-    validTelefono.innerHTML = "Número inválido";
-    telefono.classList.add('is-invalid');
-    setTimeout(()=>{
-      validTelefono.innerHTML="";
-      telefono.value="";
-      telefono1.classList.remove("is-invalid");
-    }, 1500);
-  }//if tel
-
-  if (validateMsg(mensajeValor)){
-    contadorValidacion++;
-    mensaje.classList.add('is-valid');
-  }else{
-    mensaje.classList.remove("is-valid");
-    let validMsg = document.getElementById("anclaValidaMsg");
-    validMsg.innerHTML = "Verifica el contenido de tu mensaje";
-   mensaje.classList.add('is-invalid');
-   setTimeout(()=>{
-    validMsg.innerHTML="";
-    mensaje.value="";
-    mensaje.classList.remove("is-invalid");
-  }, 1500);
-  }//if tel
- return contadorValidacion;
-} //Termina función
+//Termina función
 //Hace el string para enviar al correo
 function enviarinfo(nombre, correo, telefono, mensaje) {
   let correoValor = correo.value;
@@ -97,14 +36,95 @@ function enviarinfo(nombre, correo, telefono, mensaje) {
   return pp;
 } //Termina función
 //Traigo los valores del input
-let nombre1 = document.getElementById('nombre');
-let correo1 = document.getElementById('correo');
-let mensaje1 = document.getElementById('mensaje');
-let telefono1 = document.getElementById('telefono');
+
+let correo = document.getElementById("correo");
+correo.addEventListener("keyup", function(e){
+  e.preventDefault();
+  let d="";
+  d += correo.value;
+  if (validateEmail(d)){
+    correo.classList.remove("is-invalid");
+    correo.classList.add('is-valid');
+  }else if(d===''){
+    correo.classList.remove("is-invalid");
+    correo.classList.remove("is-valid");
+  }else{
+    correo.classList.add('is-invalid');
+  }
+});
+let nombre = document.getElementById("nombre");
+nombre.addEventListener("keyup", function(e){
+  e.preventDefault();
+  let f="";
+  f += titleCase(nombre.value);
+  nombre.value = f;
+  if (validateName(f)){
+    nombre.classList.remove("is-invalid");
+    nombre.classList.add('is-valid');
+  }else if(f===""){
+    nombre.classList.remove("is-invalid");
+    nombre.classList.remove("is-valid");
+  }else{
+    nombre.classList.remove("is-valid");
+    nombre.classList.add('is-invalid');
+  }
+});
+
+let telefono = document.getElementById("telefono");
+telefono.addEventListener("keyup", function(e){
+  e.preventDefault();
+  let f="";
+  f += String(telefono.value);
+  if (validateTel(f)){
+    telefono.classList.remove("is-invalid");
+    telefono.classList.add('is-valid');
+  }else if(f===""){
+    telefono.classList.remove("is-invalid");
+    telefono.classList.remove("is-valid");
+  }else{
+    telefono.classList.remove("is-valid");
+    telefono.classList.add('is-invalid');
+  }
+});
+
+let mensaje = document.getElementById("mensaje");
+mensaje.addEventListener("keyup", function(e){
+  e.preventDefault();
+  let f="";
+  f += String(mensaje.value);
+  if (validateMsg(f)){
+    mensaje.classList.remove("is-invalid");
+    mensaje.classList.add('is-valid');
+  }else if(f===""){
+    mensaje.classList.remove("is-invalid");
+    mensaje.classList.remove("is-valid");
+  }else{
+    mensaje.classList.remove("is-valid");
+    mensaje.classList.add('is-invalid');
+  }
+});
+
 //Es un evento de enviar con alertas
 formRespuesta.addEventListener('submit', (evento) => {
   evento.preventDefault();
-  if (validacionForm(nombre1, correo1, telefono1, mensaje1) === 4) {
+  let correo = document.getElementById("correo");
+  let nombre =document.getElementById("nombre");
+  let telefono = document.getElementById("telefono");
+  let mensaje= document.getElementById("mensaje");
+  let contador = 0;
+  if(validateEmail(correo.value)){
+    contador++;
+  };
+  if(validateName(nombre.value)){
+    contador++;
+  };
+  if(validateTel(telefono.value)){
+    contador++;
+  };
+  if(validateName(mensaje.value)){
+    contador++;
+  };
+  if (contador === 4 ) {
     Swal.fire({
       position: 'top-center',
       icon: 'success',
@@ -114,10 +134,10 @@ formRespuesta.addEventListener('submit', (evento) => {
     });
     window.open(
       'mailto:joaquinleonquero00@gmail.com?subject=subject&body=' +
-        String(enviarinfo(nombre1, correo1, telefono1, mensaje1))
+        String(enviarinfo(nombre, correo, telefono, mensaje))
     );
     formRespuesta.reset();
-  }else {
+  }else{
     Swal.fire({
       position: 'top-center',
       icon: 'error',
