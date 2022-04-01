@@ -50,7 +50,6 @@ nombre.addEventListener("keyup", function(e){
   f += titleCase(nombre.value);
   nombre.value = f;
   if (validateName(f)){
-    contador++;
     nombre.classList.remove("is-invalid");
     nombre.classList.add('is-valid');
   }else if(f===""){
@@ -69,7 +68,6 @@ apellido.addEventListener("keyup", function(e){
   f += titleCase(apellido.value);
   apellido.value = f;
   if (validateName(f)){
-    contador++;
     apellido.classList.remove("is-invalid");
     apellido.classList.add('is-valid');
   }else if(f===""){

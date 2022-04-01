@@ -14,6 +14,14 @@ function validateMsg (mensaje){
   return mensaje.match(/^(?!\s*$)[-a-zA-Z0-9_:,.' ']{3,}$/);
 };
 
+function capitalize(str) {
+  if(str.length == 0) return str;
+  return str[0].toUpperCase() + str.substr(1);
+}
+
+function titleCase(str) {
+  return str.split(' ').map(capitalize).join(' ');
+}
 //Obtiene el id de form
 let formRespuesta = document.getElementById('resp');
 //Valida los contenidos del form
@@ -41,7 +49,6 @@ correo.addEventListener("keyup", function(e){
     correo.classList.remove("is-invalid");
     correo.classList.remove("is-valid");
   }else{
-    correo.classList.remove("is-valid");
     correo.classList.add('is-invalid');
   }
 });
@@ -104,7 +111,7 @@ formRespuesta.addEventListener('submit', (evento) => {
   let nombre =document.getElementById("nombre");
   let telefono = document.getElementById("telefono");
   let mensaje= document.getElementById("mensaje");
-  let contador =0;
+  let contador = 0;
   if(validateEmail(correo.value)){
     contador++;
   };
