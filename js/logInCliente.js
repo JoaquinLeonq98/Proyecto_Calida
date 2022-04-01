@@ -27,21 +27,18 @@ function titleCase(str) {
   return str.split(' ').map(capitalize).join(' ');
 }
 
-let contador = 0;
 let correo = document.getElementById("email2");
 correo.addEventListener("keyup", function(e){
   e.preventDefault();
   let d="";
   d += correo.value;
   if (validateEmail(d)){
-    contador++
     correo.classList.remove("is-invalid");
     correo.classList.add('is-valid');
   }else if(d===''){
     correo.classList.remove("is-invalid");
     correo.classList.remove("is-valid");
   }else{
-    contador=0;
     correo.classList.remove("is-valid");
     correo.classList.add('is-invalid');
   }
@@ -53,15 +50,13 @@ nombre.addEventListener("keyup", function(e){
   f += titleCase(nombre.value);
   nombre.value = f;
   if (validateName(f)){
-    contador++
+    contador++;
     nombre.classList.remove("is-invalid");
     nombre.classList.add('is-valid');
   }else if(f===""){
-    contador = 0;
     nombre.classList.remove("is-invalid");
     nombre.classList.remove("is-valid");
   }else{
-    contador=0;
     nombre.classList.remove("is-valid");
     nombre.classList.add('is-invalid');
   }
@@ -74,15 +69,13 @@ apellido.addEventListener("keyup", function(e){
   f += titleCase(apellido.value);
   apellido.value = f;
   if (validateName(f)){
-    contador++
+    contador++;
     apellido.classList.remove("is-invalid");
     apellido.classList.add('is-valid');
   }else if(f===""){
-    contador = 0;
     apellido.classList.remove("is-invalid");
     apellido.classList.remove("is-valid");
   }else{
-    contador=0;
     apellido.classList.remove("is-valid");
     apellido.classList.add('is-invalid');
   }
@@ -93,17 +86,13 @@ telefono.addEventListener("keyup", function(e){
   e.preventDefault();
   let f="";
   f += String(telefono.value);
-  console.log(f);
   if (validateTel(f)){
-    contador++
     telefono.classList.remove("is-invalid");
     telefono.classList.add('is-valid');
   }else if(f===""){
-    contador = 0;
     telefono.classList.remove("is-invalid");
     telefono.classList.remove("is-valid");
   }else{
-    contador=0;
     telefono.classList.remove("is-valid");
     telefono.classList.add('is-invalid');
   }
@@ -114,15 +103,12 @@ password.addEventListener("keyup", function(e){
   let f="";
   f += String(password.value);
   if (validatepass(f)){
-    contador++
     password.classList.remove("is-invalid");
     password.classList.add('is-valid');
   }else if(f===""){
-    contador = 0;
     password.classList.remove("is-invalid");
     password.classList.remove("is-valid");
   }else{
-    contador=0;
     password.classList.remove("is-valid");
     password.classList.add('is-invalid');
   }
@@ -133,103 +119,17 @@ passwordConf.addEventListener("keyup", function(e){
   let f="";
   f += String(password.value);
   if (validatepass(f) && password.value===passwordConf.value){
-    contador++
     passwordConf.classList.remove("is-invalid");
     passwordConf.classList.add('is-valid');
   }else if(f===""){
-    contador = 0;
     passwordConf.classList.remove("is-invalid");
     passwordConf.classList.remove("is-valid");
   }else{
-    contador=0;
     passwordConf.classList.remove("is-valid");
     passwordConf.classList.add('is-invalid');
   }
 });
 
-
-//valida contraseña y pide que sea mayor que 5, tenga al menos un dígito, un caracter especial.
-/*ValidaForm(correo,nombre,apellido,telefono,password,passwordConf){
-  let contadorValidacion=0;
-
-
-  if (validateName(nombre.value)){
-    contadorValidacion++;
-    nombre.classList.add('is-valid');
-  }else{
-    nombre.classList.remove("is-valid");
-    let validNombre = document.getElementById("anclaValidacionNombre");
-    validNombre.innerHTML = "Por favor verifica este campo, recuerda que tu nombre no debe contener números";
-    nombre.classList.add('is-invalid');
-    setTimeout(()=>{
-      validNombre.innerHTML="";
-      nombre.value="";
-      nombre.classList.remove("is-invalid");
-    }, 2300);
-  };
-
-  if (validateLname(apellido.value)){
-    contadorValidacion++;
-    apellido.classList.add('is-valid');
-  }else{
-    apellido.classList.remove("is-valid");
-    let validApellido = document.getElementById("anclaValidacionApellidos");
-    validApellido.innerHTML = "Por favor verifica este campo, recuerda que tu apellido no debe contener números";
-    apellido.classList.add('is-invalid');
-    setTimeout(()=>{
-      validApellido.innerHTML="";
-      apellido.value="";
-      apellido.classList.remove("is-invalid");
-    }, 2300);
-  };
-
-  if (validateTel(telefono.value)){
-    contadorValidacion++;
-    telefono.classList.add('is-valid');
-  }else{
-    telefono.classList.remove("is-valid");
-    let validTelefono = document.getElementById("anclaValidacionTelefono");
-    validTelefono.innerHTML = "Número inválido";
-    telefono.classList.add('is-invalid');
-    setTimeout(()=>{
-      validTelefono.innerHTML="";
-      telefono.value="";
-      telefono.classList.remove("is-invalid");
-    }, 2300);
-  };
-
-  if (validatepass(password.value)){
-    contadorValidacion++;
-    password.classList.add('is-valid');
-  }else{
-    password.classList.remove("is-valid");
-    let validPass = document.getElementById("anclaValidacionPassword");
-    validPass.innerHTML = "Tu contraseña necesita mínimo 6 carácteres, un carácter especial, un número y una mayúscula";
-    password.classList.add('is-invalid');
-    setTimeout(()=>{
-      validPass.innerHTML="";
-      password.value="";
-      password.classList.remove("is-invalid");
-    }, 2300);
-  };
-  if (validatepass(passwordConf.value)){
-    contadorValidacion++;
-    passwordConf.classList.add('is-valid');
-  }else{
-    passwordConf.classList.remove("is-valid");
-    let validPass1 = document.getElementById("anclaValidacionPassword2");
-    validPass1.innerHTML = "Tu contraseña necesita mínimo 6 carácteres, un carácter especial, un número y una mayúscula";
-    passwordConf.classList.add('is-invalid');
-    setTimeout(()=>{
-      validPass1.innerHTML="";
-      passwordConf.value="";
-      passwordConf.classList.remove("is-invalid");
-    }, 2300);
-  };
-  return contadorValidacion;
-};*/
-
-//Registro de cliente
 let usuarios = [];
 let crearUsuario = document.getElementById("crearCuenta");
 crearUsuario.addEventListener("submit", function(e){
@@ -240,9 +140,28 @@ crearUsuario.addEventListener("submit", function(e){
   let telefono = document.getElementById("telefono");
   let password = document.getElementById("password2");
   let passwordConf = document.getElementById("password3");
-  console.log(contador);
+  let contador = 0 ;
+
+  if(validateEmail(correo.value)){
+    contador++;
+  };
+  if(validateName(nombre.value)){
+    contador++;
+  };
+  if(validateLname(apellido.value)){
+    contador++;
+  };
+  if(validateTel(telefono.value)){
+    contador++;
+  };
+  if(validatepass(password.value)){
+    contador++;
+  };
+  if(validatepass(passwordConf.value) && password.value===passwordConf.value){
+    contador++;
+  };
   
-  if(contador!=0){
+  if(contador===6){
      let a = {correo:correo.value,nombre:nombre.value,apellido:apellido.value,telefono:telefono.value,password:password.value};     
      usuarios.push(a);
      let jsonUsuarios = JSON.stringify(usuarios); // convertir la nueva array a json
@@ -263,6 +182,7 @@ crearUsuario.addEventListener("submit", function(e){
       passwordConf.classList.remove("is-valid");
       crearUsuario.reset();
     }, 2800);
+    contador=0;
    }else{
     Swal.fire({
       position: 'top-center',
@@ -271,6 +191,7 @@ crearUsuario.addEventListener("submit", function(e){
       showConfirmButton: false,
       timer: 2300,
     });
+    contador=0;
   }
 });
 //Termina registro de cliente
