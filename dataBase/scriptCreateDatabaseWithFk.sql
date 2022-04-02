@@ -29,6 +29,16 @@ DEFAULT CHARACTER SET = ascii;
 
 
 -- -----------------------------------------------------
+-- Table `CalidaDB`.`metodo_pago`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `CalidaDB`.`metodo_pago` (
+  `idmetodo` INT NOT NULL AUTO_INCREMENT,
+  `pago` VARCHAR(50) NOT NULL,
+  PRIMARY KEY (`idmetodo`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `CalidaDB`.`pedido`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `CalidaDB`.`pedido` (
@@ -36,7 +46,31 @@ CREATE TABLE IF NOT EXISTS `CalidaDB`.`pedido` (
   `fecha` DATETIME NOT NULL,
   `status_entrega` TINYINT NOT NULL,
   `status_pago` TINYINT NOT NULL,
-  PRIMARY KEY (`idpedido`))
+  `metodo_pago_idmetodo` INT NOT NULL,
+  `cliente_idcliente` INT NOT NULL,
+  PRIMARY KEY (`idpedido`, `metodo_pago_idmetodo`, `cliente_idcliente`),
+  INDEX `fk_pedido_metodo_pago1_idx` (`metodo_pago_idmetodo` ASC) VISIBLE,
+  INDEX `fk_pedido_cliente1_idx` (`cliente_idcliente` ASC) VISIBLE,
+  CONSTRAINT `fk_pedido_metodo_pago1`
+    FOREIGN KEY (`metodo_pago_idmetodo`)
+    REFERENCES `CalidaDB`.`metodo_pago` (`idmetodo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_pedido_cliente1`
+    FOREIGN KEY (`cliente_idcliente`)
+    REFERENCES `CalidaDB`.`cliente` (`idcliente`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `CalidaDB`.`categoria`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `CalidaDB`.`categoria` (
+  `idcategoria` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`idcategoria`))
 ENGINE = InnoDB;
 
 
@@ -50,17 +84,14 @@ CREATE TABLE IF NOT EXISTS `CalidaDB`.`producto` (
   `descripcion` VARCHAR(800) NOT NULL,
   `imagen` VARCHAR(150) NOT NULL,
   `inventario` INT NOT NULL,
-  PRIMARY KEY (`idproducto`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `CalidaDB`.`categoria`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `CalidaDB`.`categoria` (
-  `idcategoria` INT NOT NULL AUTO_INCREMENT,
-  `nombre` VARCHAR(20) NOT NULL,
-  PRIMARY KEY (`idcategoria`))
+  `categoria_idcategoria` INT NOT NULL,
+  PRIMARY KEY (`idproducto`, `categoria_idcategoria`),
+  INDEX `fk_producto_categoria1_idx` (`categoria_idcategoria` ASC) VISIBLE,
+  CONSTRAINT `fk_producto_categoria1`
+    FOREIGN KEY (`categoria_idcategoria`)
+    REFERENCES `CalidaDB`.`categoria` (`idcategoria`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -76,7 +107,14 @@ CREATE TABLE IF NOT EXISTS `CalidaDB`.`domicilio_envio` (
   `numero_int` VARCHAR(50) NULL,
   `acaldia` VARCHAR(50) NOT NULL,
   `numero_ext` VARCHAR(50) NOT NULL,
-  PRIMARY KEY (`iddomicilio`))
+  `cliente_idcliente` INT NOT NULL,
+  PRIMARY KEY (`iddomicilio`, `cliente_idcliente`),
+  INDEX `fk_domicilio_envio_cliente1_idx` (`cliente_idcliente` ASC) VISIBLE,
+  CONSTRAINT `fk_domicilio_envio_cliente1`
+    FOREIGN KEY (`cliente_idcliente`)
+    REFERENCES `CalidaDB`.`cliente` (`idcliente`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -101,17 +139,14 @@ CREATE TABLE IF NOT EXISTS `CalidaDB`.`reseña` (
   `calificacion` INT NOT NULL,
   `comentario` VARCHAR(800) NOT NULL,
   `fecha` DATE NOT NULL,
-  PRIMARY KEY (`idreseña`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `CalidaDB`.`metodo_pago`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `CalidaDB`.`metodo_pago` (
-  `idmetodo` INT NOT NULL AUTO_INCREMENT,
-  `pago` VARCHAR(50) NOT NULL,
-  PRIMARY KEY (`idmetodo`))
+  `producto_idproducto` INT NOT NULL,
+  PRIMARY KEY (`idreseña`),
+  INDEX `fk_reseña_producto1_idx` (`producto_idproducto` ASC) VISIBLE,
+  CONSTRAINT `fk_reseña_producto1`
+    FOREIGN KEY (`producto_idproducto`)
+    REFERENCES `CalidaDB`.`producto` (`idproducto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -134,10 +169,24 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `CalidaDB`.`pedido_has_producto` (
   `idpedido_has_producto` INT NOT NULL AUTO_INCREMENT,
+  `pedido_idpedido` INT NOT NULL,
+  `producto_idproducto` INT NOT NULL,
   `cantidad` INT NOT NULL,
   `importe` DOUBLE NOT NULL,
   `total` DOUBLE NOT NULL,
-  PRIMARY KEY (`idpedido_has_producto`))
+  PRIMARY KEY (`idpedido_has_producto`, `pedido_idpedido`, `producto_idproducto`),
+  INDEX `fk_pedido_has_producto_producto1_idx` (`producto_idproducto` ASC) VISIBLE,
+  INDEX `fk_pedido_has_producto_pedido1_idx` (`pedido_idpedido` ASC) VISIBLE,
+  CONSTRAINT `fk_pedido_has_producto_pedido1`
+    FOREIGN KEY (`pedido_idpedido`)
+    REFERENCES `CalidaDB`.`pedido` (`idpedido`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_pedido_has_producto_producto1`
+    FOREIGN KEY (`producto_idproducto`)
+    REFERENCES `CalidaDB`.`producto` (`idproducto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
