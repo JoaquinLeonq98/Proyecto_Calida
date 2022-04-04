@@ -17,7 +17,8 @@ padding-top: 20%;
 }
 .blog{
     margin-bottom: 5%;
-    height: 600px;
+    height: auto;
+    max-height: 215px;
 }
 .blog .img-responsive {
     display: block;
