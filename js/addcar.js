@@ -1,28 +1,35 @@
-class Product{
-  constructor (title, price, description,image) {
-    this.title = title;
-    this.price = price;
-    this.description = description;
-    this.image = image;
+const items = document.getElementById("list-items")
+const templateCard = document.getElementById("card").content
+const fragment = document.createDocumentFragment()
+
+
+document.addEventListener('DOMContentLoaded',()=>{
+  fetchData()
+})
+
+
+const fetchData = async() =>{
+  try {
+     const res = await fetch('productosApi.json')
+     const data = await res.json()
+     printCards(data)
+  } catch (error) {
+    console.log(error)
   }
 }
 
-let Cart =  [];
-let nombres ="" ;
-
-for (let i = 1; i <= 10; i ++){
-
-
- const btn = document.getElementById("btnTienda" + i);addEventListener('click', event =>{
-    const image = document.getElementById("image" + i).src
-    const title = document.getElementById("title" + i).textContent
-    const price = document.getElementById("price" + i).textContent
-    const description = document.getElementById("description" + i).textContent
-    console.log(btn)
-   
-  })
-}
-
+const printCards  = data => {
+ data.forEach(Product => {
+  templateCard.querySelector('h5').textContent = Product.name
+  templateCard.querySelector('p').textContent = Product.description
+  templateCard.querySelector('h8').textContent = Product.price 
+  templateCard.querySelector('img').setAttribute("src", Product.image)   
+ console.log(Product)
+  const clone = templateCard.cloneNode(true)
+  fragment.appendChild(clone)
+ });
+ items.appendChild(fragment)
+} 
 
 
 
