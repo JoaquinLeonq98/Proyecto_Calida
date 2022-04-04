@@ -38,7 +38,10 @@
                 <a class="" href="../pages/logInCliente.html" type="submit" target="_blank"
                 ><i class="fa-solid fa-user" id="fasolid"></i></a>
 
+
                 <a class="ml-4 spaceIcon" href="../pages/addCar.html" type="submit" target="_blank" 
+                
+
                 ><i class="fa-solid fa-cart-shopping" id="fasolid"></i></a>
 
              </form>
