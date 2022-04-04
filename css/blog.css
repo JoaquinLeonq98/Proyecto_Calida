@@ -20,7 +20,7 @@ padding-top: 20%;
     height: auto;
     max-height: 215px;
 }
-.blog .img-responsive {
+.blog .img-fluid {
     display: block;
     width: auto;
     max-height: 100%;
