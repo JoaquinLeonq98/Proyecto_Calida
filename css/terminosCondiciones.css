@@ -1,0 +1,7 @@
+#imagenFondo {
+    height:700px;
+    background-image: url("../img/macetasTerminos.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
