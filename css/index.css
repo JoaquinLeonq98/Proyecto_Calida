@@ -22,7 +22,9 @@
   
 }
 
-
+.backCalida{
+  background-color: #678877;
+}
 .rosaCalida{
 color:#D29293;
 }
@@ -187,9 +189,10 @@ figure.opinionIndex.hover figcaption {
   } 
   .favTexto {
     position:absolute;
-    color: white;
+    color: #000000;
+    text-shadow: 0 0 5px #ffffff;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 19px;
     align-self: end;
     margin: 0 0 20px 20px;
     letter-spacing: 0.5px;

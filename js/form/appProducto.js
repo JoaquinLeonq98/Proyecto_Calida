@@ -1,8 +1,9 @@
 class Product {
-  constructor(name, price, description,img) {
+  constructor(name, price,inventary, description,img) {
     this.name = name;
     this.price = price;
     this.description = description;
+    this.inventary = inventary;
     this.img = img;
   }
 }
@@ -17,7 +18,7 @@ class UI {
     element.innerHTML = `
   
     <div class="card text-center mb-2 mt-3">
-    <img src="${producto.img}" class="card-img-top img-thumbnail img-fluid image" alt="...">  
+    <img src="${producto.img}" class="card-img-top img-thumbnail img-fluid" alt="...">  
       <div class="card-body"> 
         <strong id="name">Producto</strong>: ${producto.name}
         <strong id="price">Precio</strong>: ${producto.price}
@@ -72,20 +73,20 @@ form.addEventListener("submit", function (event) {
   const price = document.getElementById("price").value;
   const description = document.getElementById("description").value;
   const imagen = document.getElementById("image").value;
+  const inventary = document.getElementById("inventary").value;
 
-  let b = {name:name,price:price,description:description,img:imagen}; //Creación de JSON
+
+  let b = {name:name,price:price,inventary:inventary,description:description,img:imagen}; //Creación de JSON
   let b_user=JSON.stringify(b);
   localStorage.setItem("Info",b_user); //Se agrega a localStorage
 
 
 
-  console.log(name, price, description,imagen);
-
-  const producto = new Product(name, price, description, imagen);
+  const producto = new Product(name, price,inventary, description, imagen);
 
   const ui = new UI();
   //condicion para la validacion de datos
-  if(name === ''|| price === '' || description === '' || imagen === ''){
+  if(name === ''|| price === '' || description === '' || imagen === ''||inventary === ''){
     return ui.showMesage('Campos incompletos, favor de llenarlos', 'warning');
   }//temrmina funcion de validacion 
 

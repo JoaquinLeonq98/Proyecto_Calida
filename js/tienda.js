@@ -1,15 +1,15 @@
 function addItem(item){
     const itemHTML = 
-`<div class="card-group col-lg-3 col-sm-12 col-md-6 card-espacio">
+`<div class="card-group col-lg-4 col-sm-12 col-md-6 card-espacio">
     <div class="card">
         <img src="${item.img}" class="card-img-top mx-auto" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${item.name}</h5>
-                    <p class="card-text">${item.price}</p>
+                    <p class="card-text price">${item.price}</p>
                     <p class="card-text">${item.description}</p>
                     </div>
                 <div class="card-footer">
-            <div class="text-center"><button type="button" class="btn btn-outline-dark">Agregar al carrito</button>\n </div>
+            <div class="text-center"><button id="btnTienda" type="button" class="btn btn-outline-dark">Agregar al carrito</button>\n </div>
         </div>
     </div>
 </div>`;
@@ -19,7 +19,8 @@ function addItem(item){
     itemsContainer.innerHTML += itemHTML;
 }
 
-    addItem({'name':'Rosario, Hoja de sandia y Espada mini ',
+    addItem({
+    'name':'Rosario, Hoja de sandia y Espada mini ',
     'img': '../img/productos/calidamx-p10.jpg' ,
     'price': '$190',
     'description':'¿Buscas plantas pequeñas para tu escritorio? ✍️ 🌿¡Estas tres son perfectas para ti!✨💓'});

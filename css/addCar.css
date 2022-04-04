@@ -1,0 +1,30 @@
+
+/* 
+.table__products{
+    display: flex;
+} */
+
+.itemCarTotal{
+    font-size: 22px;
+
+}
+
+
+.table__products >img{
+    object-fit: contain;
+    border-radius: 6px;
+    margin-right: 20px;
+}
+.table__quanty {
+    width: 40px;
+    outline: 0;
+    font-size: 16px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+}
+
+
+.table__buy{
+    margin-right: 20px;
+}

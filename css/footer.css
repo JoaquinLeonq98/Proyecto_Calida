@@ -21,6 +21,9 @@
     color:black;
     font-weight: bold;
 }
+.textColorCalida{
+    color: #678877;
+}
 
 
 
@@ -41,3 +44,19 @@
     color:#9FAB97;
     font-size: 36px;
 }
+
+#labCodefooter{
+    color: #678877;
+}
+#labCodefooter:hover{
+    color:#b3bdac;
+}
+
+.iconsRedes{
+ font-size: 2rem;
+ color: #678877;
+}
+.iconsRedes:hover{
+    text-shadow: 0 0 5px #ffffff;
+    color:#9FAB97;
+   }
