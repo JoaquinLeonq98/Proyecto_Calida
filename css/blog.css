@@ -17,12 +17,20 @@ padding-top: 20%;
 }
 .blog{
     margin-bottom: 5%;
-    height: auto;
-    max-height: 215px;
+    /*height: auto;
+    max-height: 215px;*/
     background-color: #F7F9F8;
 }
 .blog .img-fluid {
     width: auto;
-    max-height: 215px;
-    border-radius: 0;
+    /*max-height: 215px;
+    border-radius: 0;*/
+}
+#imagen-blog{
+    height: auto;
+    width: auto;
+}
+#titulo-blog{
+    max-width: 100%;
+    height: auto;
 }
