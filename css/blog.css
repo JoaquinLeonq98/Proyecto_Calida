@@ -19,9 +19,10 @@ padding-top: 20%;
     margin-bottom: 5%;
     height: auto;
     max-height: 215px;
+    background-color: #F7F9F8;
 }
 .blog .img-fluid {
-    display: block;
     width: auto;
     max-height: 215px;
+    border-radius: 0;
 }
