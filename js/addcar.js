@@ -1,10 +1,10 @@
-const ClickButton = document.getElementById("btnTienda");
+let clickButton = document.getElementById("btnTienda");
 const itemsContainer = document.getElementById("list-items");
 let car = [];
 
 
-ClickButton.forEach(btn =>{
-    btn.addEventListener('click', addItem)
+clickButton.addEventListener('click', btn =>{
+  addItem()
 })
 
 function addItem(e){
@@ -27,7 +27,7 @@ function addItem(e){
 function addItemCar(NewItem){
     // agregar clase a la etiqueta donde se encuentra la cantidad
     //for para validar si un producto esta repetido y sumar la cantidad
-    const InputElement = itemsContainer.getElementsByClassName('input__element') 
+    const InputElement = itemsContainer.getElementsByClassName('table__quanty') 
    for(let i = 0; i < car.length; i ++){
        if(car[i].title.trim() === NewItem.title.trim()){
         car[i].quanty ++;

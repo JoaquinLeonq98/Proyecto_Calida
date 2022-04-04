@@ -20,40 +20,49 @@
     <header id="anclaNavBar"></header>
     
     <!-- tabla de producto -->
-    <table class="tablaCar">
-      <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Producto</th>
-          <th scope="col">Precio</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td class="tablaProductos">
-            <img src="../img/productos/Aglaonema roja1.jpg" alt="">
-            <h6 class="tablaTitulo">Aglaonema Roja</h6>
-            </td>
-          <td class="tablaPrecio"><p>$ 151</p></td>
-          <td class="tablaCantidad">
-            <input type="number" min="1" value="1">
-            <button class="delete btn btn-success">Eliminar</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <br></br>
-    <div class="row mx-4">
-      <div class="col">
-        <h3 class="itemCarTotal">Total: $ 151</h3>
-      </div>
-      <div class="col d-flex justify-content-end">
-          <button class="btn btn-success">Comprar</button>
-      </div>
+    <div class="container-fluid">
+      <div class="row col-md-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <!-- <th scope="col">Producto</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Cantidad</th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row ml-4">
+              <th scope="">1</th>
+              <td class="table__poducts">
+                <img src="../img/productos/Aglaonema roja1.jpg" alt="">
+                <br><br> 
+                <h6 class="title">Producto: Aglaonema Roja</h6>
+              </td>
+                <td class="table__price"><p> precio: $ 151</p></td>
+              <td >
+                <p>Cantidad: </p>
+                <input  class="table__quanty" type="number" min="1" value="1">
+                <button class="delete btn btn-danger">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+        <br></br>
+        <div class="mx-4 row col-md-12">
+          <div class="col d-flex justify-content-end">
+            <h3 class="itemCarTotal">Total: $ 151</h3>
+          </div>
+          <div >
+              <button class="btn btn-success">Comprar</button>
+          </div>
+          </div>
+        </div>
       </div>
     </div>
-  
+      
+   
     
     
     <!--Ancla footer-->
