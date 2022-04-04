@@ -17,4 +17,10 @@ padding-top: 20%;
 }
 .blog{
     margin-bottom: 5%;
+    height: 600px;
+}
+.blog .img-responsive {
+    display: block;
+    width: auto;
+    max-height: 100%;
 }
