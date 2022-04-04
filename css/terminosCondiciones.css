@@ -18,8 +18,9 @@
     position: relative;
     text-align: justify;
     top: 0%;
-    left: 50%; 
-    transform: translate(-50%, -50%);
+    left: 50%;
+    right: 5%;
+    transform: translate(-50%, -125%);
     background-color: white;
     opacity: 50%;
     margin-left: 1%;
