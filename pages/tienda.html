@@ -35,16 +35,17 @@
                             </div>
                         <div class="card-footer">
                     <div class="text-center"><button id="btnTienda"  type="button" class="btn btn-outline-dark">Agregar al carrito</button> </div>
-                </div>
+                  </div>
             </div>
         </div>   
        
     </template>   
-     
-    <table class="table">
+     <div class="row">
+
+      <table class="table col-sm-12">
         <thead>
           <tr>
-            <th scope="col">#</th>
+            <th scope="col">Imagen</th>
             <th scope="col">Producto</th>
             <th scope="col">Cantidad</th>
             <th scope="col">Acción</th>
@@ -58,7 +59,7 @@
           </tr>
         </tfoot>
       </table>
-      <template id="template-footer">
+      <template id="template-footer" class="col-sm-12">
         <th scope="row" colspan="2">Total Productos</th>
         <td>10</td>
         <td>
@@ -69,9 +70,9 @@
         <td class="font-weigth-bold">$ <span>5000</span></td>
       </template>
 
-      <template id="template-carrito">
+      <template id="template-carrito" class="col-sm-12">
         <tr>
-          <th scope="row">id</th>
+          <th scope="row"> <img  class="img-fluid img" src="" alt=""></th>
           <td>Planta</td>
           <td>1</td>
           <td>
@@ -81,6 +82,8 @@
           <td>$<span>500</span></td>
         </tr>
       </template>
+     </div>
+   
  </div>
 
 <footer id="anclaFooter"></footer>
