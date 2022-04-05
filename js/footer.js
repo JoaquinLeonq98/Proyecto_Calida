@@ -23,7 +23,7 @@
              <!-- Content -->
              <img class="mb-4" src="/img/calida-logo-vf-color-transparent.png" alt="logo" height="100px">
              <p class="text-white">Tu tienda de plantas y macetas a precios accesibles</p>
-             <a href="https://www.instagram.com/calidamx/" target="_blank"><i class="fa-brands fa-instagram-square iconsRedes" alt="logo insta"></i> </a>
+             <a href="https://www.instagram.com/calidamx/" target="_blank"><i class="fa-brands fa-instagram-square iconsRedes" alt="logo insta"></i></a>
              <a href="https://www.facebook.com/CalidaMX/" class="ml-3" target="_blank"><i class="fa-brands fa-facebook-square iconsRedes" alt="logo face"></i></a>
          </div>
          <!-- lado izq (logo) -->
