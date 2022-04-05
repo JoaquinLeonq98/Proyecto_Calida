@@ -1,33 +1,26 @@
-/*#imagenFondo {
-    /*height:700px;
-    max-width: 100%;
-    height: 100%;
-    background-image: url("../img/macetasTerminos.jpg");
-    background-size: cover;
-    background-repeat:no-repeat;
-    background-position: center center;
-}*/
-
 .container{
     position: relative;
     text-align: justify;
     color: black;
+    /*background-image: url('../img/macetasTerminos.jpg');*/
 }
 
 .centered {
-    position: relative;
+    position: absolute;
     text-align: justify;
-    top: 0%;
     left: 50%;
     right: 5%;
-    transform: translate(-50%, -125%);
+    transform: translate(-50%, -115%);
     background-color: white;
-    opacity: 50%;
+    opacity: 80%;
     margin-left: 1%;
-    margin-right: 1%;
+    margin-right: 15%;
+    border-radius: 1.5%;
   }
 
-  .texto{
-    
+  @media screen and (max-width: 970px) {
+      .centered{
+          margin-top: 500px
+      }
   }
  
