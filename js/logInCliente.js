@@ -32,7 +32,8 @@ correo.addEventListener("keyup", function(e){
   e.preventDefault();
   let d="";
   d += correo.value;
-  if (validateEmail(d)){
+  correo.value=d.trim();
+  if (validateEmail(d.trim())){
     correo.classList.remove("is-invalid");
     correo.classList.add('is-valid');
   }else if(d===''){
@@ -56,6 +57,7 @@ nombre.addEventListener("keyup", function(e){
     nombre.classList.remove("is-invalid");
     nombre.classList.remove("is-valid");
   }else{
+    nombre.value = f.trim();
     nombre.classList.remove("is-valid");
     nombre.classList.add('is-invalid');
   }
