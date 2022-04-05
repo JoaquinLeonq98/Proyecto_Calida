@@ -1,0 +1,10 @@
+body {
+    background-image: url(../img/plantasPoliticas.jpg);
+    background-size: 100%;
+     /* background-repeat:no-repeat; */
+}
+
+.card{
+    opacity: 80%;
+    margin-top: 30px;
+}
