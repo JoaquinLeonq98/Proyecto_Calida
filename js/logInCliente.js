@@ -6,11 +6,11 @@ function validateTel (tel)  {
   return tel.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im);
 }; //Validar telefono
 function validateName (nam)  {
-  return nam.match(/^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/);
+  return nam.match(/^[ÁÉÍÓÚÑA-Z][a-záéíóúñ]+(\s+[ÁÉÍÓÚÑA-Z]?[a-záéíóúñ]+)*$/);
 };//Valida nombre
 
 function validateLname (nam1)  {
-  return nam1.match(/^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/);
+  return nam1.match(/^[ÁÉÍÓÚA-Z][a-záéíóúñ]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/);
 };//Valida apellido
 
 
@@ -57,7 +57,7 @@ nombre.addEventListener("keyup", function(e){
     nombre.classList.remove("is-invalid");
     nombre.classList.remove("is-valid");
   }else{
-    nombre.value = f.trim();
+    //nombre.value = f.trim();
     nombre.classList.remove("is-valid");
     nombre.classList.add('is-invalid');
   }
