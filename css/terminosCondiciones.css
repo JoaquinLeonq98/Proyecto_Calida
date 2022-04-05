@@ -1,26 +1,9 @@
-.container{
-    position: relative;
-    text-align: justify;
-    color: black;
-    /*background-image: url('../img/macetasTerminos.jpg');*/
+body {
+    background-image: url('../img/macetasTerminos.jpg');
+    background-size: 100%;
 }
 
-.centered {
-    position: absolute;
-    text-align: justify;
-    left: 50%;
-    right: 5%;
-    transform: translate(-50%, -115%);
-    background-color: white;
-    opacity: 80%;
-    margin-left: 1%;
-    margin-right: 15%;
-    border-radius: 1.5%;
-  }
-
-  @media screen and (max-width: 970px) {
-      .centered{
-          margin-top: 500px
-      }
-  }
- 
+.card{
+    opacity: 90%;
+    margin-top: 30px;
+}
