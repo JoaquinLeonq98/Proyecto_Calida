@@ -3,7 +3,7 @@ function validateEmail (email)  {
 };//Validar email
 
 function validateName (nam)  {
-  return nam.match(/^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/);
+  return nam.match(/^[ÁÉÍÓÚÑA-Z][a-záéíóúñ]+(\s+[ÁÉÍÓÚÑA-Z]?[a-záéíóúñ]+)*$/);
 };//Valida nombre
   
 function validateTel (tel)  {
