@@ -4,13 +4,18 @@
  let contenidoCarrito = "";
  let Rock = ""; 
  let carrito = localStorage.getItem('cart'); 
-  
+ let Rock1 = ""; 
  let long = JSON.parse(carrito);
  console.log(long)
 
  if(long === null){
   Rock+=`<th scope="row" colspan="5"> Su carrito se encuentra vacío - comience a comprar!</th>`
- }else{
+ }else if(Object.values(long).length === 0 ){
+  Rock+=`<th scope="row" colspan="5"> Su carrito se encuentra vacío - comience a comprar!</th>`
+ }
+ else{
+
+
   let d =Object.values(long);
   console.log(d);
  
@@ -18,15 +23,26 @@
    
       
  
- 
+  let total = 0;
      for (let i=0;i<g;i++){
-       contenidoCarrito+= `<tr>
+     
+      contenidoCarrito+= `<tr>
        <td><img class="img-fluid img" src="../${d[i].image}"></td>
        <td>${d[i].name}</td>
        <td>${d[i].quanty}</td>
-       <td>${d[i].total}</td>
+       <td>
+        <button class="btn btn-info btn-sm">+</button>
+    
+        <button class="btn btn-danger btn-sm">-</button>
+       </td>
+       <td>$ ${d[i].quanty * d[i].price}</td>
      </tr>`
+     total += d[i].quanty * d[i].price;
+     
    }
+   Rock1+= `<th scope="row" colspan="3.5">Total Productos: </th>
+   <td>$ ${total} </td>
+   `;
  }
  
   
@@ -85,7 +101,7 @@
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                      <h5 class="modal-title" id="staticBackdropLabel">Carrito de Compras</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -100,7 +116,7 @@
                               <th scope="col">Producto</th>
                               <th scope="col">Cantidad</th>
                               <th scope="col">Acción</th>
-                              <th scope="col">Total</th>
+                              <th scope="col">Sub Total</th>
                             </tr>
                           </thead>
                           <tbody id="items">
@@ -111,12 +127,13 @@
                           <tfoot>
                             <tr id="footer">
                               ${Rock}
+                              ${Rock1}
                             </tr>
                           </tfoot>
                         </table>
                         <template id="template-footer" class="col-sm-12">
-                          <th scope="row" colspan="2">Total Productos</th>
-                          <td>10</td>
+                          ${Rock1}
+                          
                           <td>
                             <button class="btn btn-danger btn-sm" id="vaciar-carrito">
                               vaciar carrito
@@ -132,9 +149,8 @@
                             <td>1</td>
                             <td>
                             <button class="btn btn-info btn-sm">+</button>
-                              <!--<i class="fa-solid fa-circle-plus"></i></button>-->
+                             
                             <button class="btn btn-danger btn-sm">-</button>
-                            <!--<button class="btn btn-danger btn-sm"><i class="fa-solid fa-circle-minus"></i></button>-->
                             </td>
                             <td>$<span>500</span></td>
                           </tr>
