@@ -2,23 +2,35 @@
  *  contenidoNavbar es una constante que almacena en acentos graves el HTML de la barra de navegacion global
  */
  let contenidoCarrito = "";
-
+ let Rock = ""; 
  let carrito = localStorage.getItem('cart'); 
   
  let long = JSON.parse(carrito);
+ console.log(long)
+
+ if(long === null){
+  Rock+=`<th scope="row" colspan="5"> Su carrito se encuentra vacío - comience a comprar!</th>`
+ }else{
+  let d =Object.values(long);
+  console.log(d);
  
- let d =Object.values(long);
- console.log(d);
- let g= Object.values(long).length;
+  let g= Object.values(long).length;
+   
+      
  
- for (let i=0;i<g;i++){
-     contenidoCarrito+= `<tr>
-     <td><img class="img-fluid img" src="../${d[i].image}"></td>
-     <td>${d[i].name}</td>
-     <td>${d[i].quanty}</td>
-     <td>${d[i].total}</td>
-   </tr>`
+ 
+     for (let i=0;i<g;i++){
+       contenidoCarrito+= `<tr>
+       <td><img class="img-fluid img" src="../${d[i].image}"></td>
+       <td>${d[i].name}</td>
+       <td>${d[i].quanty}</td>
+       <td>${d[i].total}</td>
+     </tr>`
+   }
  }
+ 
+  
+
 
 
  
@@ -82,7 +94,7 @@
               
                         <table class="table col-sm-12">
                           <thead>
-                            <tr>
+                            <tr class =" col-sm-12">
                               <th scope="col">Imagen</th>
                               <th scope="col">Producto</th>
                               <th scope="col">Cantidad</th>
@@ -97,7 +109,7 @@
                           </tbody>
                           <tfoot>
                             <tr id="footer">
-                              <th scope="row" colspan="5"> Su carrito se encuentra vacío - comience a comprar!</th>
+                              ${Rock}
                             </tr>
                           </tfoot>
                         </table>
