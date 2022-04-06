@@ -19,11 +19,11 @@ INSERT INTO `calidadb`.`cliente` (`nombre`, `apellido`, `correo`, `contraseña`)
 INSERT INTO `calidadb`.`cliente` (`nombre`, `apellido`, `correo`, `contraseña`) VALUES ('joaquin', 'leon', 'joaquin.leonquero@gmail.com', '#Welcome1');
 
 /*Insert de las direcciones de envio*/
-INSERT INTO `calidadb`.`domicilio_envio` (`estado`, `cp`, `calle`, `colonia`, `numero_int`, `acaldia`) VALUES ('cdmx', '02980', 'colima', 'roma', '2', 'cuautehmoc', '3');
-INSERT INTO `calidadb`.`domicilio_envio` (`estado`, `cp`, `calle`, `colonia`, `numero_int`, `acaldia`) VALUES ('cdmx', '06570', 'volcan santa maria', 'ampliacion providencia', '1', 'GAM', '121');
-INSERT INTO `calidadb`.`domicilio_envio` (`estado`, `cp`, `calle`, `colonia`, `numero_int`, `acaldia`) VALUES ('cdmx', '14390', 'el caporal', 'narciso mendoza', '208', 'tlalpan', 'edificio e');
-INSERT INTO `calidadb`.`domicilio_envio` (`estado`, `cp`, `calle`, `colonia`, `numero_int`, `acaldia`) VALUES ('cdmx', '04100', 'xicotencatl', 'del Carmen', '4', 'coyoacan', '186');
-INSERT INTO `calidadb`.`domicilio_envio` (`estado`, `cp`, `calle`, `colonia`, `numero_int`, `acaldia`) VALUES ('cdmx', '06570', 'carlos salinas de gortari', 'martires del pri', '132', 'cuauhtemoc', 'b');
+INSERT INTO `calidadb`.`domicilio_envio` (`estado`, `cp`, `calle`, `colonia`, `numero_int`, `acaldia`, `numero_ext`) VALUES ('cdmx', '02980', 'colima', 'roma', '2', 'cuautehmoc', '3');
+INSERT INTO `calidadb`.`domicilio_envio` (`estado`, `cp`, `calle`, `colonia`, `numero_int`, `acaldia`, `numero_ext`) VALUES ('cdmx', '06570', 'volcan santa maria', 'ampliacion providencia', '1', 'GAM', '121');
+INSERT INTO `calidadb`.`domicilio_envio` (`estado`, `cp`, `calle`, `colonia`, `numero_int`, `acaldia`, `numero_ext`) VALUES ('cdmx', '14390', 'el caporal', 'narciso mendoza', '208', 'tlalpan', 'edificio e');
+INSERT INTO `calidadb`.`domicilio_envio` (`estado`, `cp`, `calle`, `colonia`, `numero_int`, `acaldia`, `numero_ext`) VALUES ('cdmx', '04100', 'xicotencatl', 'del Carmen', '4', 'coyoacan', '186');
+INSERT INTO `calidadb`.`domicilio_envio` (`estado`, `cp`, `calle`, `colonia`, `numero_int`, `acaldia`, `numero_ext`) VALUES ('cdmx', '06570', 'carlos salinas de gortari', 'martires del pri', '132', 'cuauhtemoc', 'b');
 
 /*Insert de los metodos de pago*/
 INSERT INTO `calidadb`.`metodo_pago` (`pago`) VALUES ('efectivo');
