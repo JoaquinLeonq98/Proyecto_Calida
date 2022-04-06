@@ -121,7 +121,7 @@ formRespuesta.addEventListener('submit', (evento) => {
   if(validateTel(telefono.value)){
     contador++;
   };
-  if(validateName(mensaje.value)){
+  if(validateMsg(mensaje.value)){
     contador++;
   };
   if (contador === 4 ) {
@@ -145,5 +145,6 @@ formRespuesta.addEventListener('submit', (evento) => {
       showConfirmButton: false,
       timer: 2300,
     });
+    contador=0;
   }
 });
