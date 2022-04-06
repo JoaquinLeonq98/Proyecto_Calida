@@ -123,10 +123,17 @@ const printFooter = () =>{
   footer.appendChild(fragment)
 
   const btnEmpity = document.getElementById("vaciar-carrito")
-  btnEmpity.addEventListener('click', () =>{
-    cart = {}
-    printCart()
-  })
+  if(btnEmpity === null){
+  }else if(btnEmpity === ""){
+
+  }
+  else{
+    btnEmpity.addEventListener('click', () =>{
+      cart = {}
+      printCart()
+    })
+  }
+ 
 }
 
 //funcion para botones y sumar canitidad de productos o eliminarlos
