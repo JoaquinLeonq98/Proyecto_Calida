@@ -61,10 +61,11 @@
              <form class="form-inline my-2 my-lg-0" id="navbarSupportedContent">
                 <a class="" href="../pages/logInCliente.html" type="submit" target="_blank"
                 ><i class="fa-solid fa-user" id="fasolid"></i></a>
-
+                
                 <!-- boton Modal -->
-                <button type="button" class="btn btn-primary color-calida btnCartNav" data-toggle="modal" data-target="#staticBackdrop">
-                carrito
+                <!-- <button type="button" class="btn btn-primary color-calida btnCartNav" data-toggle="modal" data-target="#staticBackdrop"> -->
+                <button type="button" class="btn color-calida btnCartNav" data-toggle="modal" data-target="#staticBackdrop">
+                <i class="fa-solid fa-cart-shopping" id="fasolid"></i>
               </button>
               
               <!-- Modal -->
@@ -118,8 +119,10 @@
                             <td>Planta</td>
                             <td>1</td>
                             <td>
-                              <button class="btn btn-info btn-sm">+</button>
-                              <button class="btn btn-danger btn-sm">-</button>
+                            <button class="btn btn-info btn-sm">+</button>
+                              <!--<i class="fa-solid fa-circle-plus"></i></button>-->
+                            <button class="btn btn-danger btn-sm">-</button>
+                            <!--<button class="btn btn-danger btn-sm"><i class="fa-solid fa-circle-minus"></i></button>-->
                             </td>
                             <td>$<span>500</span></td>
                           </tr>
