@@ -71,3 +71,9 @@ function addItem(item, id){
     'img': '../img/productos/calidamx-p9.jpg' ,
     'price': '$470',
     'description':'De hermosas hojas largas 🌿 y  fáciles cuidados. Necesita de muy pocos riegos, cada 10-15 días!💚'},10);
+
+    let productoStorage = localStorage.getItem("Info");
+    console.log(productoStorage);
+    let arrayProducto = JSON.parse(productoStorage);
+    console.table(arrayProducto);
+    addItem(arrayProducto);
