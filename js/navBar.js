@@ -58,3 +58,7 @@ $(".hover").mouseleave(
     }
   );
   
+
+console.log(localStorage.getItem('cart') )
+
+  
