@@ -1,6 +1,30 @@
 /**
  *  contenidoNavbar es una constante que almacena en acentos graves el HTML de la barra de navegacion global
  */
+ let contenidoCarrito = "";
+
+ let carrito = localStorage.getItem('cart'); 
+  
+ let long = JSON.parse(carrito);
+ 
+ let d =Object.values(long);
+ console.log(d);
+ let g= Object.values(long).length;
+ 
+ for (let i=0;i<g;i++){
+     contenidoCarrito+= `<tr>
+     <td><img class="img-fluid img" src="../${d[i].image}"></td>
+     <td>${d[i].name}</td>
+     <td>${d[i].quanty}</td>
+     <td>${d[i].total}</td>
+   </tr>`
+ }
+
+
+ 
+
+
+
  const contenidoNavbar = `
  <nav class="navbar navbar-expand-lg navbar-light bg-light " style="background-color: #ffffff;">
      
@@ -38,8 +62,78 @@
                 <a class="" href="../pages/logInCliente.html" type="submit" target="_blank"
                 ><i class="fa-solid fa-user" id="fasolid"></i></a>
 
-                <a class="ml-4 spaceIcon" href="../pages/addCar.html" type="submit" target="_blank" 
-                ><i class="fa-solid fa-cart-shopping" id="fasolid"></i></a>
+                <!-- boton Modal -->
+                <button type="button" class="btn btn-primary color-calida btnCartNav" data-toggle="modal" data-target="#staticBackdrop">
+                carrito
+              </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row">
+              
+                        <table class="table col-sm-12">
+                          <thead>
+                            <tr>
+                              <th scope="col">Imagen</th>
+                              <th scope="col">Producto</th>
+                              <th scope="col">Cantidad</th>
+                              <th scope="col">Acción</th>
+                              <th scope="col">Total</th>
+                            </tr>
+                          </thead>
+                          <tbody id="items">
+                            <tr>  
+                                ${contenidoCarrito}
+                            </tr>
+                          </tbody>
+                          <tfoot>
+                            <tr id="footer">
+                              <th scope="row" colspan="5"> Su carrito se encuentra vacío - comience a comprar!</th>
+                            </tr>
+                          </tfoot>
+                        </table>
+                        <template id="template-footer" class="col-sm-12">
+                          <th scope="row" colspan="2">Total Productos</th>
+                          <td>10</td>
+                          <td>
+                            <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                              vaciar carrito
+                            </button>
+                          </td>
+                          <td class="font-weigth-bold">$ <span>5000</span></td>
+                        </template>
+                  
+                        <template id="template-carrito" class="col-sm-12">
+                          <tr>
+                            <th scope="row"> <img  class="img-fluid img" src="" alt=""></th>
+                            <td>Planta</td>
+                            <td>1</td>
+                            <td>
+                              <button class="btn btn-info btn-sm">+</button>
+                              <button class="btn btn-danger btn-sm">-</button>
+                            </td>
+                            <td>$<span>500</span></td>
+                          </tr>
+                        </template>
+                       </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-success">comprar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
 
              </form>
          </div>    
@@ -57,4 +151,4 @@ $(".hover").mouseleave(
       $(this).removeClass("hover");
     }
   );
-  
+
