@@ -1,7 +1,7 @@
 /**
  *  contenidoNavbar es una constante que almacena en acentos graves el HTML de la barra de navegacion global
  */
- let rock = "";
+ let contenidoCarrito = "";
 
  let carrito = localStorage.getItem('cart'); 
   
@@ -12,15 +12,16 @@
  let g= Object.values(long).length;
  
  for (let i=0;i<g;i++){
-     rock+= `<tr>
-     <td><image src="../${d[i].image}"></td>
+     contenidoCarrito+= `<tr>
+     <td><img class="img-fluid img" src="../${d[i].image}"></td>
      <td>${d[i].name}</td>
      <td>${d[i].quanty}</td>
      <td>${d[i].total}</td>
    </tr>`
  }
 
-document.write(carrito);
+
+ 
 
 
 
@@ -61,9 +62,9 @@ document.write(carrito);
                 <a class="" href="../pages/logInCliente.html" type="submit" target="_blank"
                 ><i class="fa-solid fa-user" id="fasolid"></i></a>
 
-
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-                Launch static backdrop modal
+                <!-- boton Modal -->
+                <button type="button" class="btn btn-primary color-calida btnCartNav" data-toggle="modal" data-target="#staticBackdrop">
+                carrito
               </button>
               
               <!-- Modal -->
@@ -91,7 +92,7 @@ document.write(carrito);
                           </thead>
                           <tbody id="items">
                             <tr>  
-                                ${rock}
+                                ${contenidoCarrito}
                             </tr>
                           </tbody>
                           <tfoot>
@@ -126,8 +127,8 @@ document.write(carrito);
                        </div>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Understood</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-success">comprar</button>
                     </div>
                   </div>
                 </div>
