@@ -1,83 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" 
-    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
     <!--CSS Main-->
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/main.css" />
     <!--<link rel="stylesheet" href="../css/addCar.css">
     <!-- Icons-->
-    <script src="https://kit.fontawesome.com/6631c06026.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/6631c06026.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Agregar al carrito</title>
-     
-
-</head>
-<body>
+  </head>
+  <body>
     <!-- Barra de navegación -->
     <header id="anclaNavBar"></header>
-    
+
     <!-- tabla de producto -->
-    <div class="container-fluid">
-      <div class="row col-md-12">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <!-- <th scope="col">Producto</th>
-              <th scope="col">Precio</th>
-              <th scope="col">Cantidad</th> -->
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="row ml-4">
-              <th scope="">1</th>
-              <td class="table__poducts">
-                <img src="../img/productos/Aglaonema roja1.jpg" alt="">
-                <br><br> 
-                <h6 class="title">Producto: Aglaonema Roja</h6>
-              </td>
-                <td class="table__price"><p> precio: $ 151</p></td>
-              <td >
-                <p>Cantidad: </p>
-                <input  class="table__quanty" type="number" min="1" value="1">
-                <button class="delete btn btn-danger">Eliminar</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <hr>
-        <br></br>
-        <div class="mx-4 row col-md-12">
-          <div class="col d-flex justify-content-end">
-            <h3 class="itemCarTotal">Total: $ 151</h3>
-          </div>
-          <div >
-              <button class="btn btn-success">Comprar</button>
-          </div>
-          </div>
-        </div>
-      </div>
+    <div class="container">
+
+      <table class="table col-sm-12">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Acción</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody id="items"></tbody>
+        <tfoot>
+          <tr id="footer">
+            <th scope="row" colspan="5"> Su carrito se encuentra vacío - comience a comprar!</th>
+          </tr>
+        </tfoot>
+      </table>
+      <template id="template-footer">
+        <th scope="row" colspan="2">Total Productos</th>
+        <td>10</td>
+        <td>
+          <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+            vaciar carrito
+          </button>
+        </td>
+        <td class="font-weigth-bold">$ <span>5000</span></td>
+      </template>
+
+      <template id="template-carrito">
+        <tr>
+          <th scope="row">id</th>
+          <td>Planta</td>
+          <td>1</td>
+          <td>
+            <button class="btn btn-info btn-sm">+</button>
+            <button class="btn btn-danger btn-sm">-</button>
+          </td>
+          <td>$ <span>500</span></td>
+        </tr>
+      </template>
     </div>
-      
-   
-    
-    
+
     <!--Ancla footer-->
-<footer id="anclaFooter"></footer>
-<!-- Bootstrap 4.6 -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <footer id="anclaFooter"></footer>
+    <!-- Bootstrap 4.6 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
     <!--Barra de navegación-->
-<script src="../js/navBar.js"></script>
-<!--JS Footer-->
-<script src="../js/footer.js"></script>
-<!--JS AddCar-->
-<script src="../js/addcar.js"></script>
+    <script src="../js/navBar.js"></script>
+    <!--JS Footer-->
+    <script src="../js/footer.js"></script>
+    <!--JS AddCar-->
+    <!-- <script src="../js/addcar.js"></script> -->
 
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-
-</body>
+    <script src="../js/car.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  </body>
 </html>
