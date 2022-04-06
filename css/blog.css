@@ -16,5 +16,15 @@ padding-top: 20%;
     padding-top: 2%;
 }
 .blog{
-    padding-bottom: 5%;
+    margin-bottom: 5%;
+    background-color: #F7F9F8;
+}
+#imagen-blog{
+    height: auto;
+    width: auto;
+}
+#titulo-blog{
+    max-width: 100%;
+    height: auto;
+    border-radius: 0;
 }
