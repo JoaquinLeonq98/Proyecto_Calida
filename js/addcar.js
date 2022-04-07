@@ -156,3 +156,11 @@ const btnAction = e => {
   }
   e.stopPropagation()
 } 
+
+//Función para agregar card de producto desde admin
+let productoStorage = localStorage.getItem("Info");
+console.log(productoStorage);
+let arrayProducto = JSON.parse(productoStorage);
+console.table(arrayProducto);
+productoStorage.push(cart);
+//addItem(arrayProducto);
