@@ -36,11 +36,13 @@
   #plus{
     color: #ffffff;
     background-color: #D29293;
-    width: 27px;
+    width: 28px;
+    font-weight: 900;
   }
 
   #minus{
     color: #ffffff;
     background-color: #9FAB97;
-    width: 27px;
+    width: 28px;
+    font-weight: 900;
   }

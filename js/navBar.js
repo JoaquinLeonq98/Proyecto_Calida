@@ -144,14 +144,12 @@
                   
                         <template id="template-carrito" class="col-sm-12">
                           <tr>
-                            <th scope="row"> <img  class="img-fluid img" src="" alt=""></th>
+                            <th scope="row"> <img  class="img-fluid w-90 img" src="" alt=""></th>
                             <td>Planta</td>
                             <td>1</td>
                             <td>
                             <button type="button" class="btn btn-info btn-sm" id="plus">+</button>
                         
-                         
-
                             <button class="btn btn-danger btn-sm" id="minus">-</button>
                          
                             </td>
