@@ -3,7 +3,7 @@ function validateEmail (email)  {
 };//Validar email
 
 function validateName (nam)  {
-  return nam.match(/^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/);
+  return nam.match(/^[ÁÉÍÓÚÑA-Z][a-záéíóúñ]+(\s+[ÁÉÍÓÚÑA-Z]?[a-záéíóúñ]+)*$/);
 };//Valida nombre
   
 function validateTel (tel)  {
@@ -121,7 +121,7 @@ formRespuesta.addEventListener('submit', (evento) => {
   if(validateTel(telefono.value)){
     contador++;
   };
-  if(validateName(mensaje.value)){
+  if(validateMsg(mensaje.value)){
     contador++;
   };
   if (contador === 4 ) {
@@ -145,5 +145,6 @@ formRespuesta.addEventListener('submit', (evento) => {
       showConfirmButton: false,
       timer: 2300,
     });
+    contador=0;
   }
 });

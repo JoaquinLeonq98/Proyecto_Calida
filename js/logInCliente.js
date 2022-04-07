@@ -6,11 +6,11 @@ function validateTel (tel)  {
   return tel.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im);
 }; //Validar telefono
 function validateName (nam)  {
-  return nam.match(/^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/);
+  return nam.match(/^[ÁÉÍÓÚÑA-Z][a-záéíóúñ]+(\s+[ÁÉÍÓÚÑA-Z]?[a-záéíóúñ]+)*$/);
 };//Valida nombre
 
 function validateLname (nam1)  {
-  return nam1.match(/^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/);
+  return nam1.match(/^[ÁÉÍÓÚA-Z][a-záéíóúñ]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/);
 };//Valida apellido
 
 
@@ -32,10 +32,11 @@ correo.addEventListener("keyup", function(e){
   e.preventDefault();
   let d="";
   d += correo.value;
-  if (validateEmail(d)){
+  correo.value=d.trim();
+  if (validateEmail(d.trim())){
     correo.classList.remove("is-invalid");
     correo.classList.add('is-valid');
-  }else if(d===''){
+  }else if(d.trim()===''){
     correo.classList.remove("is-invalid");
     correo.classList.remove("is-valid");
   }else{
@@ -56,6 +57,7 @@ nombre.addEventListener("keyup", function(e){
     nombre.classList.remove("is-invalid");
     nombre.classList.remove("is-valid");
   }else{
+    //nombre.value = f.trim();
     nombre.classList.remove("is-valid");
     nombre.classList.add('is-invalid');
   }
