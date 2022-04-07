@@ -28,9 +28,10 @@ itemsCart.addEventListener('click', e => {
 //tambien ejecuta la funcion printCards
 const fetchData = async () => {
   try {
-    const res = await fetch("productosApi.json");
+    //const res = await fetch("productosApi.json");
+    const res = await fetch("http://localhost:8080/api/productos/");
     const data = await res.json();
-    // console.log(data);
+    console.log(data);
     printCards(data);
   } catch (error) {
     console.log(error);
@@ -40,13 +41,14 @@ const fetchData = async () => {
 // Funcion que se encarga de iterar todos los objetos dentro del JSON, clona el contenido y coloca sus valores en el
 const printCards = (data) => {
   data.forEach((Product) => {
-    templateCard.querySelector("h5").textContent = Product.name;
-    templateCard.querySelector("p").textContent = Product.description;
-    templateCard.querySelector("h8").textContent = Product.price;
-    templateCard.querySelector("img").setAttribute("src", Product.image);
+    templateCard.querySelector("h5").textContent = Product.nombre;
+    templateCard.querySelector("p").textContent = Product.descripcion;
+    templateCard.querySelector("h8").textContent = Product.precio;
+    templateCard.querySelector("img").setAttribute("src","../img/productos/plantas/"+  Product.imagen);
     templateCard.querySelector(".btn-outline-dark").dataset.id = Product.id;
     const clone = templateCard.cloneNode(true);
     fragment.appendChild(clone);
+    console.log(Product.imagen);
   });
   items.appendChild(fragment);
 };
@@ -86,7 +88,7 @@ const printCart = () => {
   // console.log(cart)
   itemsCart.innerHTML = '';
   Object.values(cart).forEach(product =>{
-    templateCart.querySelector('img').setAttribute("src","../" + product.image);
+    templateCart.querySelector('img').setAttribute("src","../img/productos/plantas/" + product.imagen);
     templateCart.querySelectorAll('td')[0].textContent = product.name;
     templateCart.querySelectorAll('td')[1].textContent = product.quanty;
     templateCart.querySelector('.btn-info').dataset.id = product.id;
@@ -158,9 +160,9 @@ const btnAction = e => {
 } 
 
 //Función para agregar card de producto desde admin
-let productoStorage = localStorage.getItem("Info");
-console.log(productoStorage);
-let arrayProducto = JSON.parse(productoStorage);
-console.table(arrayProducto);
-productoStorage.push(cart);
+//let productoStorage = localStorage.getItem("Info");
+//console.log(productoStorage);
+//let arrayProducto = JSON.parse(productoStorage);
+//console.table(arrayProducto);
+//productoStorage.push(cart);
 //addItem(arrayProducto);
