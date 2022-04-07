@@ -26,6 +26,7 @@ padding-top: 20%;
     height: auto;
     background-color: #F7F9F8;
     position: relative;
+    opacity:0.89;
 }
 
 .blog > div{
