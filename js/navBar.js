@@ -148,9 +148,12 @@
                             <td>Planta</td>
                             <td>1</td>
                             <td>
-                            <button class="btn btn-info btn-sm">+</button>
-                             
-                            <button class="btn btn-danger btn-sm">-</button>
+                            <button type="button" class="btn btn-info btn-sm" id="plus">+</button>
+                        
+                         
+
+                            <button class="btn btn-danger btn-sm" id="minus">-</button>
+                         
                             </td>
                             <td>$<span>500</span></td>
                           </tr>
