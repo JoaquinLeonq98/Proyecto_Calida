@@ -1,6 +1,7 @@
 .card-espacio{
 
     padding-top: 4%;
+    
 }
 
 .card-deck-espacio{
@@ -11,4 +12,8 @@
 
 .btnCart{
     display: none;
+}
+
+.despIzq{
+    padding-left: 4%;
 }
