@@ -7,7 +7,6 @@ const templateCart = document.getElementById("template-carrito").content;
 const fragment = document.createDocumentFragment();
 let cart = {};
 
-
 // evento que se ejecuta una vez terminado de cargar el DOM
 document.addEventListener("DOMContentLoaded", () => {
   fetchData();
@@ -28,7 +27,6 @@ itemsCart.addEventListener('click', e => {
 //tambien ejecuta la funcion printCards
 const fetchData = async () => {
   try {
-    //const res = await fetch("productosApi.json");
     const res = await fetch("http://localhost:8080/api/productos/");
     const data = await res.json();
     console.log(data);
@@ -54,17 +52,13 @@ const printCards = (data) => {
 };
 
 const addCart = (e) => {
-  // console.log(e.target)
-  // console.log(e.target.classList.contains('btn-outline-dark'))
   if (e.target.classList.contains("btn-outline-dark")) {
     setCart(e.target.parentElement.parentElement.parentElement);
-  
   }
   e.stopPropagation(); //Sirve para detener eventos que se nos pueden generar en las cards de los productos
 };
 
 const setCart = (Object) => {
-  // console.log(Object)
   const Product = {
     id: Object.querySelector(".btn-outline-dark").dataset.id,
     name: Object.querySelector("h5").textContent,
@@ -76,7 +70,6 @@ const setCart = (Object) => {
 
   if (cart.hasOwnProperty(Product.id)) {
     Product.quanty = cart[Product.id].quanty + 1;
-
   }
 
   cart[Product.id] = { ...Product };
@@ -85,15 +78,14 @@ const setCart = (Object) => {
 
 
 const printCart = () => {
-  // console.log(cart)
   itemsCart.innerHTML = '';
   Object.values(cart).forEach(product =>{
-    templateCart.querySelector('img').setAttribute("src","../img/productos/plantas/" + product.imagen);
+    templateCart.querySelector('img').setAttribute("src","../"+ product.image);//
     templateCart.querySelectorAll('td')[0].textContent = product.name;
     templateCart.querySelectorAll('td')[1].textContent = product.quanty;
     templateCart.querySelector('.btn-info').dataset.id = product.id;
     templateCart.querySelector('.btn-danger').dataset.id = product.id;
-    templateCart.querySelector('span').textContent = product.quanty * product.price;
+    templateCart.querySelector('span').textContent = product.quanty * parseFloat(product.price);
 
     const clone = templateCart.cloneNode(true)
     fragment.appendChild(clone);
@@ -158,11 +150,3 @@ const btnAction = e => {
   }
   e.stopPropagation()
 } 
-
-//Función para agregar card de producto desde admin
-//let productoStorage = localStorage.getItem("Info");
-//console.log(productoStorage);
-//let arrayProducto = JSON.parse(productoStorage);
-//console.table(arrayProducto);
-//productoStorage.push(cart);
-//addItem(arrayProducto);
