@@ -1,3 +1,6 @@
+.contenedor_campos{
+ 
+}
 .form{
   background-color: #efece8;
 }
@@ -39,7 +42,7 @@
 .input-text {
   background: #ffffff;
   /* fallback for old browsers */
-  width: 80%;
+  width: 100%;
   border: none;
   padding: 1.5rem;
   color: rgb(0, 0, 0);
@@ -69,3 +72,5 @@
 .boton:hover {
   cursor: pointer;
 }
+
+
