@@ -1,0 +1,72 @@
+{
+ {
+    "nombre":"Aglaonema roja",
+    "precio": "151.00",
+    "descripcion":"Tamaño CH, de riego 1 vez a la semana, luz tipo resolana y semisombra.",
+    "imagen":"Aglaonema roja.jpg",
+    "inventario":"10" 
+ },
+ {
+    "nombre":"Aglaonema rosa",
+    "precio": "151.00",
+    "descripcion":"Tamaño CH, de riego 1 vez a la semana, luz tipo resolana, semisombra y luz artificial.",
+    "imagen":"Aglaonema rosa.jpg",
+     "inventario":"10"
+ },
+ {
+    "nombre":"Amoena hoja reina",
+    "precio": "79.00",
+    "descripcion":"Tamaño CH, de riego 1 o 2 veces por semana, luz tipo resolana, semisombra y soporta sol directo en pequeñas cantidades.",
+    "imagen":"Amoena.JPG",
+     "inventario":"10" 
+ }  
+ {
+    "nombre":"Calathea burle marx",
+    "precio": "37.00",
+    "descripcion":"Tamaño CH, de riego 1 o 2 veces por semana, manteniendo húmedo el sustrato, luz tipo resolana y semisombra.",
+    "imagen":"Calathea burle marx.JPG",
+     "inventario":"10" 
+ } 
+{
+    "nombre":"Calathea ornata",
+    "precio": "103.00",
+    "descripcion":"Tamaño M, de riego 1 o 2 veces por semana, luz tipo resolana o semisombra.",
+    "imagen":"Calathea ornata.jpg",
+     "inventario":"10" 
+ } 
+{
+    "nombre":"Cascara de nuez",
+    "precio": "67.00",
+    "descripcion":"Tamaño CH, de riego 1 vez a la semana, a menos luz, más verdes las hojas, más luz, más rojizas.",
+    "imagen":"Cascara de nuez.jpg",
+     "inventario":"10" 
+ } 
+{
+    "nombre":"Cuna de Moisés",
+    "precio": "139.00",
+    "descripcion":"Tamaño CH, de riego 1 o 2 a la semana, cuidar que la tierra no permanezca seca por mucho, luz tipo resolana o semisombra.",
+    "imagen":"Cuna de moises.jpg",
+     "inventario":"10" 
+ } 
+{
+    "nombre":"Monstera",
+    "precio": "139.00",
+    "descripcion":"Tamaño M, de riego 1 vez a la semana dejando que el sustrato seque por completo, luz tipo resolana o semisombra.",
+    "imagen":"Monstera.JPG",
+     "inventario":"10" 
+ } 
+{
+    "nombre":"Pilea peperomioides",
+    "precio": "163.00",
+    "descripcion":"Tamaño M, de riego 1 vez por semana, luz tipo resolana y semisombra.",
+    "imagen":"Pilea peperomioides .jpg",
+     "inventario":"10" 
+ } 
+{
+    "nombre":"Telefono",
+    "precio": "72.00",
+    "descripcion":"Tamaño G, de riego 1 vez a la semana dejando que el sustrato seque por completo, luz tipo resolana.",
+    "imagen":"Telefono .jpg",
+     "inventario":"10" 
+ } 
+}
