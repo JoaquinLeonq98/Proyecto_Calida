@@ -77,8 +77,29 @@ form.addEventListener("submit", function (event) {
 
 
   let b = {name:name,price:price,inventary:inventary,description:description,img:imagen}; //Creación de JSON
-  let b_user=JSON.stringify(b);
-  localStorage.setItem("Info",b_user); //Se agrega a localStorage
+  let b_user=JSON.stringify(b);//
+  localStorage.setItem("Info",b_user); 
+
+  const URL_MAIN ='https://calida-mx.herokuapp.com/api/productos/';
+  
+  fetch(URL_MAIN,{
+    method: 'POST',
+    headers:{
+      'Content-type' : 'application/json',
+    },
+    body:JSON.stringify(b),
+  })
+  .then(response => response.text())
+  .then(data =>{
+    //if
+  })
+  .catch((error)=>{
+    console.error('Error:',error);
+  });
+
+
+
+  //Se agrega a localStorage
 
 
 
