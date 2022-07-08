@@ -67,10 +67,6 @@
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
              
                 <ul class="navbar-nav m-auto text-center" id="colorLink">
-    
-                    <li class="nav-item">
-                        <a class=" ml-5 hexCalida" href="../pages/aboutUs.html">Nosotros</a>
-                    </li>
 
                     <li class="nav-item">
                         <a class=" ml-5 hexCalida" href="../pages/tienda.html">Tienda</a>
@@ -83,6 +79,10 @@
                     <li class="nav-item">
                         <a class=" ml-5 hexCalida" href="../pages/blog.html">Blog</a>
                     </li>
+
+                    <li class="nav-item">
+                    <a class=" ml-5 hexCalida" href="../pages/aboutUs.html">Nosotros</a>
+                </li>
      
                 </ul>
 
